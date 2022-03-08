@@ -1,0 +1,32 @@
+{
+  "name": "@tapjs/processinfo",
+  "version": "0.0.0-0",
+  "main": "lib/index.cjs",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": "lib/index.cjs",
+    "./esm": "lib/esm.mjs",
+    "./cjs": "lib/cjs.cjs"
+  },
+  "scripts": {
+    "test": "tap",
+    "snap": "tap",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
+  },
+  "tap": {
+    "coverage-map": "map.cjs"
+  },
+  "dependencies": {
+    "process-on-spawn": "^1.0.0",
+    "tap": "^16.0.0",
+    "uuid": "^8.3.2"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "license": "ISC"
+}
