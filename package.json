@@ -28,5 +28,9 @@
   "engines": {
     "node": ">=12"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@npmcli/promise-spawn": "^2.0.1",
+    "diff": "^5.0.0"
+  }
 }
