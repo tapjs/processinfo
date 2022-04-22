@@ -70,9 +70,8 @@ t.test('basic instance stuff', t => {
       for (const o of order) {
         const node = nodes[o]
         t.equal(db.uuids.has(node.uuid), false)
-        db.uuids.set(node.uuid, node)
-        t.equal(db.uuids.get(node.uuid), node)
         node.link(db)
+        t.equal(db.uuids.get(node.uuid), node)
       }
 
       t.equal(child.parent, parent)
