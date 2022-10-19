@@ -1,4 +1,5 @@
 const t = require('tap')
+process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
 const {getProcessInfo} = require('../lib/get-process-info.cjs')
 const processInfo = getProcessInfo()
 require('../lib/cjs.cjs')

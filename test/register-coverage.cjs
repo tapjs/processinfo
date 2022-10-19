@@ -1,3 +1,6 @@
+process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
+process.env._TAPJS_PROCESSINFO_COV_EXCLUDE_ = '/node_modules/'
+
 const t = require('tap')
 
 // this one we just run an integration test, because we need to catch
@@ -55,7 +58,7 @@ t.test('coverage enabled', async t => {
       require('diff')
     `
   })
-  const result = await spawn(process.execPath, [
+  await spawn(process.execPath, [
     `--require=${dir}/r.js`,
     `${dir}/x.js`,
   ], {
