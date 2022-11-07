@@ -69,12 +69,10 @@ t.test('with others', async t => {
     }
   )
   t.equal(result.status, 0)
-  t.match(
-    result.stdout.toString(),
-    new RegExp(
-      '^otherload file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n' +
-        'otherhook load file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\\?otherload\n' +
-        'file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n$'
-    )
-  )
+  const lines = result.stdout.toString().trim().split('\n')
+  t.match(lines, [
+    /^otherload file:.*?\/file.mjs\?otherresolve\?otherhook-resolve$/,
+    /^otherhook load file:.*?\/file.mjs\?otherresolve\?otherhook-resolve\?otherload$/,
+    /^file:.*?\/file.mjs\?otherresolve\?otherhook-resolve\?otherload\?otherhook-load$/,
+  ])
 })

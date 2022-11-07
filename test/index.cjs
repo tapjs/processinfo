@@ -1,8 +1,10 @@
 const t = require('tap')
 const ProcessInfo = require('../lib/index.cjs')
+const cp = require('../lib/child_process.cjs')
 const { ProcessInfoNode } = require('../lib/process-info-node.cjs')
 const { resolve } = require('path')
 const fixtures = resolve(__dirname, 'fixtures')
+const { readdir } = require('fs/promises')
 
 const removePath = (o, path, replace, seen = new Map()) => {
   if (seen.has(o)) {
@@ -95,6 +97,22 @@ t.test('basic instantiation and usage', async t => {
 
   pi.clear()
   t.matchSnapshot(pi, 'cleared')
+  await pi.load()
+
+  const dir = t.testdir({ sync: {}, async: {} })
+  piSync.dir = `${dir}/sync`
+  pi.dir = `${dir}/async`
+  piSync.saveSync()
+  await pi.save()
+  const pi2 = new ProcessInfo({ dir: pi.dir })
+  await pi2.load()
+  const piSync2 = new ProcessInfo({ dir: piSync.dir })
+  piSync2.loadSync()
+  t.match(pi2, pi)
+  t.match(piSync2, piSync)
+  await pi.erase()
+  piSync.eraseSync()
+  await t.rejects(readdir(pi.dir))
 
   const piEmpty = new ProcessInfo({ dir: resolve(fixtures, 'asdfasdfasdfas') })
   await piEmpty.load()
@@ -104,4 +122,11 @@ t.test('basic instantiation and usage', async t => {
   })
   piEmptySync.loadSync()
   t.matchSnapshot(piEmptySync, pi, 'missing dir is just empty (sync)')
+})
+
+t.test('re-export spawn methods', t => {
+  for (const [name, method] of Object.entries(cp)) {
+    t.equal(ProcessInfo[name], method)
+  }
+  t.end()
 })
