@@ -1,0 +1,25 @@
+{
+  "date": "2022-10-19T23:01:55.375Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/file.mjs"
+  ],
+  "execArgv": [
+    "--loader",
+    "file:///Users/isaacs/dev/tapjs/processinfo/lib/esm.mjs"
+  ],
+  "NODE_OPTIONS": " --require /Users/isaacs/dev/tapjs/processinfo/node_modules/node-preload/preload-path/node-preload.js",
+  "cwd": "/Users/isaacs/dev/tapjs/processinfo",
+  "pid": 39496,
+  "ppid": 39494,
+  "parent": null,
+  "uuid": "9881d0ae-c6d4-473e-9e0a-26fb6a5e7514",
+  "files": [
+    "/Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/file.mjs"
+  ],
+  "root": "9881d0ae-c6d4-473e-9e0a-26fb6a5e7514",
+  "code": 0,
+  "signal": null,
+  "runtime": 2.658875,
+  "globalsAdded": ["__coverage__"]
+}

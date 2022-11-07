@@ -1,14 +1,12 @@
 const t = require('tap')
 
-const {getExclude, defaultExclude} = require('../lib/get-exclude.cjs')
+const { getExclude, defaultExclude } = require('../lib/get-exclude.cjs')
 
 const k = '_TESTING_TAPJS_PROCESSINFO_EXCLUDE_'
 const ex = process.env[k]
 t.teardown(() => {
-  if (ex === undefined)
-    delete process.env[k]
-  else
-    process.env[k] = ex
+  if (ex === undefined) delete process.env[k]
+  else process.env[k] = ex
 })
 
 t.test('missing', async t => {
@@ -27,7 +25,7 @@ t.test('empty', async t => {
 
 t.test('invalid regexp', async t => {
   process.env[k] = 'blerg'
-  t.same(getExclude(k), defaultExclude )
+  t.same(getExclude(k), defaultExclude)
   t.equal(process.env[k], defaultExclude.toString())
   t.end()
 })

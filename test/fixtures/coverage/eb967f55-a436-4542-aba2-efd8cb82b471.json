@@ -1,0 +1,270 @@
+{
+  "result": [
+    {
+      "scriptId": "318",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/lib/node-options-env.cjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 2925,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "hasCJSLoader",
+          "ranges": [
+            {
+              "startOffset": 366,
+              "endOffset": 423,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "hasESMLoader",
+          "ranges": [
+            {
+              "startOffset": 446,
+              "endOffset": 527,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "addCJS",
+          "ranges": [
+            {
+              "startOffset": 544,
+              "endOffset": 622,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "addESM",
+          "ranges": [
+            {
+              "startOffset": 638,
+              "endOffset": 665,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "cjsOnly",
+          "ranges": [
+            {
+              "startOffset": 683,
+              "endOffset": 738,
+              "count": 2
+            },
+            {
+              "startOffset": 710,
+              "endOffset": 717,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "resolveLoader",
+          "ranges": [
+            {
+              "startOffset": 985,
+              "endOffset": 1172,
+              "count": 2
+            },
+            {
+              "startOffset": 1122,
+              "endOffset": 1128,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "decode",
+          "ranges": [
+            {
+              "startOffset": 1189,
+              "endOffset": 1296,
+              "count": 6
+            },
+            {
+              "startOffset": 1215,
+              "endOffset": 1221,
+              "count": 2
+            },
+            {
+              "startOffset": 1224,
+              "endOffset": 1296,
+              "count": 4
+            },
+            {
+              "startOffset": 1246,
+              "endOffset": 1267,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "squashLoaders",
+          "ranges": [
+            {
+              "startOffset": 1320,
+              "endOffset": 2112,
+              "count": 2
+            },
+            {
+              "startOffset": 1467,
+              "endOffset": 1974,
+              "count": 0
+            },
+            {
+              "startOffset": 2002,
+              "endOffset": 2007,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "hasLoader",
+          "ranges": [
+            {
+              "startOffset": 2132,
+              "endOffset": 2718,
+              "count": 4
+            },
+            {
+              "startOffset": 2314,
+              "endOffset": 2336,
+              "count": 0
+            },
+            {
+              "startOffset": 2337,
+              "endOffset": 2391,
+              "count": 0
+            },
+            {
+              "startOffset": 2393,
+              "endOffset": 2418,
+              "count": 0
+            },
+            {
+              "startOffset": 2569,
+              "endOffset": 2628,
+              "count": 2
+            },
+            {
+              "startOffset": 2630,
+              "endOffset": 2659,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "nodeOptionsEnv",
+          "ranges": [
+            {
+              "startOffset": 2743,
+              "endOffset": 2889,
+              "count": 2
+            },
+            {
+              "startOffset": 2861,
+              "endOffset": 2873,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "319",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/lib/node-options-to-argv.cjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 970,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "exports.nodeOptionsToArgv",
+          "ranges": [
+            {
+              "startOffset": 28,
+              "endOffset": 969,
+              "count": 2
+            },
+            {
+              "startOffset": 56,
+              "endOffset": 968,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    },
+    {
+      "scriptId": "320",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/lib/argv-to-node-options.cjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 93,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "exports.argvToNodeOptions",
+          "ranges": [
+            {
+              "startOffset": 28,
+              "endOffset": 92,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 47,
+              "endOffset": 81,
+              "count": 2
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ],
+  "timestamp": 896353.688167,
+  "source-map-cache": {}
+}

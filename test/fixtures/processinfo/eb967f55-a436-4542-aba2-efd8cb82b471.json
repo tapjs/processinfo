@@ -1,0 +1,22 @@
+{
+  "date": "2022-04-22T03:50:31.466Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/isaacs/dev/tapjs/processinfo/test/esm.mjs"
+  ],
+  "execArgv": ["--loader=./lib/esm.mjs?X"],
+  "cwd": "/Users/isaacs/dev/tapjs/processinfo",
+  "pid": 51729,
+  "ppid": 50812,
+  "parent": null,
+  "uuid": "eb967f55-a436-4542-aba2-efd8cb82b471",
+  "files": [
+    "/Users/isaacs/dev/tapjs/processinfo/lib/node-options-env.cjs",
+    "/Users/isaacs/dev/tapjs/processinfo/lib/node-options-to-argv.cjs",
+    "/Users/isaacs/dev/tapjs/processinfo/lib/argv-to-node-options.cjs"
+  ],
+  "root": "eb967f55-a436-4542-aba2-efd8cb82b471",
+  "code": 1,
+  "signal": null,
+  "runtime": 237.802042
+}

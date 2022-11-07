@@ -1,0 +1,20 @@
+{
+  "date": "2022-10-19T22:41:57.892Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/isaacs/dev/tapjs/processinfo/test/cjs.cjs"
+  ],
+  "execArgv": [],
+  "NODE_OPTIONS": " --require /Users/isaacs/dev/tapjs/processinfo/node_modules/node-preload/preload-path/node-preload.js",
+  "cwd": "/Users/isaacs/dev/tapjs/processinfo",
+  "pid": 36483,
+  "ppid": 36477,
+  "parent": null,
+  "uuid": "7b5660d9-1218-4dd5-bd08-f2e015569e27",
+  "files": ["/Users/isaacs/dev/tapjs/processinfo/lib/json-file.cjs"],
+  "root": "7b5660d9-1218-4dd5-bd08-f2e015569e27",
+  "code": 1,
+  "signal": null,
+  "runtime": 25.637459,
+  "globalsAdded": ["__coverage__"]
+}

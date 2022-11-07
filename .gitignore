@@ -19,6 +19,7 @@
 !/.github/
 !/.travis.yml
 !/.gitignore
+!/.prettierignore
 !/.gitattributes
 !/coverage-map.js
 !/coverage-map.[mc]js

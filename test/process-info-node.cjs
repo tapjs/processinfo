@@ -1,37 +1,37 @@
 const t = require('tap')
-const {ProcessInfoNode} = require('../lib/process-info-node.cjs')
-const {ProcessInfo} = require('../lib/index.cjs')
+const { ProcessInfoNode } = require('../lib/process-info-node.cjs')
+const { ProcessInfo } = require('../lib/index.cjs')
 
 t.test('basic instance stuff', t => {
   // run it in every order
   const orders = [
-    ['root',   'parent', 'child',  'child2'],
-    ['root',   'child',  'parent', 'child2'],
-    ['parent', 'root',   'child',  'child2'],
-    ['child',  'root',   'parent', 'child2'],
-    ['parent', 'child',  'root',   'child2'],
-    ['child',  'parent', 'root',   'child2'],
+    ['root', 'parent', 'child', 'child2'],
+    ['root', 'child', 'parent', 'child2'],
+    ['parent', 'root', 'child', 'child2'],
+    ['child', 'root', 'parent', 'child2'],
+    ['parent', 'child', 'root', 'child2'],
+    ['child', 'parent', 'root', 'child2'],
 
-    ['child2', 'root',   'parent', 'child' ],
-    ['child2', 'root',   'child',  'parent'],
-    ['child2', 'parent', 'root',   'child' ],
-    ['child2', 'child',  'root',   'parent'],
-    ['child2', 'parent', 'child',  'root'  ],
-    ['child2', 'child',  'parent', 'root'  ],
+    ['child2', 'root', 'parent', 'child'],
+    ['child2', 'root', 'child', 'parent'],
+    ['child2', 'parent', 'root', 'child'],
+    ['child2', 'child', 'root', 'parent'],
+    ['child2', 'parent', 'child', 'root'],
+    ['child2', 'child', 'parent', 'root'],
 
-    ['root',   'child2', 'parent', 'child' ],
-    ['root',   'child2', 'child',  'parent'],
-    ['parent', 'child2', 'root',   'child' ],
-    ['child',  'child2', 'root',   'parent'],
-    ['parent', 'child2', 'child',  'root'  ],
-    ['child',  'child2', 'parent', 'root'  ],
+    ['root', 'child2', 'parent', 'child'],
+    ['root', 'child2', 'child', 'parent'],
+    ['parent', 'child2', 'root', 'child'],
+    ['child', 'child2', 'root', 'parent'],
+    ['parent', 'child2', 'child', 'root'],
+    ['child', 'child2', 'parent', 'root'],
 
-    ['root',   'parent', 'child2', 'child' ],
-    ['root',   'child',  'child2', 'parent'],
-    ['parent', 'root',   'child2', 'child' ],
-    ['child',  'root',   'child2', 'parent'],
-    ['parent', 'child',  'child2', 'root'  ],
-    ['child',  'parent', 'child2', 'root'  ],
+    ['root', 'parent', 'child2', 'child'],
+    ['root', 'child', 'child2', 'parent'],
+    ['parent', 'root', 'child2', 'child'],
+    ['child', 'root', 'child2', 'parent'],
+    ['parent', 'child', 'child2', 'root'],
+    ['child', 'parent', 'child2', 'root'],
   ]
 
   for (const order of orders) {

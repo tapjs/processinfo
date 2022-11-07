@@ -4,8 +4,8 @@ const exclude = String(
 )
 
 import * as t from 'tap'
-import {pathToFileURL, fileURLToPath} from 'node:url'
-import {resolve, dirname} from 'node:path'
+import { pathToFileURL, fileURLToPath } from 'node:url'
+import { resolve, dirname } from 'node:path'
 
 const dir = t.testdir({
   'otherload.mjs': `
@@ -37,40 +37,44 @@ const otherHooks = [
   pathToFileURL(resolve(dir, 'otherhook.mjs')),
 ].join('&')
 
-import {spawnSync} from 'node:child_process'
+import { spawnSync } from 'node:child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const esmLoader = pathToFileURL(resolve(__dirname, '../lib/esm.mjs'))
 
 t.test('alone', async t => {
-  const result = spawnSync(process.execPath, [
-    '--loader',
-    esmLoader,
-    dir + '/file.mjs',
-  ], {
-    env: {
-      ...process.env,
-      _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
-    },
-  })
+  const result = spawnSync(
+    process.execPath,
+    ['--loader', esmLoader, dir + '/file.mjs'],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
+      },
+    }
+  )
   t.equal(result.status, 0)
   t.match(result.stdout.toString(), /^file:.*?\/file.mjs\n$/)
 })
 
 t.test('with others', async t => {
-  const result = spawnSync(process.execPath, [
-    '--loader',
-    `${esmLoader}?${otherHooks}`,
-    dir + '/file.mjs',
-  ], {
-    env: {
-      ...process.env,
-      _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
-    },
-  })
+  const result = spawnSync(
+    process.execPath,
+    ['--loader', `${esmLoader}?${otherHooks}`, dir + '/file.mjs'],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
+      },
+    }
+  )
   t.equal(result.status, 0)
-  t.match(result.stdout.toString(), new RegExp(
-    '^otherload file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n' +
-    'otherhook load file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\\?otherload\n'+
-    'file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n$'))
+  t.match(
+    result.stdout.toString(),
+    new RegExp(
+      '^otherload file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n' +
+        'otherhook load file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\\?otherload\n' +
+        'file:.*?/file.mjs\\?otherresolve\\?otherhook-resolve\n$'
+    )
+  )
 })

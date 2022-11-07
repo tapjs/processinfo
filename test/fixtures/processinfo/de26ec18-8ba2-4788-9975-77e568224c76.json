@@ -1,0 +1,18 @@
+{
+  "date": "2022-10-19T22:58:46.183Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/isaacs/dev/tapjs/processinfo/test/cjs.cjs"
+  ],
+  "execArgv": [],
+  "cwd": "/Users/isaacs/dev/tapjs/processinfo",
+  "pid": 39156,
+  "ppid": 38762,
+  "parent": null,
+  "uuid": "de26ec18-8ba2-4788-9975-77e568224c76",
+  "files": ["/Users/isaacs/dev/tapjs/processinfo/lib/json-file.cjs"],
+  "root": "de26ec18-8ba2-4788-9975-77e568224c76",
+  "code": 1,
+  "signal": null,
+  "runtime": 22.1195
+}

@@ -11,6 +11,7 @@
     "./cjs": "./lib/cjs.cjs"
   },
   "scripts": {
+    "format": "prettier --write . --loglevel warn",
     "test": "tap",
     "snap": "tap",
     "preversion": "npm test",
@@ -19,6 +20,17 @@
   },
   "tap": {
     "coverage-map": "map.cjs"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
+    "arrowParens": "avoid",
+    "endOfLine": "lf"
   },
   "dependencies": {
     "pirates": "^4.0.5",
@@ -32,6 +44,8 @@
   "license": "ISC",
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.6.2",
     "diff": "^5.0.0"
   }
 }

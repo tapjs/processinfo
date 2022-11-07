@@ -1,0 +1,45 @@
+{
+  "result": [
+    {
+      "scriptId": "717",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/lib/json-file.cjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 403,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "safeJSONSync",
+          "ranges": [
+            {
+              "startOffset": 172,
+              "endOffset": 269,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "safeJSON",
+          "ranges": [
+            {
+              "startOffset": 288,
+              "endOffset": 357,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    }
+  ],
+  "timestamp": 1855144.034334,
+  "source-map-cache": {}
+}

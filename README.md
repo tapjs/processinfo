@@ -33,7 +33,7 @@ const childProcess = ProcessInfo.execSync(cmd, options)
 ```
 
 The `cmd` and `args` parameters are identical to the methods from the
-Node.js `child_process` module.  The `options` parameter is also identical,
+Node.js `child_process` module. The `options` parameter is also identical,
 but may also include an `externalID` field, which if set to a string, will
 be used as the processinfo `externalID`.
 
@@ -93,5 +93,5 @@ for (const f of proc.files) {
 ```
 
 Note: unless there has been a previous wrapped process run, nothing will be
-present in the data.  That is, `data.root` will be null, and all the maps
+present in the data. That is, `data.root` will be null, and all the maps
 will be empty.

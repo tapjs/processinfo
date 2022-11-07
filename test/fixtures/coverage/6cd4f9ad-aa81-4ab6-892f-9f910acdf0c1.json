@@ -1,0 +1,62 @@
+{
+  "result": [
+    {
+      "scriptId": "717",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/lib/json-file.cjs",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 403,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        },
+        {
+          "functionName": "safeJSONSync",
+          "ranges": [
+            {
+              "startOffset": 172,
+              "endOffset": 269,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        },
+        {
+          "functionName": "safeJSON",
+          "ranges": [
+            {
+              "startOffset": 288,
+              "endOffset": 357,
+              "count": 0
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    },
+    {
+      "scriptId": "719",
+      "url": "file:///Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-cjs/file.js",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 24,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": true
+        }
+      ]
+    }
+  ],
+  "timestamp": 1853750.796626,
+  "source-map-cache": {}
+}

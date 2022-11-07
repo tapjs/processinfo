@@ -10,8 +10,8 @@ const t = require('tap')
 const spawn = require('@npmcli/promise-spawn')
 
 const mod = require.resolve('../lib/register-coverage.cjs')
-const {resolve} = require('path')
-const {pathToFileURL} = require('url')
+const { resolve } = require('path')
+const { pathToFileURL } = require('url')
 const fs = require('fs')
 
 t.test('coverage disabled', async t => {
@@ -27,19 +27,20 @@ t.test('coverage disabled', async t => {
     `,
     'x.js': `
       require('diff')
-    `
+    `,
   })
-  const result = await spawn(process.execPath, [
-    `--require=${dir}/r.js`,
-    `${dir}/x.js`,
-  ], {
-    env: {
-      ...process.env,
-      _TAPJS_PROCESSINFO_COVERAGE_: '0',
-    },
-    stdio: 'inherit',
-    cwd: dir,
-  })
+  const result = await spawn(
+    process.execPath,
+    [`--require=${dir}/r.js`, `${dir}/x.js`],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_COVERAGE_: '0',
+      },
+      stdio: 'inherit',
+      cwd: dir,
+    }
+  )
   t.throws(() => fs.statSync(`${dir}/.tap`))
 })
 
@@ -56,12 +57,9 @@ t.test('coverage enabled', async t => {
     `,
     'x.js': `
       require('diff')
-    `
+    `,
   })
-  await spawn(process.execPath, [
-    `--require=${dir}/r.js`,
-    `${dir}/x.js`,
-  ], {
+  await spawn(process.execPath, [`--require=${dir}/r.js`, `${dir}/x.js`], {
     env: {
       ...process.env,
       _TAPJS_PROCESSINFO_COVERAGE_: '1',
@@ -81,13 +79,13 @@ t.test('coverage enabled', async t => {
               {
                 startOffset: 0,
                 endOffset: Number,
-                count: 1
-              }
+                count: 1,
+              },
             ],
-            isBlockCoverage: true
-          }
-        ]
-      }
+            isBlockCoverage: true,
+          },
+        ],
+      },
     ],
     timestamp: Number,
     'source-map-cache': {},
@@ -109,20 +107,22 @@ t.test('coverage of diff module enabled', async t => {
     `,
     'x.js': `
       require('diff')
-    `
+    `,
   })
-  const result = await spawn(process.execPath, [
-    `--require=${dir}/r.js`,
-    `${dir}/x.js`,
-  ], {
-    env: {
-      ...process.env,
-      _TAPJS_PROCESSINFO_COVERAGE_: '1',
-      _TAPJS_PROCESSINFO_COV_EXCLUDE_: '/^(?!.*node_modules[\\\\/]diff\\b.*$).*$/',
-    },
-    stdio: 'inherit',
-    cwd: dir,
-  })
+  const result = await spawn(
+    process.execPath,
+    [`--require=${dir}/r.js`, `${dir}/x.js`],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_COVERAGE_: '1',
+        _TAPJS_PROCESSINFO_COV_EXCLUDE_:
+          '/^(?!.*node_modules[\\\\/]diff\\b.*$).*$/',
+      },
+      stdio: 'inherit',
+      cwd: dir,
+    }
+  )
   const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
   // got multiple entries
   t.match(cov, {

@@ -1,0 +1,24 @@
+{
+  "date": "2022-04-22T03:50:31.683Z",
+  "argv": [
+    "/usr/local/bin/node",
+    "/Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/file.mjs"
+  ],
+  "execArgv": [
+    "--loader",
+    "file:///Users/isaacs/dev/tapjs/processinfo/lib/esm.mjs?file:///Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/otherload.mjs&file:///Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/otherresolve.mjs&file:///Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/otherhook.mjs"
+  ],
+  "NODE_OPTIONS": "\"--loader=file:///Users/isaacs/dev/tapjs/processinfo/lib/esm.mjs\"",
+  "cwd": "/Users/isaacs/dev/tapjs/processinfo",
+  "pid": 51731,
+  "ppid": 51729,
+  "parent": "eb967f55-a436-4542-aba2-efd8cb82b471",
+  "uuid": "9be50d1c-e1f8-484d-8581-f1b702626d0e",
+  "files": [
+    "/Users/isaacs/dev/tapjs/processinfo/test/tap-testdir-esm/file.mjs"
+  ],
+  "root": "eb967f55-a436-4542-aba2-efd8cb82b471",
+  "code": 0,
+  "signal": null,
+  "runtime": 3.868917
+}

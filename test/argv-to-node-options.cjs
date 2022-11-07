@@ -1,5 +1,5 @@
 const t = require('tap')
-const {argvToNodeOptions} = require('../lib/argv-to-node-options.cjs')
+const { argvToNodeOptions } = require('../lib/argv-to-node-options.cjs')
 const cases = [
   [['--loader', 'has " quotes'], '"--loader" "has \\" quotes"'],
   [['--loader', 'has \\" escape'], '"--loader" "has \\\\" escape"'],
