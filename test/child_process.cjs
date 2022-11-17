@@ -6,7 +6,11 @@ t.formatSnapshot = o =>
   : o instanceof Set ? new Set(t.formatSnapshot([...o]))
   : Object.fromEntries(Object.entries(o).map(([k, v]) => k === 'env' ? [k, filterEnv(v)]: [k, v]))
 
-const filterEnv = e => removePath(Object.fromEntries(Object.entries(e).filter(([k]) => /PROCESSINFO/.test(k) || /NODE_OPTIONS/.test(k))), process.cwd(), '{CWD}')
+// Also remove the home directory where the fixtures happened to be generated,
+// since that's '{CWD}' in the snapshots, also generated on that same dir.
+const filterEnv = e => removePath(
+  removePath(Object.fromEntries(Object.entries(e).filter(([k]) => /PROCESSINFO/.test(k) || /NODE_OPTIONS/.test(k))), process.cwd(), '{CWD}'),
+  '/Users/isaacs/dev/tapjs/processinfo', '{CWD}')
 
 const removePath = (o, path, replace, seen = new Map()) => {
   if (seen.has(o)) {
@@ -49,6 +53,7 @@ const removePath = (o, path, replace, seen = new Map()) => {
     return clean
   }
 }
+
 const calls = []
 const track = (method, args) => {
   const ret = [method, args]

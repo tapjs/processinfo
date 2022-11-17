@@ -47,7 +47,7 @@ const removePath = (o, path, replace, seen = new Map()) => {
     return clean
   }
 }
-t.formatSnapshot = o => removePath(o, process.cwd(), '{CWD}')
+t.formatSnapshot = o => removePath(removePath(o, process.cwd(), '{CWD}'), '/Users/isaacs/dev/tapjs/processinfo', '{CWD}')
 
 t.test('basic instantiation and usage', async t => {
   t.equal(ProcessInfo, ProcessInfo.ProcessInfo, 'exported as default and named')

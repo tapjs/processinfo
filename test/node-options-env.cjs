@@ -12,6 +12,8 @@ const cjsAbs = require.resolve('../lib/cjs.cjs')
 const cjsRel = './' + relative(process.cwd(), cjsAbs)
 
 const cwdEnc = encodeURIComponent(process.cwd().replace(/\\/g, '/'))
+const isaacsCwdEnc = encodeURIComponent('/Users/isaacs/dev/tapjs/processinfo')
+
 t.cleanSnapshot = s =>
   s
     .split(esmURL)
@@ -25,6 +27,8 @@ t.cleanSnapshot = s =>
     .split(cjsRel.replace(/"/g, '\\"'))
     .join('{CJSREL}')
     .split(cwdEnc.replace(/"/g, '\\"'))
+    .join('{CWD}')
+    .split(isaacsCwdEnc.replace(/"/g, '\\"'))
     .join('{CWD}')
 
 const cases = {

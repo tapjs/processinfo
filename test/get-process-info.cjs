@@ -9,7 +9,11 @@ t.formatSnapshot = obj => {
     return obj
       .split(process.cwd())
       .join('{CWD}')
+      .split('/Users/isaacs/dev/tapjs/processinfo')
+      .join('{CWD}')
       .split(process.execPath)
+      .join('{NODE}')
+      .split('/usr/local/bin/node')
       .join('{NODE}')
       .replace(/\\/g, '/')
   } else if (!obj || typeof obj !== 'object') {
