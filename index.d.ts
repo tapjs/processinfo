@@ -1,11 +1,12 @@
 /// <reference types="node" />
 import {
-  spawn,
-  spawnSync,
-  exec,
-  execSync,
-  execFile,
-  execFileSync,
+  ChildProcess,
+  ExecFileOptions,
+  ExecFileSyncOptions,
+  ExecOptions,
+  ExecSyncOptions,
+  SpawnOptions,
+  SpawnSyncOptions,
 } from 'node:child_process'
 
 declare interface ProcessInfoOptions {
@@ -19,6 +20,25 @@ declare class ProcessInfoNode {
   public files: string[] | null
   public externalID: string | null
   link(db: ProcessInfo): void
+}
+
+declare interface ProcessInfoSpawnOptions extends SpawnOptions {
+  externalID?: string
+}
+declare interface ProcessInfoSpawnSyncOptions extends SpawnSyncOptions {
+  externalID?: string
+}
+declare interface ProcessInfoExecSyncOptions extends ExecSyncOptions {
+  externalID?: string
+}
+declare interface ProcessInfoExecOptions extends ExecOptions {
+  externalID?: string
+}
+declare interface ProcessInfoExecFileSyncOptions extends ExecFileSyncOptions {
+  externalID?: string
+}
+declare interface ProcessInfoExecFileOptions extends ExecFileOptions {
+  externalID?: string
 }
 
 declare class ProcessInfo {
@@ -44,12 +64,40 @@ declare class ProcessInfo {
 
   static get Node(): typeof ProcessInfoNode
   static get ProcessInfo(): typeof ProcessInfo
-  static get spawn(): typeof spawn
-  static get spawnSync(): typeof spawnSync
-  static get exec(): typeof exec
-  static get execSync(): typeof execSync
-  static get execFile(): typeof execFile
-  static get execFileSync(): typeof execFileSync
+
+  static get spawn(): (
+    cmd: string,
+    args: string[],
+    options: ProcessInfoSpawnOptions
+  ) => ChildProcess
+  static get spawnSync(): (
+    cmd: string,
+    args: string[],
+    options: ProcessInfoSpawnSyncOptions
+  ) => SpawnSyncReturns
+  static get exec(): (
+    cmd: string,
+    options: ProcessInfoExecOptions,
+    callback?: (
+      error: ExecException | null,
+      stdout: Buffer,
+      stderr: Buffer
+    ) => void
+  ) => ChildProcess
+  static get execSync(): (
+    cmd: string,
+    options: ProcessInfoExecSyncOptions
+  ) => string | Buffer
+  static get execFile(): (
+    cmd: string,
+    args: string[],
+    options: ProcessInfoExecFileOptions
+  ) => ChildProcess
+  static get execFileSync(): (
+    cmd: string,
+    args: string[],
+    options: ProcessInfoExecFileSyncOptions
+  ) => string | Buffer
 }
 
 export = ProcessInfo
