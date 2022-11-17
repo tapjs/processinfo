@@ -8,6 +8,8 @@ const cases = [
   [[], ''],
   // this isn't _quite_ right, but Node would throw it out anyway
   [['--x', '--y \\asdf" foo'], '--x --y" "\\"asdf\\" foo"'],
+  [['--require=.\\asdf.js'], '"--require=.\\asdf.js"'],
+  [['--require=.\\asdf.js'], '--require=.\\asdf.js'],
   [[], '--invalid "unfinished quote'],
 ]
 

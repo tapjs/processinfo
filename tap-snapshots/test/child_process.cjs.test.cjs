@@ -12,7 +12,7 @@ Array [
     "cmd args",
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -29,7 +29,7 @@ Array [
     "cmd args",
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -48,7 +48,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -67,7 +67,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -87,7 +87,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -106,7 +106,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -126,7 +126,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -144,7 +144,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -163,7 +163,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -181,7 +181,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -197,7 +197,7 @@ Array [
     "cmd args",
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -212,7 +212,7 @@ Array [
     "cmd args",
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -231,7 +231,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -249,7 +249,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",
@@ -268,7 +268,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
     },
@@ -286,7 +286,7 @@ Array [
     ],
     Object {
       "env": Object {
-        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[\\\\\\\\/])(node_modules|\\\\.tap|tap-testdir-.*?|tap-snapshots|tests?|[^\\\\/]+\\\\.test\\\\.[cm]?js|__tests?__)([\\\\\\\\/]|$)/i",
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
         "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
       },
       "stdio": "ignore",

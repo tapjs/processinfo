@@ -37,7 +37,7 @@ const filterEnv = e => {
   )
   // also remove the --node-preload that nyc adds
   if (e.NODE_OPTIONS) {
-    e.NODE_OPTIONS = e.NODE_OPTIONS.replace(/"--require" "[^"]+node-preload.js" */g, '')
+    e.NODE_OPTIONS = e.NODE_OPTIONS.replace(/"--require" "[^"]*node-preload.js" */g, '')
   }
   return e
 }

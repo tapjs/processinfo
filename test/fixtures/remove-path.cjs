@@ -3,7 +3,7 @@ const removePath = (o, path, replace, seen = new Map()) => {
     return seen.get(o)
   }
   if (typeof o === 'string') {
-    return o.split(path).join(replace)
+    return o.split(path).join(replace).replace(/\\/g, '/')
   } else if (!o || typeof o !== 'object') {
     return o
   } else if (Array.isArray(o)) {

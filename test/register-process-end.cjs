@@ -1,4 +1,5 @@
 const t = require('tap')
+const { resolve } = require('path')
 
 // mocks
 const exitHandlers = []
@@ -31,8 +32,8 @@ const getProcessInfo = () => processInfo
 const mkdirCalls = []
 const writeFileCalls = []
 const fsMock = {
-  mkdirSync: (path, opt) => mkdirCalls.push([path, opt]),
-  writeFileSync: (path, data, opt) => writeFileCalls.push([path, data, opt]),
+  mkdirSync: (path, opt) => mkdirCalls.push([resolve(path), opt]),
+  writeFileSync: (path, data, opt) => writeFileCalls.push([resolve(path), data, opt]),
 }
 
 const mocks = {
@@ -54,7 +55,6 @@ t.same(processInfo, {
   runtime: 0,
 })
 
-const { resolve } = require('path')
 t.same(mkdirCalls, [
   [resolve(process.cwd(), '.tap/processinfo'), { recursive: true }],
 ])

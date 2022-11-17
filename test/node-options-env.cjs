@@ -2,14 +2,14 @@ const t = require('tap')
 const { nodeOptionsEnv } = require('../lib/node-options-env.cjs')
 const { argvToNodeOptions } = require('../lib/argv-to-node-options.cjs')
 
-const { relative } = require('path')
+const { relative, sep } = require('path')
 const { pathToFileURL } = require('url')
 
 const esmAbs = require.resolve('../lib/esm.mjs')
 const esmRel = './' + relative(process.cwd(), esmAbs)
 const esmURL = String(pathToFileURL(esmAbs))
 const cjsAbs = require.resolve('../lib/cjs.cjs')
-const cjsRel = './' + relative(process.cwd(), cjsAbs)
+const cjsRel = '.' + sep + relative(process.cwd(), cjsAbs)
 
 const cwdEnc = encodeURIComponent(process.cwd().replace(/\\/g, '/'))
 const isaacsCwdEnc = encodeURIComponent('/Users/isaacs/dev/tapjs/processinfo')
