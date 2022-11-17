@@ -21,20 +21,26 @@ const removePath = require('./fixtures/remove-path.cjs')
 const cwds = [
   process.cwd(),
   '/Users/isaacs/dev/tapjs/processinfo',
-  process.cwd().replace(/\\/g, '/'),
   '/' + process.cwd().replace(/\\/g, '/'),
+  process.cwd().replace(/\\/g, '/'),
 ]
 
 const filterCWD = o => cwds.reduce((o, cwd) => removePath(o, cwd, '{CWD}'), o)
 
-const filterEnv = e =>
-  filterCWD(
+const filterEnv = e => {
+  e = filterCWD(
     Object.fromEntries(
       Object.entries(e).filter(
         ([k]) => /PROCESSINFO/.test(k) || /NODE_OPTIONS/.test(k)
       )
     )
   )
+  // also remove the --node-preload that nyc adds
+  if (e.NODE_OPTIONS) {
+    e.NODE_OPTIONS = e.NODE_OPTIONS.replace(/"--require" "[^"]+node-preload.js" */g, '')
+  }
+  return e
+}
 
 const calls = []
 const track = (method, args) => {
