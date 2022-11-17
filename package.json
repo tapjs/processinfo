@@ -44,9 +44,10 @@
   "license": "ISC",
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
+    "@types/node": "^18.11.9",
+    "diff": "^5.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.6.2",
-    "diff": "^5.0.0"
+    "prettier": "^2.6.2"
   },
   "repository": "https://github.com/tapjs/processinfo"
 }
