@@ -51,6 +51,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -79,6 +80,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -107,6 +109,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -135,6 +138,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -163,6 +167,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -191,6 +196,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -219,6 +225,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -247,6 +254,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -275,6 +283,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -303,6 +312,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -331,6 +341,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -359,6 +370,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -387,6 +399,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -415,6 +428,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -443,6 +457,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -471,6 +486,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -499,6 +515,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -527,6 +544,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -555,6 +573,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -583,6 +602,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -611,6 +631,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -639,6 +660,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -667,6 +689,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -691,6 +714,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -710,6 +734,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -745,6 +770,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -764,6 +790,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -794,6 +821,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -822,6 +850,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -850,6 +879,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -878,6 +908,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -906,6 +937,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -934,6 +966,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -962,6 +995,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -990,6 +1024,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1018,6 +1053,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1046,6 +1082,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1074,6 +1111,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1102,6 +1140,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1130,6 +1169,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1158,6 +1198,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1181,6 +1222,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -1201,6 +1243,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -1235,6 +1278,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -1255,6 +1299,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -1285,6 +1330,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1313,6 +1359,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1341,6 +1388,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -1368,6 +1416,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:33.312Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1393,6 +1442,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:17.387Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1418,6 +1468,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:57:14.186Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1443,6 +1494,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1469,6 +1521,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1495,6 +1548,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:49:07.389Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1520,6 +1574,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:38:50.947Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1545,6 +1600,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:58.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1570,6 +1626,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1596,6 +1653,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1622,6 +1680,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:41:57.892Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1647,6 +1706,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:44.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1672,6 +1732,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1698,6 +1759,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:14.189Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1723,6 +1785,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1749,6 +1812,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1775,6 +1839,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:27.088Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1800,6 +1865,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1826,6 +1892,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1852,6 +1919,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:58:46.183Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1873,6 +1941,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:24.462Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1898,6 +1967,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:11.402Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -1925,6 +1995,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1951,6 +2022,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -1977,6 +2049,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2003,6 +2076,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2029,6 +2103,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2055,6 +2130,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2081,6 +2157,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2107,6 +2184,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2133,6 +2211,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2170,6 +2249,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2195,6 +2275,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2214,6 +2295,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -2248,6 +2330,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2273,6 +2356,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2292,6 +2376,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -2326,6 +2411,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2351,6 +2437,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -2370,6 +2457,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -2401,6 +2489,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2429,6 +2518,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2457,6 +2547,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2482,6 +2573,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -2510,6 +2602,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2538,6 +2631,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2563,6 +2657,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -2588,6 +2683,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -2613,6 +2709,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -2639,6 +2736,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2664,6 +2762,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2693,6 +2792,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2718,6 +2818,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -2747,6 +2848,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2772,6 +2874,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -2800,6 +2903,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2828,6 +2932,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2856,6 +2961,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2884,6 +2990,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2912,6 +3019,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2937,6 +3045,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -2965,6 +3074,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -2990,6 +3100,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3018,6 +3129,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3046,6 +3158,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3074,6 +3187,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3099,6 +3213,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3125,6 +3240,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3154,6 +3270,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3182,6 +3299,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3210,6 +3328,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3235,6 +3354,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3260,6 +3380,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3288,6 +3409,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3313,6 +3435,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3339,6 +3462,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3367,6 +3491,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3392,6 +3517,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3421,6 +3547,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3449,6 +3576,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3474,6 +3602,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3500,6 +3629,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3528,6 +3658,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3556,6 +3687,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3581,6 +3713,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3610,6 +3743,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3638,6 +3772,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3666,6 +3801,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3694,6 +3830,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3719,6 +3856,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -3748,6 +3886,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3776,6 +3915,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3804,6 +3944,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3832,6 +3973,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3857,6 +3999,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3878,6 +4021,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -3906,6 +4050,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3934,6 +4079,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -3968,6 +4114,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -3993,6 +4140,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -4012,6 +4160,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -4038,6 +4187,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4066,6 +4216,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4091,6 +4242,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4121,6 +4273,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4149,6 +4302,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4177,6 +4331,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4202,6 +4357,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4230,6 +4386,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4258,6 +4415,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4283,6 +4441,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4308,6 +4467,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4333,6 +4493,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -4359,6 +4520,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4384,6 +4546,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -4413,6 +4576,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4438,6 +4602,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -4467,6 +4632,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4492,6 +4658,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4520,6 +4687,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4548,6 +4716,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4576,6 +4745,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4604,6 +4774,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4632,6 +4803,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4657,6 +4829,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4685,6 +4858,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4710,6 +4884,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4738,6 +4913,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4766,6 +4942,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4794,6 +4971,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4819,6 +4997,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -4845,6 +5024,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -4874,6 +5054,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4902,6 +5083,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4930,6 +5112,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -4955,6 +5138,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -4980,6 +5164,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -5008,6 +5193,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5033,6 +5219,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -5059,6 +5246,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -5087,6 +5275,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5112,6 +5301,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -5141,6 +5331,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5165,6 +5356,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -5184,6 +5376,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -5219,6 +5412,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -5238,6 +5432,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -5268,6 +5463,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5296,6 +5492,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5321,6 +5518,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -5347,6 +5545,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -5375,6 +5574,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5403,6 +5603,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5428,6 +5629,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -5457,6 +5659,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5485,6 +5688,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5513,6 +5717,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5541,6 +5746,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5566,6 +5772,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -5595,6 +5802,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5623,6 +5831,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5651,6 +5860,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5679,6 +5889,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5704,6 +5915,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -5725,6 +5937,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -5753,6 +5966,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5781,6 +5995,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5804,6 +6019,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -5824,6 +6040,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -5858,6 +6075,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -5878,6 +6096,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -5908,6 +6127,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -5942,6 +6162,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -5967,6 +6188,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -5986,6 +6208,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -6012,6 +6235,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -6040,6 +6264,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -6065,6 +6290,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -6104,6 +6330,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6132,6 +6359,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6160,6 +6388,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6188,6 +6417,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6216,6 +6446,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6244,6 +6475,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6272,6 +6504,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6300,6 +6533,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6328,6 +6562,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6356,6 +6591,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6384,6 +6620,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6412,6 +6649,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6440,6 +6678,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6468,6 +6707,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6496,6 +6736,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6524,6 +6765,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6552,6 +6794,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6580,6 +6823,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6608,6 +6852,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6636,6 +6881,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6664,6 +6910,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6692,6 +6939,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6720,6 +6968,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6744,6 +6993,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -6763,6 +7013,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -6798,6 +7049,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -6817,6 +7069,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -6847,6 +7100,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6875,6 +7129,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6903,6 +7158,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6931,6 +7187,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6959,6 +7216,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -6987,6 +7245,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7015,6 +7274,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7043,6 +7303,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7071,6 +7332,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7099,6 +7361,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7127,6 +7390,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7155,6 +7419,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7183,6 +7448,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7211,6 +7477,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7234,6 +7501,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -7254,6 +7522,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -7288,6 +7557,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -7308,6 +7578,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -7338,6 +7609,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7366,6 +7638,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7394,6 +7667,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -7421,6 +7695,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:33.312Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7446,6 +7721,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:17.387Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7471,6 +7747,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:57:14.186Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7496,6 +7773,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7522,6 +7800,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7548,6 +7827,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:49:07.389Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7573,6 +7853,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:38:50.947Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7598,6 +7879,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:58.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7623,6 +7905,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7649,6 +7932,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7675,6 +7959,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:41:57.892Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7700,6 +7985,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:44.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7725,6 +8011,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7751,6 +8038,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:14.189Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7776,6 +8064,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7802,6 +8091,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7828,6 +8118,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:27.088Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7853,6 +8144,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7879,6 +8171,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -7905,6 +8198,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:58:46.183Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7926,6 +8220,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:24.462Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7951,6 +8246,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:11.402Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -7978,6 +8274,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8004,6 +8301,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8030,6 +8328,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8056,6 +8355,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8082,6 +8382,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8108,6 +8409,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8134,6 +8436,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8160,6 +8463,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8186,6 +8490,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8223,6 +8528,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8248,6 +8554,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8267,6 +8574,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -8301,6 +8609,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8326,6 +8635,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8345,6 +8655,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -8379,6 +8690,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8404,6 +8716,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -8423,6 +8736,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -8454,6 +8768,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8482,6 +8797,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8510,6 +8826,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8535,6 +8852,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -8563,6 +8881,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8591,6 +8910,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8616,6 +8936,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -8641,6 +8962,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -8666,6 +8988,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -8692,6 +9015,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8717,6 +9041,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8746,6 +9071,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8771,6 +9097,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -8800,6 +9127,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8825,6 +9153,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -8853,6 +9182,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8881,6 +9211,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8909,6 +9240,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8937,6 +9269,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8965,6 +9298,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -8990,6 +9324,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9018,6 +9353,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9043,6 +9379,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9071,6 +9408,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9099,6 +9437,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9127,6 +9466,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9152,6 +9492,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9178,6 +9519,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9207,6 +9549,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9235,6 +9578,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9263,6 +9607,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9288,6 +9633,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9313,6 +9659,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9341,6 +9688,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9366,6 +9714,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9392,6 +9741,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9420,6 +9770,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9445,6 +9796,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9474,6 +9826,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9502,6 +9855,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9527,6 +9881,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9553,6 +9908,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9581,6 +9937,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9609,6 +9966,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9634,6 +9992,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9663,6 +10022,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9691,6 +10051,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9719,6 +10080,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9747,6 +10109,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9772,6 +10135,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -9801,6 +10165,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9829,6 +10194,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9857,6 +10223,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9885,6 +10252,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9910,6 +10278,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9931,6 +10300,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -9959,6 +10329,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -9987,6 +10358,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10021,6 +10393,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -10046,6 +10419,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -10065,6 +10439,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -10091,6 +10466,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10119,6 +10495,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10144,6 +10521,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10174,6 +10552,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10202,6 +10581,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10230,6 +10610,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10255,6 +10636,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10283,6 +10665,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10311,6 +10694,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10336,6 +10720,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10361,6 +10746,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10386,6 +10772,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -10412,6 +10799,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10437,6 +10825,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -10466,6 +10855,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10491,6 +10881,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -10520,6 +10911,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10545,6 +10937,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10573,6 +10966,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10601,6 +10995,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10629,6 +11024,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10657,6 +11053,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10685,6 +11082,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10710,6 +11108,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10738,6 +11137,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10763,6 +11163,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -10791,6 +11192,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10819,6 +11221,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10847,6 +11250,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10872,6 +11276,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -10898,6 +11303,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -10927,6 +11333,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10955,6 +11362,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -10983,6 +11391,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11008,6 +11417,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11033,6 +11443,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11061,6 +11472,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11086,6 +11498,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -11112,6 +11525,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11140,6 +11554,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11165,6 +11580,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -11194,6 +11610,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11218,6 +11635,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -11237,6 +11655,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -11272,6 +11691,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -11291,6 +11711,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -11321,6 +11742,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11349,6 +11771,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11374,6 +11797,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -11400,6 +11824,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11428,6 +11853,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11456,6 +11882,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11481,6 +11908,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -11510,6 +11938,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11538,6 +11967,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11566,6 +11996,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11594,6 +12025,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11619,6 +12051,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -11648,6 +12081,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11676,6 +12110,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11704,6 +12139,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11732,6 +12168,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11757,6 +12194,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11778,6 +12216,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -11806,6 +12245,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11834,6 +12274,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11857,6 +12298,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -11877,6 +12319,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -11911,6 +12354,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -11931,6 +12375,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -11961,6 +12406,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -11995,6 +12441,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -12020,6 +12467,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -12039,6 +12487,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -12065,6 +12514,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -12093,6 +12543,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -12118,6 +12569,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -12157,6 +12609,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12185,6 +12638,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12213,6 +12667,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12241,6 +12696,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12269,6 +12725,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12297,6 +12754,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12325,6 +12783,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12353,6 +12812,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12381,6 +12841,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12409,6 +12870,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12437,6 +12899,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12465,6 +12928,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12493,6 +12957,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12521,6 +12986,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12549,6 +13015,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12577,6 +13044,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12605,6 +13073,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12633,6 +13102,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12661,6 +13131,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12689,6 +13160,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12717,6 +13189,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12745,6 +13218,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12773,6 +13247,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12797,6 +13272,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -12816,6 +13292,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -12851,6 +13328,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -12870,6 +13348,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -12900,6 +13379,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12928,6 +13408,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12956,6 +13437,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -12984,6 +13466,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13012,6 +13495,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13040,6 +13524,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13068,6 +13553,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13096,6 +13582,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13124,6 +13611,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13152,6 +13640,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13180,6 +13669,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13208,6 +13698,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13236,6 +13727,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13264,6 +13756,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13287,6 +13780,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -13307,6 +13801,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -13341,6 +13836,7 @@ Object {
                 "--loader",
                 "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
               ],
+              "externalID": null,
               "files": Array [
                 "{CWD}/test/tap-testdir-esm/file.mjs",
               ],
@@ -13361,6 +13857,7 @@ Object {
           "execArgv": Array [
             "--loader=./lib/esm.mjs?X",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/lib/node-options-env.cjs",
             "{CWD}/lib/node-options-to-argv.cjs",
@@ -13391,6 +13888,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13419,6 +13917,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13447,6 +13946,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -13474,6 +13974,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:33.312Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13499,6 +14000,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:17.387Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13524,6 +14026,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:57:14.186Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13549,6 +14052,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13575,6 +14079,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13601,6 +14106,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:49:07.389Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13626,6 +14132,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:38:50.947Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13651,6 +14158,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:58.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13676,6 +14184,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13702,6 +14211,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13728,6 +14238,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:41:57.892Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13753,6 +14264,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:39:44.797Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13778,6 +14290,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13804,6 +14317,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:48:14.189Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13829,6 +14343,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13855,6 +14370,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13881,6 +14397,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:27.088Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13906,6 +14423,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13932,6 +14450,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -13958,6 +14477,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:58:46.183Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -13979,6 +14499,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:24.462Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -14004,6 +14525,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:46:11.402Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
         ],
@@ -14031,6 +14553,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:55.253Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14057,6 +14580,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:22.735Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14083,6 +14607,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:00:32.492Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14109,6 +14634,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T22:44:52.739Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14135,6 +14661,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:08:05.998Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14161,6 +14688,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:09:28.983Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14187,6 +14715,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:01:02.247Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14213,6 +14742,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:02:03.710Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14239,6 +14769,7 @@ Object {
         "cwd": "{CWD}",
         "date": "2022-10-19T23:07:35.363Z",
         "execArgv": Array [],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/json-file.cjs",
           "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14276,6 +14807,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14301,6 +14833,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14320,6 +14853,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -14354,6 +14888,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14379,6 +14914,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14398,6 +14934,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -14432,6 +14969,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14457,6 +14995,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -14476,6 +15015,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -14507,6 +15047,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14535,6 +15076,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14563,6 +15105,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14588,6 +15131,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -14616,6 +15160,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14644,6 +15189,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14669,6 +15215,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -14694,6 +15241,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -14719,6 +15267,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -14745,6 +15294,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14770,6 +15320,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14799,6 +15350,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14824,6 +15376,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -14853,6 +15406,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14878,6 +15432,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -14906,6 +15461,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14934,6 +15490,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14962,6 +15519,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -14990,6 +15548,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15018,6 +15577,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15043,6 +15603,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15071,6 +15632,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15096,6 +15658,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15124,6 +15687,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15152,6 +15716,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15180,6 +15745,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15205,6 +15771,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15231,6 +15798,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15260,6 +15828,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15288,6 +15857,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15316,6 +15886,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15341,6 +15912,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15366,6 +15938,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15394,6 +15967,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15419,6 +15993,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15445,6 +16020,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15473,6 +16049,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15498,6 +16075,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15527,6 +16105,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15555,6 +16134,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15580,6 +16160,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15606,6 +16187,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15634,6 +16216,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15662,6 +16245,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15687,6 +16271,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15716,6 +16301,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15744,6 +16330,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15772,6 +16359,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15800,6 +16388,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15825,6 +16414,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -15854,6 +16444,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15882,6 +16473,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15910,6 +16502,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15938,6 +16531,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -15963,6 +16557,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -15984,6 +16579,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16012,6 +16608,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16040,6 +16637,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16074,6 +16672,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -16099,6 +16698,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -16118,6 +16718,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -16144,6 +16745,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16172,6 +16774,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16197,6 +16800,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16227,6 +16831,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16255,6 +16860,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16283,6 +16889,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16308,6 +16915,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:33.312Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16336,6 +16944,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16364,6 +16973,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16389,6 +16999,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:17.387Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16414,6 +17025,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:57:14.186Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16439,6 +17051,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.761Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [],
       "globalsAdded": Array [
         "__coverage__",
@@ -16465,6 +17078,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16490,6 +17104,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:55.253Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -16519,6 +17134,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16544,6 +17160,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:22.735Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -16573,6 +17190,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16598,6 +17216,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:49:07.389Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16626,6 +17245,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16654,6 +17274,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16682,6 +17303,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16710,6 +17332,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16738,6 +17361,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16763,6 +17387,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:38:50.947Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16791,6 +17416,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16816,6 +17442,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:58.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -16844,6 +17471,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16872,6 +17500,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16900,6 +17529,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -16925,6 +17555,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:00:32.492Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -16951,6 +17582,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:52.739Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -16980,6 +17612,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17008,6 +17641,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17036,6 +17670,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17061,6 +17696,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:41:57.892Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17086,6 +17722,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:39:44.797Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17114,6 +17751,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17139,6 +17777,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:08:05.998Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -17165,6 +17804,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:48:14.189Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17193,6 +17833,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17218,6 +17859,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:09:28.983Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -17247,6 +17889,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17271,6 +17914,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -17290,6 +17934,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -17325,6 +17970,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -17344,6 +17990,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -17374,6 +18021,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17402,6 +18050,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17427,6 +18076,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:01:02.247Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -17453,6 +18103,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:27.088Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17481,6 +18132,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17509,6 +18161,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17534,6 +18187,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:02:03.710Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -17563,6 +18217,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17591,6 +18246,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17619,6 +18275,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17647,6 +18304,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17672,6 +18330,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T23:07:35.363Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
         "{CWD}/test/tap-testdir-cjs/file.js",
@@ -17701,6 +18360,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17729,6 +18389,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17757,6 +18418,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17785,6 +18447,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17810,6 +18473,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:58:46.183Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17831,6 +18495,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:44:24.462Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -17859,6 +18524,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17887,6 +18553,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -17910,6 +18577,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -17930,6 +18598,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -17964,6 +18633,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -17984,6 +18654,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -18014,6 +18685,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -18048,6 +18720,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -18073,6 +18746,7 @@ Object {
             "--loader",
             "file://{CWD}/lib/esm.mjs",
           ],
+          "externalID": null,
           "files": Array [
             "{CWD}/test/tap-testdir-esm/file.mjs",
           ],
@@ -18092,6 +18766,7 @@ Object {
       "execArgv": Array [
         "--loader=./lib/esm.mjs?X",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/node-options-env.cjs",
         "{CWD}/lib/node-options-to-argv.cjs",
@@ -18118,6 +18793,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -18146,6 +18822,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -18171,6 +18848,7 @@ Object {
       "cwd": "{CWD}",
       "date": "2022-10-19T22:46:11.402Z",
       "execArgv": Array [],
+      "externalID": null,
       "files": Array [
         "{CWD}/lib/json-file.cjs",
       ],
@@ -18236,6 +18914,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -18260,6 +18939,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -18279,6 +18959,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -18314,6 +18995,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -18333,6 +19015,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -18363,6 +19046,7 @@ Object {
         "--loader",
         "file://{CWD}/lib/esm.mjs",
       ],
+      "externalID": null,
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
@@ -18386,6 +19070,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -18406,6 +19091,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -18440,6 +19126,7 @@ Object {
               "--loader",
               "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
             ],
+            "externalID": null,
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
@@ -18460,6 +19147,7 @@ Object {
         "execArgv": Array [
           "--loader=./lib/esm.mjs?X",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/lib/node-options-env.cjs",
           "{CWD}/lib/node-options-to-argv.cjs",
@@ -18484,6 +19172,7 @@ Object {
   "execArgv": Array [
     "--loader=./lib/esm.mjs?X",
   ],
+  "externalID": null,
   "files": Array [
     "{CWD}/lib/node-options-env.cjs",
     "{CWD}/lib/node-options-to-argv.cjs",
@@ -18511,6 +19200,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs?file://{CWD}/test/tap-testdir-esm/otherload.mjs&file://{CWD}/test/tap-testdir-esm/otherresolve.mjs&file://{CWD}/test/tap-testdir-esm/otherhook.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -18536,6 +19226,7 @@ Object {
           "--loader",
           "file://{CWD}/lib/esm.mjs",
         ],
+        "externalID": null,
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
@@ -18555,6 +19246,7 @@ Object {
     "execArgv": Array [
       "--loader=./lib/esm.mjs?X",
     ],
+    "externalID": null,
     "files": Array [
       "{CWD}/lib/node-options-env.cjs",
       "{CWD}/lib/node-options-to-argv.cjs",
