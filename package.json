@@ -36,7 +36,6 @@
   "dependencies": {
     "pirates": "^4.0.5",
     "process-on-spawn": "^1.0.0",
-    "tap": "^16.3.0",
     "uuid": "^8.3.2"
   },
   "engines": {
@@ -48,7 +47,8 @@
     "@types/node": "^18.11.9",
     "diff": "^5.0.0",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "tap": "^16.3.0"
   },
   "repository": "https://github.com/tapjs/processinfo"
 }
