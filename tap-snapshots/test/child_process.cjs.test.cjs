@@ -221,6 +221,23 @@ Array [
 ]
 `
 
+exports[`test/child_process.cjs TAP > spawn, no args, options 1`] = `
+Array [
+  "spawn",
+  Array [
+    "cmd",
+    Array [],
+    Object {
+      "env": Object {
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
+        "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
+      },
+      "stdio": "ignore",
+    },
+  ],
+]
+`
+
 exports[`test/child_process.cjs TAP > spawn, no options 1`] = `
 Array [
   "spawn",
@@ -284,6 +301,23 @@ Array [
     Array [
       "args",
     ],
+    Object {
+      "env": Object {
+        "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",
+        "NODE_OPTIONS": "\\"\\" \\"--loader=file://{CWD}/lib/esm.mjs\\"",
+      },
+      "stdio": "ignore",
+    },
+  ],
+]
+`
+
+exports[`test/child_process.cjs TAP > spawnSync, no args, options 1`] = `
+Array [
+  "spawnSync",
+  Array [
+    "cmd",
+    Array [],
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[///])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^//]+/.test/.[cm]?js|__tests?__)([///]|$)/i",

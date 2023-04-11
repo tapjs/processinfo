@@ -64,10 +64,18 @@ t.matchSnapshot(
   cp.spawn('cmd', ['args'], { stdio: 'ignore' }),
   'spawn, options'
 )
+t.matchSnapshot(
+  cp.spawn('cmd', { stdio: 'ignore' }),
+  'spawn, no args, options'
+)
 t.matchSnapshot(cp.spawnSync('cmd', ['args']), 'spawnSync no options')
 t.matchSnapshot(
   cp.spawnSync('cmd', ['args'], { stdio: 'ignore' }),
   'spawnSync options'
+)
+t.matchSnapshot(
+  cp.spawnSync('cmd', { stdio: 'ignore' }),
+  'spawnSync, no args, options'
 )
 t.matchSnapshot(
   cp.exec('cmd args', () => {}),
