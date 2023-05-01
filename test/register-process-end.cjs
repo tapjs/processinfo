@@ -37,7 +37,7 @@ const fsMock = {
 }
 
 const mocks = {
-  'signal-exit': onExit,
+  'signal-exit': { onExit },
   fs: { ...require('fs'), ...fsMock },
   '../lib/register-coverage.cjs': registerCoverage,
   '../lib/get-process-info.cjs': { getProcessInfo },

@@ -36,6 +36,7 @@
   "dependencies": {
     "pirates": "^4.0.5",
     "process-on-spawn": "^1.0.0",
+    "signal-exit": "^4.0.1",
     "uuid": "^8.3.2"
   },
   "engines": {
