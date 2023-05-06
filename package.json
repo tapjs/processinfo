@@ -40,7 +40,7 @@
     "uuid": "^8.3.2"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=16.12"
   },
   "license": "ISC",
   "devDependencies": {
