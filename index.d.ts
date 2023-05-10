@@ -17,11 +17,23 @@ declare interface ProcessInfoOptions {
 }
 
 declare class ProcessInfoNode {
-  public parent: ProcessInfoNode | null
-  public children: ProcessInfoNode[] | null
-  public files: string[] | null
-  public externalID: string | null
+  parent: ProcessInfoNode | null
+  root: ProcessInfoNode | null
+  children: ProcessInfoNode[] | null
+  files: string[] | null
+  externalID?: string | null
+  uuid: string
+  date: string
+  argv: string[]
+  execArgv: string[]
+  pid: number
+  ppid: number
+  cwd: string
+  code?: number | null
+  signal: string | null
+  runtime: number
   link(db: ProcessInfo): void
+  NODE_OPTIONS?: string | null
 }
 
 declare interface ProcessInfoSpawnOptions extends SpawnOptions {
