@@ -2,6 +2,7 @@
   "name": "@tapjs/processinfo",
   "version": "1.0.10",
   "main": "lib/index.cjs",
+  "types": "index.d.ts",
   "files": [
     "index.d.ts",
     "lib"
