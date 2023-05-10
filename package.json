@@ -1,6 +1,6 @@
 {
   "name": "@tapjs/processinfo",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "lib/index.cjs",
   "types": "index.d.ts",
   "files": [
