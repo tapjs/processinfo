@@ -81,7 +81,7 @@ declare class ProcessInfo {
   private pendingRoot: Map<string, ProcessInfoNode>
   private pendingParent: Map<string, ProcessInfoNode>
 
-  constructor(options: ProcessInfoOptions)
+  constructor(options?: ProcessInfoOptions)
 
   save(): Promise<void>
   saveSync(): void
