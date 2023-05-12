@@ -31,7 +31,7 @@ export const globalPreload = (context: { port?: GPPort }) => {
 if (typeof port !== 'undefined') {
   const { createRequire } = getBuiltin('module')
   const require = createRequire(${JSON.stringify(base)})
-  const getProcessInfo = require('./get-process-info.js')
+  const { getProcessInfo } = require('./get-process-info.js')
   // must be called eagerly here.
   // this does all the registration as well.
   const processInfo = getProcessInfo()

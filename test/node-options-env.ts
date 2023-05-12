@@ -1,18 +1,17 @@
-const t = require('tap')
-const { nodeOptionsEnv } = require('../lib/node-options-env.cjs')
-const { argvToNodeOptions } = require('../lib/argv-to-node-options.cjs')
+import t from 'tap'
+import { argvToNodeOptions } from '../dist/cjs/argv-to-node-options.js'
+import { nodeOptionsEnv } from '../dist/cjs/node-options-env.js'
 
-const { relative, sep } = require('path')
-const { pathToFileURL } = require('url')
+import { relative, sep } from 'path'
+import { pathToFileURL } from 'url'
 
-const esmAbs = require.resolve('../lib/esm.mjs')
+const esmAbs = require.resolve('../dist/mjs/esm.mjs')
 const esmRel = './' + relative(process.cwd(), esmAbs)
 const esmURL = String(pathToFileURL(esmAbs))
-const cjsAbs = require.resolve('../lib/cjs.cjs')
+const cjsAbs = require.resolve('../dist/cjs/cjs.js')
 const cjsRel = '.' + sep + relative(process.cwd(), cjsAbs)
 
 const cwdEnc = encodeURIComponent(process.cwd().replace(/\\/g, '/'))
-const isaacsCwdEnc = encodeURIComponent('/Users/isaacs/dev/tapjs/processinfo')
 
 t.cleanSnapshot = s =>
   s
@@ -28,10 +27,13 @@ t.cleanSnapshot = s =>
     .join('{CJSREL}')
     .split(cwdEnc.replace(/"/g, '\\"'))
     .join('{CWD}')
-    .split(isaacsCwdEnc.replace(/"/g, '\\"'))
-    .join('{CWD}')
 
-const cases = {
+const cases: {
+  [name: string]: [
+    env: { NODE_OPTIONS?: string | string[] },
+    args: string[]
+  ]
+} = {
   empty: [{}, []],
   'has NO': [{ NODE_OPTIONS: '--x y -z' }, []],
   'has argv': [{}, ['--a', 'b']],
@@ -78,7 +80,10 @@ const cases = {
   'short opts has cjs absolute': [{ NODE_OPTIONS: ['-r', cjsAbs] }, []],
 
   'args has both': [{}, ['-r', cjsRel, '--loader=' + esmURL]],
-  'opts has both': [{ NODE_OPTIONS: ['-r', cjsRel, '--loader=' + esmURL] }, []],
+  'opts has both': [
+    { NODE_OPTIONS: ['-r', cjsRel, '--loader=' + esmURL] },
+    [],
+  ],
   'opts esm, args cjs': [
     { NODE_OPTIONS: ['-r', cjsRel] },
     ['--loader=' + esmURL],
@@ -106,7 +111,10 @@ const cases = {
     [],
   ],
 
-  'opts loader not found': [{ NODE_OPTIONS: ['--loader', 'not foud'] }, []],
+  'opts loader not found': [
+    { NODE_OPTIONS: ['--loader', 'not foud'] },
+    [],
+  ],
   'args loader not found': [{}, ['--loader', 'not foud']],
   'opts loader missing': [{ NODE_OPTIONS: ['--loader'] }, []],
   'args loader missing': [{}, ['--loader']],
@@ -116,5 +124,8 @@ for (const [name, [env, argv]] of Object.entries(cases)) {
   if (Array.isArray(env.NODE_OPTIONS)) {
     env.NODE_OPTIONS = argvToNodeOptions(env.NODE_OPTIONS)
   }
-  t.matchSnapshot(nodeOptionsEnv(env, argv), name)
+  t.matchSnapshot(
+    nodeOptionsEnv(env as { NODE_OPTIONS?: string }, argv),
+    name
+  )
 }

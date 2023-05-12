@@ -1,4 +1,9 @@
-const removePath = (o, path, replace, seen = new Map()) => {
+export const removePath = (
+  o: any,
+  path: string,
+  replace: string,
+  seen: Map<any, any> = new Map()
+): typeof o => {
   if (seen.has(o)) {
     return seen.get(o)
   }
@@ -39,4 +44,3 @@ const removePath = (o, path, replace, seen = new Map()) => {
     return clean
   }
 }
-module.exports = removePath

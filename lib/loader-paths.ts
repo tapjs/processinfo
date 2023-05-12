@@ -5,7 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'url'
 
 export const cjsLoader = resolve('../cjs/cjs.js')
 const esmLoaderPath = resolve('../mjs/esm.mjs')
-export const esmLoader = pathToFileURL(esmLoaderPath)
+export const esmLoader = String(pathToFileURL(esmLoaderPath))
 
 const res = (p: string) =>
   /^\.?\.[\\/]/.test(p) ? resolve(pathResolve(p)) : resolve(p)

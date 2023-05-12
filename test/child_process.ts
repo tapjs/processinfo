@@ -1,11 +1,11 @@
-const t = require('tap')
-t.formatSnapshot = o =>
+import t from 'tap'
+const formatSnapshot = (o: any): any =>
   !o || typeof o !== 'object'
     ? o
     : Array.isArray(o)
     ? o.map(el => t.formatSnapshot(el))
     : o instanceof Map
-    ? new Map(t.formatSnapshot([...o.entries()]))
+    ? new Map(formatSnapshot([...o.entries()]))
     : o instanceof Set
     ? new Set(t.formatSnapshot([...o]))
     : Object.fromEntries(
@@ -13,8 +13,9 @@ t.formatSnapshot = o =>
           k === 'env' ? [k, filterEnv(v)] : [k, v]
         )
       )
+t.formatSnapshot = formatSnapshot
 
-const removePath = require('./fixtures/remove-path.cjs')
+import { removePath } from './fixtures/remove-path'
 
 // Also remove the home directory where the fixtures happened to be generated,
 // since that's '{CWD}' in the snapshots, also generated on that same dir.
@@ -25,9 +26,10 @@ const cwds = [
   process.cwd().replace(/\\/g, '/'),
 ]
 
-const filterCWD = o => cwds.reduce((o, cwd) => removePath(o, cwd, '{CWD}'), o)
+const filterCWD = (o: any) =>
+  cwds.reduce((o, cwd) => removePath(o, cwd, '{CWD}'), o)
 
-const filterEnv = e => {
+const filterEnv = (e: any) => {
   e = filterCWD(
     Object.fromEntries(
       Object.entries(e).filter(
@@ -37,25 +39,27 @@ const filterEnv = e => {
   )
   // also remove the --node-preload that nyc adds
   if (e.NODE_OPTIONS) {
-    e.NODE_OPTIONS = e.NODE_OPTIONS.replace(/"--require" "[^"]*node-preload.js" */g, '')
+    e.NODE_OPTIONS = e.NODE_OPTIONS.replace(
+      /"--require" "[^"]*node-preload.js" */g,
+      ''
+    )
   }
   return e
 }
 
-const calls = []
-const track = (method, args) => {
-  const ret = [method, args]
-  calls.push(ret)
-  return ret
+const calls: [string, any[]][] = []
+const track = (method: string, args: any[]) => {
+  calls.push([method, args])
+  return [method, args]
 }
-const cp = t.mock('../lib/child_process.cjs', {
+const cp = t.mock('../dist/cjs/child_process.js', {
   child_process: {
-    spawn: (...args) => track('spawn', args),
-    spawnSync: (...args) => track('spawnSync', args),
-    exec: (...args) => track('exec', args),
-    execSync: (...args) => track('execSync', args),
-    execFile: (...args) => track('execFile', args),
-    execFileSync: (...args) => track('execFileSync', args),
+    spawn: (...args: any[]) => track('spawn', args),
+    spawnSync: (...args: any[]) => track('spawnSync', args),
+    exec: (...args: any[]) => track('exec', args),
+    execSync: (...args: any[]) => track('execSync', args),
+    execFile: (...args: any[]) => track('execFile', args),
+    execFileSync: (...args: any[]) => track('execFileSync', args),
   },
 })
 
@@ -106,7 +110,10 @@ t.matchSnapshot(
   cp.execFile('cmd', ['args'], null, { stdio: 'ignore' }, () => {}),
   'execFile, null arg, options'
 )
-t.matchSnapshot(cp.execFileSync('cmd', ['args']), 'execFileSync, no options')
+t.matchSnapshot(
+  cp.execFileSync('cmd', ['args']),
+  'execFileSync, no options'
+)
 t.matchSnapshot(
   cp.execFileSync('cmd', ['args'], { stdio: 'ignore' }),
   'execFileSync, options'

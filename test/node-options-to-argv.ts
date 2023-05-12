@@ -1,6 +1,6 @@
-const t = require('tap')
-const { nodeOptionsToArgv } = require('../lib/node-options-to-argv.cjs')
-const cases = [
+import t from 'tap'
+import { nodeOptionsToArgv } from '../dist/cjs/node-options-to-argv.js'
+const cases: [expect: string[], options: string][] = [
   [['--loader', 'has " quotes'], '"--loader" "has \\" quotes"'],
   [['--loader', 'has \\" escape'], '"--loader" "has \\\\" escape"'],
   [['--loader=has " quotes'], '"--loader=has \\" quotes"'],
@@ -15,5 +15,5 @@ const cases = [
 
 t.plan(cases.length)
 for (const [expect, options] of cases) {
-  t.same(nodeOptionsToArgv(options), expect, { options })
+  t.same(nodeOptionsToArgv(options), expect, options)
 }

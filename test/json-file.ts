@@ -1,5 +1,5 @@
-const t = require('tap')
-const { safeJSON, safeJSONSync } = require('../lib/json-file.cjs')
+import t from 'tap'
+import { safeJSON, safeJSONSync } from '../dist/cjs/json-file.js'
 
 const dir = t.testdir({
   'j.json': JSON.stringify({ foo: 1 }),

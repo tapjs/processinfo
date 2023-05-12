@@ -5,11 +5,11 @@
  * Make sure to inspect the output below.  Do not ignore changes!
  */
 'use strict'
-exports[`test/get-process-info.cjs TAP get the process info > root process info 1`] = `
+exports[`test/get-process-info.ts TAP get the process info > root process info 1`] = `
 Object {
   "argv": Array [
     "{NODE}",
-    "{CWD}/test/get-process-info.cjs",
+    "{CWD}/test/get-process-info.ts",
   ],
   "cwd": "{CWD}",
   "date": "string",
@@ -28,11 +28,11 @@ Object {
 }
 `
 
-exports[`test/get-process-info.cjs child process TAP get the process info child process info > child process info 1`] = `
+exports[`test/get-process-info.ts child process TAP get the process info child process info > child process info 1`] = `
 Object {
   "argv": Array [
     "{NODE}",
-    "{CWD}/test/get-process-info.cjs",
+    "{CWD}/test/get-process-info.ts",
     "child process",
   ],
   "cwd": "{CWD}",
@@ -52,11 +52,11 @@ Object {
 }
 `
 
-exports[`test/get-process-info.cjs eid process TAP get the process info external id process > process with external ID 1`] = `
+exports[`test/get-process-info.ts eid process TAP get the process info external id process > process with external ID 1`] = `
 Object {
   "argv": Array [
     "{NODE}",
-    "{CWD}/test/get-process-info.cjs",
+    "{CWD}/test/get-process-info.ts",
     "eid process",
   ],
   "cwd": "{CWD}",

@@ -1,23 +1,26 @@
 process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
 process.env._TAPJS_PROCESSINFO_COV_EXCLUDE_ = '/node_modules/'
 
-const t = require('tap')
+import t from 'tap'
 
 // this one we just run an integration test, because we need to catch
 // when node/v8 change their API, and it's a huge amount of stuff to
 // have to mock anyway.
 
-const spawn = require('@npmcli/promise-spawn')
+import spawn from '@npmcli/promise-spawn'
+import fs from 'fs'
+import { resolve } from 'path'
+import { pathToFileURL } from 'url'
 
-const mod = require.resolve('../lib/register-coverage.cjs')
-const { resolve } = require('path')
-const { pathToFileURL } = require('url')
-const fs = require('fs')
+const mod = require.resolve('../dist/cjs/register-coverage.js')
 
 t.test('coverage disabled', async t => {
   const dir = t.testdir({
     'r.js': `
-      const {coverageOnProcessEnd} = require(${JSON.stringify(mod)})
+      const {coverageOnProcessEnd, register} = require(${JSON.stringify(
+        mod
+      )})
+      register()
       process.on('beforeExit', (code, signal) => {
         coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
           uuid: 'uuid-0',
@@ -29,9 +32,9 @@ t.test('coverage disabled', async t => {
       require('diff')
     `,
   })
-  const result = await spawn(
+  await spawn(
     process.execPath,
-    [`--require=${dir}/r.js`, `${dir}/x.js`],
+    ['--enable-source-maps', `--require=${dir}/r.js`, `${dir}/x.js`],
     {
       env: {
         ...process.env,
@@ -47,7 +50,10 @@ t.test('coverage disabled', async t => {
 t.test('coverage enabled', async t => {
   const dir = t.testdir({
     'r.js': `
-      const {coverageOnProcessEnd} = require(${JSON.stringify(mod)})
+      const {coverageOnProcessEnd, register} = require(${JSON.stringify(
+        mod
+      )})
+      register()
       process.on('exit', (code, signal) => {
         coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
           uuid: 'uuid-0',
@@ -59,14 +65,18 @@ t.test('coverage enabled', async t => {
       require('diff')
     `,
   })
-  await spawn(process.execPath, [`--require=${dir}/r.js`, `${dir}/x.js`], {
-    env: {
-      ...process.env,
-      _TAPJS_PROCESSINFO_COVERAGE_: '1',
-    },
-    stdio: 'inherit',
-    cwd: dir,
-  })
+  await spawn(
+    process.execPath,
+    ['--enable-source-maps', `--require=${dir}/r.js`, `${dir}/x.js`],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_COVERAGE_: '1',
+      },
+      stdio: 'inherit',
+      cwd: dir,
+    }
+  )
   t.match(require(resolve(dir, '.tap/coverage/uuid-0.json')), {
     result: [
       {
@@ -95,7 +105,10 @@ t.test('coverage enabled', async t => {
 t.test('coverage of diff module enabled', async t => {
   const dir = t.testdir({
     'r.js': `
-      const {coverageOnProcessEnd} = require(${JSON.stringify(mod)})
+      const {coverageOnProcessEnd, register} = require(${JSON.stringify(
+        mod
+      )})
+      register()
       process.on('exit', (code, signal) => {
         coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
           uuid: 'uuid-0',
@@ -109,9 +122,9 @@ t.test('coverage of diff module enabled', async t => {
       require('diff')
     `,
   })
-  const result = await spawn(
+  await spawn(
     process.execPath,
-    [`--require=${dir}/r.js`, `${dir}/x.js`],
+    ['--enable-source-maps', `--require=${dir}/r.js`, `${dir}/x.js`],
     {
       env: {
         ...process.env,

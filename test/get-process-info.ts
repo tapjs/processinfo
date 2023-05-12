@@ -1,4 +1,6 @@
-const t = require('tap')
+import t from 'tap'
+import type { ProcessInfoNodeData } from '../dist/cjs/index.js'
+
 const mockUUID = {
   i: 0,
   v4: () => `uuid-${mockUUID.i++}`,
@@ -24,7 +26,7 @@ t.formatSnapshot = obj => {
     return Object.fromEntries(
       Object.entries(obj).map(([k, v]) =>
         k === 'hrstart'
-          ? [k, [Array.isArray(v), v.length]]
+          ? [k, [Array.isArray(v), (v as Array<any>).length]]
           : k === 'NODE_OPTIONS'
           ? [k, '']
           : k === 'date'
@@ -41,17 +43,17 @@ t.formatSnapshot = obj => {
   }
 }
 
-const requireGetProcessInfo = t =>
-  t.mock('../lib/get-process-info.cjs', {
+const requireGetProcessInfo = (t: Tap.Test) =>
+  t.mock('../dist/cjs/get-process-info.js', {
     uuid: mockUUID,
-    '../lib/register-env.cjs': {},
-    '../lib/register-coverage.cjs': {},
-    '../lib/register-process-end.cjs': {},
-  })
+    '../dist/cjs/register-env.js': { register: () => {} },
+    '../dist/cjs/register-coverage.js': { register: () => {} },
+    '../dist/cjs/register-process-end.js': { register: () => {} },
+  }).reset()
 
 const getEnvs = () =>
   Object.fromEntries(
-    Object.entries(process.env).filter(([k, v]) =>
+    Object.entries(process.env).filter(([k]) =>
       /^_TAPJS_PROCESSINFO_/.test(k)
     )
   )
@@ -64,17 +66,26 @@ const clearEnv = () => {
   return process.env
 }
 
-clearEnv(process.env)
-t.teardown(() => Object.assign(clearEnv(process.env), saveEnvs))
+clearEnv()
+t.teardown(() => {
+  Object.assign(clearEnv(), saveEnvs)
+})
 
 const { argv } = process
-t.teardown(() => (process.argv = argv))
+t.teardown(() => {
+  process.argv = argv
+})
 
 t.test('get the process info', t => {
-  let root, child, eid
+  let root: ProcessInfoNodeData | null
+  let child: ProcessInfoNodeData | null
+  let eid: ProcessInfoNodeData | null
 
   const { getProcessInfo } = requireGetProcessInfo(t)
   const processInfo = (root = getProcessInfo())
+  if (!root) {
+    throw new Error('could not get root processInfo')
+  }
   t.matchSnapshot(processInfo, 'root process info')
   t.equal(getProcessInfo(), processInfo, 'returns same object second time')
 
@@ -82,6 +93,12 @@ t.test('get the process info', t => {
     process.argv = [process.execPath, __filename, 'child process']
     const { getProcessInfo } = requireGetProcessInfo(t)
     const processInfo = (child = getProcessInfo())
+    if (!root) {
+      throw new Error('could not get root processInfo')
+    }
+    if (!child) {
+      throw new Error('could not get child processInfo')
+    }
     t.equal(child.parent, root.uuid, 'root is parent of child')
     t.equal(child.root, root.uuid, 'root is root of child')
     t.matchSnapshot(processInfo, 'child process info')
@@ -94,6 +111,15 @@ t.test('get the process info', t => {
     process.env._TAPJS_PROCESSINFO_EXTERNAL_ID_ = externalID
     const { getProcessInfo } = requireGetProcessInfo(t)
     const processInfo = (eid = getProcessInfo())
+    if (!root) {
+      throw new Error('could not get root processInfo')
+    }
+    if (!child) {
+      throw new Error('could not get child processInfo')
+    }
+    if (!eid) {
+      throw new Error('could not get eid processInfo')
+    }
     t.equal(eid.parent, child.uuid, 'child is parent of eid')
     t.equal(eid.root, root.uuid, 'root is root of eid')
     t.matchSnapshot(processInfo, 'process with external ID')

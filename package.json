@@ -36,11 +36,12 @@
     "test": "c8 tap",
     "snap": "c8 tap",
     "format": "prettier --write . --loglevel warn",
-    "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts"
+    "typedoc": "typedoc --tsconfig tsconfig-esm.json ./lib/*.*ts"
   },
   "tap": {
     "coverage": false,
     "node-arg": [
+      "--enable-source-maps",
       "--no-warnings",
       "--loader",
       "ts-node/esm"
@@ -61,7 +62,7 @@
   "dependencies": {
     "pirates": "^4.0.5",
     "process-on-spawn": "^1.0.0",
-    "signal-exit": "^4.0.1",
+    "signal-exit": "^4.0.2",
     "uuid": "^8.3.2"
   },
   "engines": {
@@ -71,12 +72,14 @@
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
     "@types/node": "^20.1.2",
+    "@types/npmcli__promise-spawn": "^6.0.0",
     "@types/tap": "^15.0.8",
     "@types/uuid": "^9.0.1",
     "c8": "^7.13.0",
     "diff": "^5.0.0",
     "prettier": "^2.6.2",
     "tap": "^16.3.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "repository": "https://github.com/tapjs/processinfo"

@@ -7,6 +7,9 @@
 - no longer squashing the loaders into the query string, since
   multiple-loader support is required
 - default export replaced with named export
+- Make the ESM entry point also the default module, to drop the `/esm`
+  from the end of the loader argument
+- Do not minify processinfo json files
 
 # 1
 

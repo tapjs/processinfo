@@ -1,3 +1,9 @@
+// we always want this
+const p = process as NodeJS.Process & {
+  setSourceMapsEnabled(v: boolean): void
+}
+p.setSourceMapsEnabled(true)
+
 import { v4 as uuid } from 'uuid'
 import type { ProcessInfoNodeData } from './process-info-node.js'
 
@@ -22,6 +28,12 @@ import { register as registerCJS } from './register-cjs.js'
 const kProcessInfo = Symbol.for('@tapjs/processinfo.ProcessInfoNodeData')
 const g = global as typeof globalThis & {
   [kProcessInfo]?: ProcessInfoNodeData
+}
+
+// only used for tests so we can simulate multiple processes
+export const reset = () => {
+  g[kProcessInfo] = undefined
+  return { getProcessInfo }
 }
 
 export const getProcessInfo = (): ProcessInfoNodeData => {

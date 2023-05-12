@@ -1,11 +1,11 @@
-const t = require('tap')
-const ProcessInfo = require('../lib/index.cjs')
-const cp = require('../lib/child_process.cjs')
-const { ProcessInfoNode } = require('../lib/process-info-node.cjs')
-const { resolve } = require('path')
+import { readdir } from 'fs/promises'
+import { resolve } from 'path'
+import t from 'tap'
+import * as cp from '../dist/cjs/child_process.js'
+import { ProcessInfo } from '../dist/cjs/index.js'
+import { ProcessInfoNode } from '../dist/cjs/process-info-node.js'
+import { removePath } from './fixtures/remove-path'
 const fixtures = resolve(__dirname, 'fixtures')
-const { readdir } = require('fs/promises')
-const removePath = require('./fixtures/remove-path.cjs')
 
 t.formatSnapshot = o =>
   removePath(
@@ -15,7 +15,11 @@ t.formatSnapshot = o =>
   )
 
 t.test('basic instantiation and usage', async t => {
-  t.equal(ProcessInfo, ProcessInfo.ProcessInfo, 'exported as default and named')
+  t.equal(
+    ProcessInfo,
+    ProcessInfo.ProcessInfo,
+    'exported as default and named'
+  )
   t.equal(ProcessInfo.Node, ProcessInfoNode, 'Node class exported')
   {
     const pi = new ProcessInfo()
@@ -30,7 +34,10 @@ t.test('basic instantiation and usage', async t => {
   t.equal(pi.roots.size, 62)
   t.equal(pi.uuids.size, 64)
   for (const [uuid, node] of pi.uuids) {
-    t.ok(pi.roots.has(node.root), 'root found in roots for uuid ' + uuid)
+    t.ok(
+      node.root && pi.roots.has(node.root),
+      'root found in roots for uuid ' + uuid
+    )
   }
   t.notOk(
     pi.uuids.has('not-a-processinfo-file-just-some-json'),
@@ -45,7 +52,9 @@ t.test('basic instantiation and usage', async t => {
     {
       ...r,
       children: new Set(
-        [...r.children].sort((a, b) => a.uuid.localeCompare(b.uuid, 'en'))
+        [...(r?.children || [])].sort((a, b) =>
+          a.uuid.localeCompare(b.uuid, 'en')
+        )
       ),
     },
     'root node'
@@ -53,12 +62,12 @@ t.test('basic instantiation and usage', async t => {
 
   const piSync = new ProcessInfo({ dir: resolve(fixtures, 'processinfo') })
   piSync.loadSync()
-  t.matchSnapshot(piSync, pi, 'sync load has same data')
+  t.match(piSync, pi, 'sync load has same data')
 
   await pi.load()
-  t.matchSnapshot(piSync, pi, 'loading second time has no effect')
+  t.match(piSync, pi, 'loading second time has no effect')
   piSync.loadSync()
-  t.matchSnapshot(piSync, pi, 'loading second time has no effect (sync)')
+  t.match(piSync, pi, 'loading second time has no effect (sync)')
 
   pi.clear()
   t.matchSnapshot(pi, 'cleared')
@@ -79,19 +88,21 @@ t.test('basic instantiation and usage', async t => {
   piSync.eraseSync()
   await t.rejects(readdir(pi.dir))
 
-  const piEmpty = new ProcessInfo({ dir: resolve(fixtures, 'asdfasdfasdfas') })
+  const piEmpty = new ProcessInfo({
+    dir: resolve(fixtures, 'asdfasdfasdfas'),
+  })
   await piEmpty.load()
-  t.matchSnapshot(piEmpty, pi, 'missing dir is just empty')
+  t.matchSnapshot(piEmpty, 'missing dir is just empty')
   const piEmptySync = new ProcessInfo({
     dir: resolve(fixtures, 'asdfasdfasdfas'),
   })
   piEmptySync.loadSync()
-  t.matchSnapshot(piEmptySync, pi, 'missing dir is just empty (sync)')
+  t.matchSnapshot(piEmptySync, 'missing dir is just empty (sync)')
 })
 
 t.test('re-export spawn methods', t => {
   for (const [name, method] of Object.entries(cp)) {
-    t.equal(ProcessInfo[name], method)
+    t.equal(ProcessInfo[name as keyof typeof ProcessInfo], method)
   }
   t.end()
 })

@@ -18,10 +18,6 @@ const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 export const register = () => {
   if (!enabled) return
   process.env._TAPJS_PROCESSINFO_COVERAGE_ = '1'
-  const p = process as NodeJS.Process & {
-    setSourceMapsEnabled(v: boolean): void
-  }
-  p.setSourceMapsEnabled(true)
 
   SESSION = new Session()
   SESSION.connect()
@@ -33,10 +29,12 @@ export const register = () => {
   })
 }
 
-const lineLengths = (f: string) =>
-  readFileSync(f, 'utf8')
-    .split(/\n|\u2028|\u2029/)
-    .map(l => l.length)
+// only read the file again if we don't already have the content
+// in the source map itself.
+const lineLengths = (f: string, content?: string): number[] =>
+  !content
+    ? lineLengths(f, readFileSync(f, 'utf8'))
+    : content.split(/\n|\u2028|\u2029/).map(l => l.length)
 
 export const coverageOnProcessEnd = (
   cwd: string,
@@ -51,21 +49,24 @@ export const coverageOnProcessEnd = (
   session.post('Profiler.takePreciseCoverage', (er, cov) => {
     session.post('Profiler.stopPreciseCoverage')
 
-    /* istanbul ignore next - something very strange and bad happened */
+    // something very strange and bad happened
+    /* c8 ignore start */
     if (er) {
       throw er
     }
-    const covsm: typeof cov & {
-      'source-map-cache': {
-        [k: string]: {
-          lineLengths: number[]
-          data: SourceMapPayload
-        }
+    /* c8 ignore stop */
+
+    // Create a source-map-cache that c8 uses in report generation
+    const sourceMapCache: {
+      [k: string]: {
+        lineLengths: number[]
+        data: SourceMapPayload
       }
-    } = Object.assign(cov, {
-      'source-map-cache': {},
+    } = {}
+    Object.assign(cov, {
+      'source-map-cache': sourceMapCache,
     })
-    const sourceMapCache = covsm['source-map-cache']
+
     cov.result = cov.result.filter(obj => {
       if (!/^file:/.test(obj.url)) {
         return false
@@ -79,7 +80,7 @@ export const coverageOnProcessEnd = (
       if (s) {
         const { payload } = s
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {
-          lineLengths: lineLengths(f),
+          lineLengths: lineLengths(f, payload.sourcesContent?.join('')),
           data: payload,
         })
       }
