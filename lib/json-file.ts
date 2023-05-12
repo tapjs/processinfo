@@ -1,9 +1,9 @@
 // read the file and json decode it, if anything fails, return {}
 
-const { readFile } = require('fs/promises')
-const { readFileSync } = require('fs')
+import { readFileSync } from 'fs'
+import { readFile } from 'fs/promises'
 
-const safeJSONSync = f => {
+export const safeJSONSync = (f: string) => {
   try {
     return JSON.parse(readFileSync(f, 'utf8'))
   } catch (e) {
@@ -11,9 +11,7 @@ const safeJSONSync = f => {
   }
 }
 
-const safeJSON = f =>
+export const safeJSON = (f: string) =>
   readFile(f, 'utf8')
     .then(d => JSON.parse(d))
     .catch(() => ({}))
-
-module.exports = { safeJSON, safeJSONSync }

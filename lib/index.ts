@@ -1,40 +1,56 @@
-const {
-  spawn,
-  spawnSync,
+import {
   exec,
-  execSync,
   execFile,
   execFileSync,
-} = require('./child_process.cjs')
+  execSync,
+  fork,
+  spawn,
+  spawnSync,
+} from './child_process.js'
 
-const { resolve, basename } = require('path')
+export * from './child_process.js'
 
-const { ProcessInfoNode } = require('./process-info-node.cjs')
+import { basename, resolve } from 'path'
 
-const {
-  writeFileSync,
-  readdirSync,
-  rmSync,
-  rmdirSync,
+import { ProcessInfoNode } from './process-info-node.js'
+export * from './process-info-node.js'
+
+import {
   mkdirSync,
-} = require('fs')
-const { writeFile, readdir, rm, rmdir, mkdir } = require('fs/promises')
+  readdirSync,
+  rmdirSync,
+  rmSync,
+  writeFileSync,
+} from 'fs'
+import { mkdir, readdir, rm, rmdir, writeFile } from 'fs/promises'
 
-const { safeJSONSync, safeJSON } = require('./json-file.cjs')
+import { safeJSON, safeJSONSync } from './json-file.js'
 
-class ProcessInfo {
+export class ProcessInfo {
+  dir: string
+  exclude: RegExp
+  roots: Set<ProcessInfoNode> = new Set()
+  uuids: Map<string, ProcessInfoNode> = new Map()
+  files: Map<string, Set<ProcessInfoNode>> = new Map()
+  pendingRoot: Map<string, Set<ProcessInfoNode>> = new Map()
+  pendingParent: Map<string, Set<ProcessInfoNode>> = new Map()
+  externalIDs: Map<string, ProcessInfoNode> = new Map()
+
+  static async load({
+    dir = resolve(process.cwd(), '.tap/processinfo'),
+    exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
+  }): Promise<ProcessInfo> {
+    const pi = new ProcessInfo({ dir, exclude })
+    await pi.load()
+    return pi
+  }
+
   constructor({
     dir = resolve(process.cwd(), '.tap/processinfo'),
     exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
   } = {}) {
     this.dir = dir
     this.exclude = exclude
-    this.roots = new Set()
-    this.files = new Map()
-    this.uuids = new Map()
-    this.pendingRoot = new Map()
-    this.pendingParent = new Map()
-    this.externalIDs = new Map()
   }
 
   clear() {
@@ -105,7 +121,7 @@ class ProcessInfo {
   }
 
   loadSync() {
-    let entries
+    let entries: string[]
     try {
       entries = readdirSync(this.dir)
     } catch (_) {
@@ -158,6 +174,8 @@ class ProcessInfo {
   static get execFileSync() {
     return execFileSync
   }
-}
 
-module.exports = ProcessInfo
+  static get fork() {
+    return fork
+  }
+}

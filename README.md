@@ -15,21 +15,31 @@ track all Node.js child processes.
 
 ```sh
 # wrap both CommonJS and ESM
-node --loader=@tapjs/processinfo/esm file.js
+node --loader=@tapjs/processinfo file.js
 
-# wrap only CommonJS
+# wrap only CommonJS, idk why you'd want to do this, but it works
 node --require=@tapjs/processinfo/cjs
 ```
 
 To spawn a wrapped process from JavaScript, you can run:
 
 ```js
-const ProcessInfo = require('@tapjs/processinfo')
+import {
+  spawn,
+  exec,
+  execFile,
+  execSync,
+  execFileSync,
+  fork,
+} from '@tapjs/processinfo'
 // any of these will work
-const childProcess = ProcessInfo.spawn(cmd, args, options)
-const childProcess = ProcessInfo.exec(cmd, options)
-const childProcess = ProcessInfo.spawnSync(cmd, args, options)
-const childProcess = ProcessInfo.execSync(cmd, options)
+const childProcess = spawn(cmd, args, options)
+const childProcess = exec(cmd, options, callback)
+const childProcess = execFile(cmd, options, callback)
+const childProcess = spawnSync(cmd, args, options)
+const childProcess = execSync(cmd, options)
+const childProcess = execFileSync(cmd, options)
+const childProcess = fork(cmd, options)
 ```
 
 The `cmd` and `args` parameters are identical to the methods from the
@@ -48,7 +58,6 @@ To load the process info data, use the exported `ProcessInfo` class.
 ```js
 const ProcessInfo = require('@tapjs/processinfo')
 
-const processInfo = new ProcessInfo()
 // returns
 // {
 //   roots: Set([ProcessInfo.Node, ...]) for each root process group
@@ -74,14 +83,14 @@ const processInfo = new ProcessInfo()
 //   signal: terminating signal or null,
 //   runtime: high resolution run time in ms,
 // }
-const data = await processInfo.load()
+const processInfoDB = await ProcessInfo.load()
 // say we wanted to find all the files loaded by the process 'foo'
-const proc = data.externalIDs.get('foo')
+const proc = processInfoDB.externalIDs.get('foo')
 console.error(`Files loaded by process named 'foo':`, proc.files)
 
 // now let's find all any other named processes that loaded them
 for (const f of proc.files) {
-  for (const otherProc of data.files.get(f)) {
+  for (const otherProc of processInfoDB.files.get(f)) {
     // walk up the tree looking for a named process
     for (let parent = otherProc; parent; parent = parent.parent) {
       if (parent.externalID && parent !== proc) {

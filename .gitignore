@@ -2,7 +2,7 @@
 /*
 /.*
 
-!/index.d.*ts
+!/tsconfig*.json
 !/bin/
 !/lib/
 !/docs/
@@ -18,7 +18,6 @@
 !/tap-snapshots/
 !/test/
 !/.github/
-!/.travis.yml
 !/.gitignore
 !/.prettierignore
 !/.gitattributes

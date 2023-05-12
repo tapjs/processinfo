@@ -1,4 +1,4 @@
-exports.nodeOptionsToArgv = no => {
+export const nodeOptionsToArgv = (no: string | undefined): string[] => {
   if (!no) return []
   const argv = []
   let escaping = false

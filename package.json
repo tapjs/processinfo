@@ -1,31 +1,55 @@
 {
   "name": "@tapjs/processinfo",
-  "version": "1.0.12",
-  "main": "lib/index.cjs",
-  "types": "index.d.ts",
+  "version": "2.0.0-0",
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/cjs/index.d.ts",
+  "module": "./dist/mjs/esm.mjs",
   "files": [
-    "index.d.ts",
-    "lib"
+    "dist"
   ],
   "exports": {
-    ".": "./lib/index.cjs",
-    "./esm": "./lib/esm.mjs",
-    "./cjs": "./lib/cjs.cjs"
+    ".": {
+      "import": {
+        "types": "./dist/mjs/esm.d.ts",
+        "default": "./dist/mjs/esm.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    },
+    "./cjs": {
+      "require": {
+        "types": "./dist/mjs/cjs.d.mts",
+        "default": "./lib/cjs.cjs"
+      }
+    }
   },
   "scripts": {
-    "format": "prettier --write . --loglevel warn",
-    "test": "tap",
-    "snap": "tap",
     "preversion": "npm test",
     "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags"
+    "prepublishOnly": "git push origin --follow-tags",
+    "preprepare": "rm -rf dist",
+    "prepare": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json && bash ./scripts/fixup.sh",
+    "pretest": "npm run prepare",
+    "presnap": "npm run prepare",
+    "test": "c8 tap",
+    "snap": "c8 tap",
+    "format": "prettier --write . --loglevel warn",
+    "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts"
   },
   "tap": {
-    "coverage-map": "map.cjs"
+    "coverage": false,
+    "node-arg": [
+      "--no-warnings",
+      "--loader",
+      "ts-node/esm"
+    ],
+    "ts": false
   },
   "prettier": {
     "semi": false,
-    "printWidth": 80,
+    "printWidth": 75,
     "tabWidth": 2,
     "useTabs": false,
     "singleQuote": true,
@@ -41,16 +65,19 @@
     "uuid": "^8.3.2"
   },
   "engines": {
-    "node": ">=16.12"
+    "node": ">=16.17"
   },
   "license": "ISC",
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
-    "@types/node": "^18.11.9",
+    "@types/node": "^20.1.2",
+    "@types/tap": "^15.0.8",
+    "@types/uuid": "^9.0.1",
+    "c8": "^7.13.0",
     "diff": "^5.0.0",
-    "eslint-config-prettier": "^8.5.0",
     "prettier": "^2.6.2",
-    "tap": "^16.3.0"
+    "tap": "^16.3.0",
+    "typescript": "^5.0.4"
   },
   "repository": "https://github.com/tapjs/processinfo"
 }
