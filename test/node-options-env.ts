@@ -1,9 +1,17 @@
 import t from 'tap'
 import { argvToNodeOptions } from '../dist/cjs/argv-to-node-options.js'
 import { nodeOptionsEnv } from '../dist/cjs/node-options-env.js'
+import { removePath } from './fixtures/remove-path'
 
 import { relative, sep } from 'path'
 import { pathToFileURL } from 'url'
+
+t.formatSnapshot = o =>
+  removePath(
+    removePath(o, process.cwd(), '{CWD}'),
+    '/Users/isaacs/dev/tapjs/processinfo',
+    '{CWD}'
+  )
 
 const esmAbs = require.resolve('../dist/mjs/esm.mjs')
 const esmRel = './' + relative(process.cwd(), esmAbs)
@@ -101,19 +109,19 @@ const cases: {
     ['-r', cjsRel],
   ],
 
-  'other loader in opts': [{ NODE_OPTIONS: ['--loader', __filename] }, []],
-  'other loader in args': [{}, ['--loader', __filename]],
+  'other loader in opts': [{ NODE_OPTIONS: ['--loader', 'some-file.ts'] }, []],
+  'other loader in args': [{}, ['--loader', 'some-file.ts']],
   'other loader in both': [
-    { NODE_OPTIONS: ['--loader', __filename] },
-    ['--loader', __dirname + '/index.cjs'],
+    { NODE_OPTIONS: ['--loader', 'some-file.ts'] },
+    ['--loader', '/some/path/to/index.cjs'],
   ],
   'multiple loaders': [
     {
       NODE_OPTIONS: [
         '--loader',
-        __filename,
+        'some-file.ts',
         '--loader',
-        __dirname + '/index.cjs',
+        '/some/path/to/index.cjs',
       ],
     },
     [],

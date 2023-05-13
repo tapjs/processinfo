@@ -90,7 +90,7 @@ exports[`test/node-options-env.ts TAP > has both 1`] = `
 `
 
 exports[`test/node-options-env.ts TAP > multiple loaders 1`] = `
-"--loader" "/Users/isaacs/dev/tapjs/processinfo/test/node-options-env.ts" "--loader" "/Users/isaacs/dev/tapjs/processinfo/test/index.cjs" "--loader={ESMURL}"
+"--loader" "some-file.ts" "--loader" "/some/path/to/index.cjs" "--loader={ESMURL}"
 `
 
 exports[`test/node-options-env.ts TAP > opts cjs, args cjs 1`] = `
@@ -142,11 +142,11 @@ exports[`test/node-options-env.ts TAP > other loader in args 1`] = `
 `
 
 exports[`test/node-options-env.ts TAP > other loader in both 1`] = `
-"--loader" "/Users/isaacs/dev/tapjs/processinfo/test/node-options-env.ts" "--loader={ESMURL}"
+"--loader" "some-file.ts" "--loader={ESMURL}"
 `
 
 exports[`test/node-options-env.ts TAP > other loader in opts 1`] = `
-"--loader" "/Users/isaacs/dev/tapjs/processinfo/test/node-options-env.ts" "--loader={ESMURL}"
+"--loader" "some-file.ts" "--loader={ESMURL}"
 `
 
 exports[`test/node-options-env.ts TAP > short args has cjs absolute 1`] = `
