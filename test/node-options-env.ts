@@ -79,6 +79,14 @@ const cases: {
   'short opts has cjs relative': [{ NODE_OPTIONS: ['-r', cjsRel] }, []],
   'short opts has cjs absolute': [{ NODE_OPTIONS: ['-r', cjsAbs] }, []],
 
+  'short args no sp has cjs relative': [{}, [`-r${cjsRel}`]],
+  'short args no sp has cjs absolute': [{}, [`-r${cjsAbs}`]],
+  'short opts no sp has cjs relative': [{ NODE_OPTIONS: [`-r${cjsRel}`] }, []],
+  'short opts no sp has cjs absolute': [{ NODE_OPTIONS: [`-r${cjsAbs}`] }, []],
+
+  'short args no sp other': [{}, [`-rfoo`]],
+  'short opts no sp other': [{ NODE_OPTIONS: [`-rfoo`] }, []],
+
   'args has both': [{}, ['-r', cjsRel, '--loader=' + esmURL]],
   'opts has both': [
     { NODE_OPTIONS: ['-r', cjsRel, '--loader=' + esmURL] },

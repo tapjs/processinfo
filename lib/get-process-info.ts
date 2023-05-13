@@ -5,7 +5,31 @@ const p = process as NodeJS.Process & {
 p.setSourceMapsEnabled(true)
 
 import { v4 as uuid } from 'uuid'
-import type { ProcessInfoNodeData } from './process-info-node.js'
+export interface ProcessInfoNodeData {
+  // set initially, but deleted before it is written
+  hrstart?: [number, number]
+
+  // always set
+  date: string
+  argv: string[]
+  execArgv: string[]
+  NODE_OPTIONS?: string
+  cwd: string
+  pid: number
+  ppid: number
+  parent: string | null
+  uuid: string
+  files: string[]
+
+  // fields that are only set when the process completes
+  root?: string | null
+  externalID?: string | null
+  code?: number | null
+  signal?: NodeJS.Signals | null
+  runtime?: number
+  globalsAdded?: string[]
+}
+
 
 const envKey = (k: string) => `_TAPJS_PROCESSINFO_${k.toUpperCase()}_`
 const getEnv = (k: string) => process.env[envKey(k)]

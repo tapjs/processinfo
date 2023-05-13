@@ -10,6 +10,8 @@
 - Make the ESM entry point also the default module, to drop the `/esm`
   from the end of the loader argument
 - Do not minify processinfo json files
+- add support for fork()
+- add support for promisified spawn methods
 
 # 1
 

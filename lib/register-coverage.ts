@@ -6,7 +6,7 @@ import { Session } from 'inspector'
 import { findSourceMap, SourceMapPayload } from 'module'
 import { fileURLToPath } from 'url'
 import { getExclude } from './get-exclude.js'
-import { ProcessInfoNodeData } from './process-info-node'
+import { ProcessInfoNodeData } from './get-process-info.js'
 
 export let SESSION: Session | undefined = undefined
 
@@ -15,6 +15,14 @@ export let SESSION: Session | undefined = undefined
 // about at least somewhat, but coverage is a subset.
 const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 
+// C8 can't see that this function runs, best theory is that it
+// collides with what it's doing with the coverage it's collecting
+// This ignore can possibly be removed once this is being tested
+// with a version of tap that uses this library, but it might just
+// be an unresolveable bootstrap problem.
+// The test does verify that it ran, because otherwise, there would
+// be no coverage, and it verifies that it gets the expected coverage.
+/* c8 ignore start */
 export const register = () => {
   if (!enabled) return
   process.env._TAPJS_PROCESSINFO_COVERAGE_ = '1'
@@ -28,6 +36,7 @@ export const register = () => {
     detailed: true,
   })
 }
+/* c8 ignore stop */
 
 // only read the file again if we don't already have the content
 // in the source map itself.
@@ -40,6 +49,10 @@ export const coverageOnProcessEnd = (
   cwd: string,
   processInfo: ProcessInfoNodeData
 ) => {
+  // Similar to the coverage tracking bootstrap problem above, c8
+  // doesn't see that this function runs, even though it DOES see
+  // that the function defined below runs, which is weird.
+  /* c8 ignore start */
   if (!SESSION) return
   const session = SESSION
 
@@ -48,6 +61,7 @@ export const coverageOnProcessEnd = (
 
   session.post('Profiler.takePreciseCoverage', (er, cov) => {
     session.post('Profiler.stopPreciseCoverage')
+    /* c8 ignore stop */
 
     // something very strange and bad happened
     /* c8 ignore start */
@@ -88,5 +102,7 @@ export const coverageOnProcessEnd = (
     })
 
     writeFileSync(f, JSON.stringify(cov, null, 2) + '\n', 'utf8')
+    /* c8 ignore start */
   })
 }
+/* c8 ignore stop */

@@ -9,20 +9,15 @@ import {
 } from './child_process.js'
 
 export * from './child_process.js'
+export { ProcessInfoNodeData } from './get-process-info.js'
+export * from './process-info-node.js'
 
 import { basename, resolve } from 'path'
 
 import { ProcessInfoNode } from './process-info-node.js'
-export * from './process-info-node.js'
 
-import {
-  mkdirSync,
-  readdirSync,
-  rmdirSync,
-  rmSync,
-  writeFileSync,
-} from 'fs'
-import { mkdir, readdir, rm, rmdir, writeFile } from 'fs/promises'
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'fs'
+import { mkdir, readdir, rm, writeFile } from 'fs/promises'
 
 import { safeJSON, safeJSONSync } from './json-file.js'
 
@@ -42,6 +37,15 @@ export class ProcessInfo {
   }): Promise<ProcessInfo> {
     const pi = new ProcessInfo({ dir, exclude })
     await pi.load()
+    return pi
+  }
+
+  static loadSync({
+    dir = resolve(process.cwd(), '.tap/processinfo'),
+    exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
+  }): ProcessInfo {
+    const pi = new ProcessInfo({ dir, exclude })
+    pi.loadSync()
     return pi
   }
 
@@ -80,22 +84,12 @@ export class ProcessInfo {
 
   async erase() {
     this.clear()
-    /* istanbul ignore next - node version compat */
-    try {
-      await rm(this.dir, { recursive: true })
-    } catch (e) {
-      await rmdir(this.dir, { recursive: true })
-    }
+    await rm(this.dir, { recursive: true })
   }
 
   eraseSync() {
     this.clear()
-    /* istanbul ignore next - node version compat */
-    try {
-      rmSync(this.dir, { recursive: true })
-    } catch (e) {
-      rmdirSync(this.dir, { recursive: true })
-    }
+    rmSync(this.dir, { recursive: true })
   }
 
   async load() {
