@@ -10,8 +10,8 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/mjs/esm.d.ts",
-        "default": "./dist/mjs/esm.js"
+        "types": "./dist/mjs/esm.d.mts",
+        "default": "./dist/mjs/esm.mjs"
       },
       "require": {
         "types": "./dist/cjs/index.d.ts",
