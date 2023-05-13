@@ -1,29 +1,5 @@
 import type { ProcessInfo } from './index.js'
-
-export interface ProcessInfoNodeData {
-  // set initially, but deleted before it is written
-  hrstart?: [number, number]
-
-  // always set
-  date: string
-  argv: string[]
-  execArgv: string[]
-  NODE_OPTIONS?: string
-  cwd: string
-  pid: number
-  ppid: number
-  parent: string | null
-  uuid: string
-  files: string[]
-
-  // fields that are only set when the process completes
-  root?: string | null
-  externalID?: string | null
-  code?: number | null
-  signal?: NodeJS.Signals | null
-  runtime?: number
-  globalsAdded?: string[]
-}
+import type { ProcessInfoNodeData } from './get-process-info.js'
 
 export class ProcessInfoNode {
   date!: string
@@ -34,24 +10,22 @@ export class ProcessInfoNode {
   pid!: number
   ppid!: number
   uuid!: string
-  files: string[] | null = null
+  files: string[] = []
   parent?: ProcessInfoNode | null = null
   root?: ProcessInfoNode | null = null
   children?: Set<ProcessInfoNode> | null = null
-  externalID: string | null
+  externalID: string | null = null
 
   #data: ProcessInfoNodeData
 
   constructor(data: ProcessInfoNodeData) {
-    this.files = null
-    this.externalID = null
     this.#data = data
     Object.assign(this, data)
   }
 
   toJSON() {
     return Object.fromEntries(
-      Object.entries(this.#data)
+      Object.entries(this)
         .filter(([_, val]) => val !== null && val !== undefined)
         .map(([key, val]) =>
           val instanceof ProcessInfoNode
@@ -115,7 +89,7 @@ export class ProcessInfoNode {
       db.pendingParent.delete(this.uuid)
     }
 
-    for (const f of this.files || []) {
+    for (const f of this.files as string[]) {
       const files = db.files.get(f)
       if (!files) {
         db.files.set(f, new Set<ProcessInfoNode>([this]))

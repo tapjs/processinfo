@@ -25,8 +25,9 @@ t.test('basic instantiation and usage', async t => {
     const pi = new ProcessInfo()
     t.matchSnapshot(pi, 'defaults')
   }
-  const pi = new ProcessInfo({ dir: resolve(fixtures, 'processinfo') })
-  await pi.load()
+  const pi = await ProcessInfo.load({
+    dir: resolve(fixtures, 'processinfo'),
+  })
   // verify that all roots are roots
   for (const r of pi.roots) {
     t.equal(r.root, r)
@@ -60,8 +61,9 @@ t.test('basic instantiation and usage', async t => {
     'root node'
   )
 
-  const piSync = new ProcessInfo({ dir: resolve(fixtures, 'processinfo') })
-  piSync.loadSync()
+  const piSync = ProcessInfo.loadSync({
+    dir: resolve(fixtures, 'processinfo'),
+  })
   t.match(piSync, pi, 'sync load has same data')
 
   await pi.load()

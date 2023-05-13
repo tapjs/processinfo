@@ -49,7 +49,10 @@ type CP<T extends { __promisify__: any }> = T & {
 }
 type OldCP = { __promisify__: (...a: any) => any }
 const customPromisify = <T extends OldCP>(e: T) =>
+  // the node types list it as __promisify__ but it's actually the symbol
+  /* c8 ignore start */
   (e as CP<T>)[promisify] || e.__promisify__
+/* c8 ignore stop */
 
 const k = '_TAPJS_PROCESSINFO_EXCLUDE_'
 
@@ -415,7 +418,9 @@ export namespace exec {
   }
 
   Object.assign(exec, { [promisify]: __promisify__ })
+  /* c8 ignore start */
 }
+/* c8 ignore stop */
 
 export function execSync(command: string): Buffer
 export function execSync(
@@ -741,7 +746,9 @@ export namespace execFile {
     )
   }
   Object.assign(execFile, { [promisify]: __promisify__ })
+  /* c8 ignore start */
 }
+/* c8 ignore stop */
 
 export function execFileSync(file: string): Buffer
 export function execFileSync(

@@ -157,10 +157,34 @@ exports[`test/node-options-env.ts TAP > short args has cjs relative 1`] = `
 "--require={CJSABS}"
 `
 
+exports[`test/node-options-env.ts TAP > short args no sp has cjs absolute 1`] = `
+"--require={CJSABS}"
+`
+
+exports[`test/node-options-env.ts TAP > short args no sp has cjs relative 1`] = `
+"--require={CJSABS}"
+`
+
+exports[`test/node-options-env.ts TAP > short args no sp other 1`] = `
+"--loader={ESMURL}"
+`
+
 exports[`test/node-options-env.ts TAP > short opts has cjs absolute 1`] = `
 "-r" "{CJSABS}"
 `
 
 exports[`test/node-options-env.ts TAP > short opts has cjs relative 1`] = `
 "-r" "{CJSREL}"
+`
+
+exports[`test/node-options-env.ts TAP > short opts no sp has cjs absolute 1`] = `
+"-r{CJSABS}"
+`
+
+exports[`test/node-options-env.ts TAP > short opts no sp has cjs relative 1`] = `
+"-r{CJSREL}"
+`
+
+exports[`test/node-options-env.ts TAP > short opts no sp other 1`] = `
+"-rfoo" "--loader={ESMURL}"
 `
