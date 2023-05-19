@@ -15,6 +15,37 @@ export let SESSION: Session | undefined = undefined
 // about at least somewhat, but coverage is a subset.
 const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 
+// This is a \n delimited list of files to show coverage for
+// If not set, or empty, then coverage is included for all files
+// that pass the exclusion RegExp filter. If included in this list,
+// then coverage will be recorded, even if it matches exclude.
+const cfEnv = process.env._TAPJS_PROCESSINFO_COV_FILES_ || ''
+const coveredFiles: string[] = cfEnv.trim().split('\n').filter(f => !!f)
+const fileCovered = (
+  f: string,
+  s?: SourceMapPayload,
+  files: string[] = []
+) => {
+  const testFiles = [f]
+  if (s) {
+    for (const src of s.sources || []) {
+      testFiles.push(fileURLToPath(src))
+    }
+  }
+  if (!testFiles.some(f => files.includes(f))) return false
+
+  // if at least one of them are explicitly covered, then include it,
+  // otherwise omit if we explicitly listed
+  if (coveredFiles.length) {
+    return testFiles.some(f => coveredFiles.includes(f))
+  }
+
+  for (const f of testFiles) {
+    if (!exclude.test(f)) return true
+  }
+  return false
+}
+
 // C8 can't see that this function runs, best theory is that it
 // collides with what it's doing with the coverage it's collecting
 // This ignore can possibly be removed once this is being tested
@@ -86,11 +117,11 @@ export const coverageOnProcessEnd = (
         return false
       }
       const f = fileURLToPath(obj.url)
-      if (!processInfo.files.includes(f) || exclude.test(f)) {
-        return false
-      }
       // see if it has a source map
       const s = findSourceMap(f)
+      if (!fileCovered(f, s?.payload, processInfo.files)) {
+        return false
+      }
       if (s) {
         const { payload } = s
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {

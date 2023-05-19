@@ -146,3 +146,67 @@ t.test('coverage of diff module enabled', async t => {
   // not an empty object
   t.notSame(cov['source-map-cache'], {})
 })
+
+t.test('coverage of specific files enabled', async t => {
+  const dir = t.testdir({
+    'r.js': `
+      const {coverageOnProcessEnd, register} = require(${JSON.stringify(
+        mod
+      )})
+      register()
+      process.on('exit', (code, signal) => {
+        coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
+          uuid: 'uuid-0',
+          files: { // not an actual array, everything included yolo
+            includes: () => true,
+          }
+        })
+      })
+    `,
+    'x.js': `
+      require('diff')
+    `,
+  })
+  await spawn(
+    process.execPath,
+    ['--enable-source-maps', `--require=${dir}/r.js`, `${dir}/x.js`],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_COVERAGE_: '1',
+        // exclude nothing
+        _TAPJS_PROCESSINFO_COV_EXCLUDE_: '/$./',
+        _TAPJS_PROCESSINFO_COV_FILES_: resolve(dir, 'x.js'),
+      },
+      stdio: 'inherit',
+      cwd: dir,
+    }
+  )
+  const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
+  // got one entries
+  t.match(cov, {
+    result: [
+      {
+        scriptId: /^[0-9]+$/,
+        url: String(pathToFileURL(resolve(dir, 'x.js'))),
+        functions: [
+          {
+            functionName: '',
+            ranges: [
+              {
+                startOffset: 0,
+                endOffset: Number,
+                count: 1,
+              },
+            ],
+            isBlockCoverage: true,
+          },
+        ],
+      },
+    ],
+    timestamp: Number,
+    'source-map-cache': {},
+  })
+  // no sourcemaps found
+  t.same(cov['source-map-cache'], {})
+})

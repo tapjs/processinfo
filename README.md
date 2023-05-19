@@ -104,3 +104,29 @@ for (const f of proc.files) {
 Note: unless there has been a previous wrapped process run, nothing will be
 present in the data. That is, `data.root` will be null, and all the maps
 will be empty.
+
+## Controlling Coverage
+
+To disable coverage entirely, set
+`_TAPJS_PROCESSINFO_COVERAGE_=0` in the environment.
+
+To exclude certain file paths from coverage, set the
+`_TAPJS_PROCESSINFO_COV_EXCLUDE_` to a regular expression string.
+By default, it will ignore:
+
+- Anything in a folder named `node_modules`, `.tap`,
+  `tap-snapshots`, `test`, `tests`, `__test__`, `__tests__`, or
+  starting with `tap-testdir-`.
+- Any file named `*.test.{ext}` where `{ext}` is one of js, cjs,
+  mjs, ts, cts, mts, jsx, or tsx.
+
+To include only a specific set of files for coverage (as with
+node-tap's `coverage-map` option), set
+`_TAPJS_PROCESSINFO_COV_FILES_` to a `\n` delimited list of the
+files to include. These will have their coverage reported even if
+they would be excluded by the `_TAPJS_PROCESSINFO_COV_EXCLUDE_`
+regexp.
+
+Note that coverage _instrumentation_ is by necessity enabled for
+all files, but it's only written to disk if the file (or any of
+its sources, if it has a sourcemap) is included.
