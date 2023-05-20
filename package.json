@@ -8,6 +8,10 @@
     "dist"
   ],
   "exports": {
+    "./package.json": {
+      "import": "./package.json",
+      "require": "./package.json"
+    },
     ".": {
       "import": {
         "types": "./dist/mjs/esm.d.mts",
