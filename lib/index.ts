@@ -8,6 +8,8 @@ import {
   spawnSync,
 } from './child_process.js'
 
+export { WithExternalID } from './spawn-opts.js'
+
 export * from './child_process.js'
 export { ProcessInfoNodeData } from './get-process-info.js'
 export * from './process-info-node.js'
