@@ -3,7 +3,9 @@ import { getProcessInfo } from './get-process-info.js'
 
 import { mkdirSync, writeFileSync } from 'fs'
 import { coverageOnProcessEnd } from './register-coverage.js'
-const cwd = process.cwd()
+
+const cwd = process.env._TAPJS_PROCESSINFO_CWD_ || process.cwd()
+process.env._TAPJS_PROCESSINFO_CWD_ = cwd
 const globals = new Set(Object.keys(global))
 
 export const register = () => {
