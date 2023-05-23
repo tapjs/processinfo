@@ -69,12 +69,15 @@ export const register = () => {
 }
 /* c8 ignore stop */
 
-// only read the file again if we don't already have the content
-// in the source map itself.
-const lineLengths = (f: string, content?: string): number[] =>
-  !content
-    ? lineLengths(f, readFileSync(f, 'utf8'))
-    : content.split(/\n|\u2028|\u2029/).map(l => l.length)
+// NB: this is the *generated* line lengths, not the source
+const lineLengths = (f: string): number[] => {
+  try {
+    const content = readFileSync(f, 'utf8')
+    return content.split(/\n|\u2028|\u2029/).map(l => l.length)
+  } catch {
+    return []
+  }
+}
 
 export const coverageOnProcessEnd = (
   cwd: string,
@@ -125,7 +128,7 @@ export const coverageOnProcessEnd = (
       if (s) {
         const { payload } = s
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {
-          lineLengths: lineLengths(f, payload.sourcesContent?.join('')),
+          lineLengths: lineLengths(f),
           data: payload,
         })
       }

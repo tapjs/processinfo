@@ -8,7 +8,7 @@ import t from 'tap'
 // have to mock anyway.
 
 import spawn from '@npmcli/promise-spawn'
-import fs from 'fs'
+import fs, { readFileSync } from 'fs'
 import { resolve } from 'path'
 import { pathToFileURL } from 'url'
 
@@ -145,6 +145,10 @@ t.test('coverage of diff module enabled', async t => {
   })
   // not an empty object
   t.notSame(cov['source-map-cache'], {})
+  const f = String(pathToFileURL(require.resolve('diff')))
+  const content = readFileSync(require.resolve('diff'), 'utf8')
+  const lineLengths = content.split(/\n/).map(l => l.length)
+  t.strictSame(lineLengths, cov['source-map-cache'][f].lineLengths)
 })
 
 t.test('coverage of specific files enabled', async t => {
