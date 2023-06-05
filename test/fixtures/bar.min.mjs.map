@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["bar.mjs"],
+  "sourcesContent": ["export const b = 'hello'\nimport mkdirp from 'mkdirp'\nmkdirp\nimport * as uuid from 'uuid'\nuuid.parse\n"],
+  "mappings": "aAAO,aAAM,EAAI,QACjB,OAAOA,MAAY,SACnBA,EACA,UAAYC,MAAU,OACtBA,EAAK",
+  "names": ["mkdirp", "uuid"]
+}

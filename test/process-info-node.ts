@@ -52,6 +52,7 @@ t.test('basic instance stuff', t => {
         uuid: 'root',
         root: 'root',
         files: ['root.txt', 'shared.txt'],
+        sources: {},
         ...extra,
       })
       const parent = new ProcessInfoNode({
@@ -59,6 +60,7 @@ t.test('basic instance stuff', t => {
         uuid: 'parent',
         root: 'root',
         files: ['parent.txt', 'shared.txt'],
+        sources: {},
         ...extra,
       })
       const child = new ProcessInfoNode({
@@ -66,6 +68,7 @@ t.test('basic instance stuff', t => {
         root: 'root',
         uuid: 'child',
         files: ['child.txt', 'shared.txt'],
+        sources: {},
         ...extra,
       })
       const child2 = new ProcessInfoNode({
@@ -73,6 +76,7 @@ t.test('basic instance stuff', t => {
         root: 'root',
         uuid: 'child2',
         files: ['child2.txt', 'parent.txt'],
+        sources: {},
         externalID: 'child2-eid',
         ...extra,
       })

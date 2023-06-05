@@ -29,13 +29,17 @@ export const globalPreload = (context: { port?: GPPort }) => {
   PORT = port
   return `
 if (typeof port !== 'undefined') {
-  const { createRequire } = getBuiltin('module')
+  const { createRequire, findSourceMap } = getBuiltin('module')
+  const { fileURLToPath } = getBuiltin('url')
   const require = createRequire(${JSON.stringify(base)})
   const { getProcessInfo } = require('./get-process-info.js')
   // must be called eagerly here.
   // this does all the registration as well.
   const processInfo = getProcessInfo()
-  port.onmessage = (e) => processInfo.files.push(e.data)
+  port.onmessage = (e) => {
+    const filename = e.data
+    processInfo.files.push(filename)
+  }
   port.unref()
 }
 `

@@ -20,6 +20,7 @@ export interface ProcessInfoNodeData {
   parent: string | null
   uuid: string
   files: string[]
+  sources: Record<string, string[]>
 
   // fields that are only set when the process completes
   root?: string | null
@@ -75,6 +76,7 @@ export const getProcessInfo = (): ProcessInfoNodeData => {
     parent: getEnv('parent') || null,
     uuid: uuid(),
     files: [],
+    sources: Object.create(null),
   }
 
   if (!g[kProcessInfo].parent) {

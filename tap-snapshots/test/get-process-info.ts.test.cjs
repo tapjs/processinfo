@@ -24,6 +24,7 @@ Object {
   "pid": true,
   "ppid": true,
   "root": "uuid-0",
+  "sources": Object {},
   "uuid": "uuid-0",
 }
 `
@@ -48,6 +49,7 @@ Object {
   "pid": true,
   "ppid": true,
   "root": "uuid-0",
+  "sources": Object {},
   "uuid": "uuid-1",
 }
 `
@@ -73,6 +75,7 @@ Object {
   "pid": true,
   "ppid": true,
   "root": "uuid-0",
+  "sources": Object {},
   "uuid": "uuid-2",
 }
 `

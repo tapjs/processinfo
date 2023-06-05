@@ -11,6 +11,7 @@ export class ProcessInfoNode {
   ppid!: number
   uuid!: string
   files: string[] = []
+  sources: Record<string, string[]> = Object.create(null)
   parent?: ProcessInfoNode | null = null
   root?: ProcessInfoNode | null = null
   children?: Set<ProcessInfoNode> | null = null
