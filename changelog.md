@@ -1,3 +1,16 @@
+# 2.2
+
+- capture source map sources in processinfo data
+
+# 2.1
+
+- add support for setting an explicit list of files to cover
+- export WithExternalID type
+- export ./package.json
+- use consistent cwd for entire process group
+- coverage: lineLengths should be based on generated content
+- Revert using the diagnostics channel, does not work on node 20
+
 # 2
 
 - ported to typescript
