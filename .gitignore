@@ -2,6 +2,7 @@
 /*
 /.*
 
+!/typedoc.json
 !/tsconfig*.json
 !/bin/
 !/lib/
