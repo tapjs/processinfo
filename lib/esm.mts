@@ -1,4 +1,5 @@
 // usage: node '--loader=@tapjs/processinfo/esm' foo.mjs
+import { parse } from 'path'
 import { fileURLToPath } from 'url'
 import type { Serializable } from 'worker_threads'
 import { getExclude } from './get-exclude.js'
@@ -59,6 +60,17 @@ export const load = async (
       } else {
         // call lazily so we don't double-register
         getProcessInfo().files.push(filename)
+      }
+    }
+    const { ext } = parse(filename)
+    // Package bins will sometimes have an extensionless bin script
+    // instead of just naming their extensioned file and letting npm
+    // symlink it for them. Don't blow up when this happens, just tell
+    // node that it's commonjs.
+    if (!ext) {
+      return {
+        format: 'commonjs',
+        shortCircuit: true,
       }
     }
   }

@@ -89,3 +89,22 @@ t.test('with others', async t => {
     /^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
   ])
 })
+
+t.test('extensionless does not blow up, it is just cjs', async t => {
+  const dir = t.testdir({
+    program: `console.log('hello')`,
+    'program.cjs': `console.log('hello')`,
+    'program.mjs': `console.log('hello')`,
+    'program.js': `console.log('hello')`,
+  })
+  for (const p of ['program', 'program.cjs']) {
+    const result = spawnSync(process.execPath, [
+      '--no-warnings',
+      '--loader',
+      esmLoader,
+      resolve(dir, p),
+    ])
+    t.equal(result.status, 0)
+    t.equal(result.stdout.toString().trim(), 'hello')
+  }
+})
