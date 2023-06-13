@@ -52,7 +52,6 @@ t.same(pos.listener?.({}), {
 
 t.same(pos.listener?.({ env: {} }), {
   env: {
-    _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
     NODE_OPTIONS: mjsLoader,
   },
 })
@@ -60,7 +59,6 @@ t.same(pos.listener?.({ env: {} }), {
 t.same(pos.listener?.({ x: 1, env: {} }), {
   x: 1,
   env: {
-    _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
     NODE_OPTIONS: mjsLoader,
   },
 })
@@ -68,7 +66,6 @@ t.same(pos.listener?.({ x: 1, env: {} }), {
 t.same(pos.listener?.({ env: { x: '1' } }), {
   env: {
     x: '1',
-    _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
     NODE_OPTIONS: mjsLoader,
   },
 })
