@@ -23,6 +23,13 @@ t.test('empty', async t => {
   t.end()
 })
 
+t.test('empty, no default', async t => {
+  process.env[k] = ''
+  t.same(getExclude(k, false), /$./)
+  t.equal(process.env[k], /$./.toString())
+  t.end()
+})
+
 t.test('not a regexp', async t => {
   process.env[k] = 'blerg'
   t.same(getExclude(k), defaultExclude)

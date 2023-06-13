@@ -45,7 +45,7 @@ if (typeof port !== 'undefined') {
 `
 }
 
-const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_')
+const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
 export const load = async (
   url: string,
   context: any,

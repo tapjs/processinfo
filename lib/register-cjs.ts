@@ -11,7 +11,8 @@ const g = global as typeof globalThis & {
 export const register = () => {
   if (g[kRegisterCJS]) return
   g[kRegisterCJS] = true
-  const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_')
+  // by default we include everything in processInfo.files
+  const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
   addHook(
     (code, filename) => {
       getProcessInfo().files.push(filename)
