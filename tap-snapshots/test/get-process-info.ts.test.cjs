@@ -14,7 +14,9 @@ Object {
   "cwd": "{CWD}",
   "date": "string",
   "execArgv": Array [],
-  "files": Array [],
+  "files": Array [
+    "{CWD}/test/get-process-info.ts",
+  ],
   "hrstart": Array [
     true,
     2,
@@ -39,7 +41,9 @@ Object {
   "cwd": "{CWD}",
   "date": "string",
   "execArgv": Array [],
-  "files": Array [],
+  "files": Array [
+    "{CWD}/test/get-process-info.ts",
+  ],
   "hrstart": Array [
     true,
     2,
@@ -65,7 +69,9 @@ Object {
   "date": "string",
   "execArgv": Array [],
   "externalID": "external id",
-  "files": Array [],
+  "files": Array [
+    "{CWD}/test/get-process-info.ts",
+  ],
   "hrstart": Array [
     true,
     2,

@@ -9,6 +9,7 @@ const dir = t.testdir({ 'file.js': 'module.exports = "hello"' })
 t.equal(require(dir + '/file.js'), 'hello')
 
 t.same(getProcessInfo().files, [
+  __filename,
   require.resolve('../dist/cjs/json-file.js'),
   require.resolve(dir + '/file.js'),
 ])

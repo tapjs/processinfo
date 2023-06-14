@@ -4,6 +4,7 @@ const p = process as NodeJS.Process & {
 }
 p.setSourceMapsEnabled(true)
 
+import { fileURLToPath } from 'node:url'
 import { v4 as uuid } from 'uuid'
 export interface ProcessInfoNodeData {
   // set initially, but deleted before it is written
@@ -31,16 +32,15 @@ export interface ProcessInfoNodeData {
   globalsAdded?: string[]
 }
 
-
 const envKey = (k: string) => `_TAPJS_PROCESSINFO_${k.toUpperCase()}_`
 const getEnv = (k: string) => process.env[envKey(k)]
 const setEnv = (k: string, v: string) => (process.env[envKey(k)] = v)
 const delEnv = (k: string) => delete process.env[envKey(k)]
 
+import { register as registerCJS } from './register-cjs.js'
 import { register as registerCoverage } from './register-coverage.js'
 import { register as registerEnv } from './register-env.js'
 import { register as registerProcessEnd } from './register-process-end.js'
-import { register as registerCJS } from './register-cjs.js'
 
 // this module is hybridized.  In node v20, it's the *commonjs* one that
 // gets loaded, because the esm loader context can't modify the main thread
@@ -64,6 +64,12 @@ export const reset = () => {
 export const getProcessInfo = (): ProcessInfoNodeData => {
   if (g[kProcessInfo]) return g[kProcessInfo]
 
+  const argv1 = process.argv[1]
+  // we only test this in CJS, but file:// only prepended in ESM
+  /* c8 ignore start */
+  const main = argv1.startsWith('file://') ? fileURLToPath(argv1) : argv1
+  /* c8 ignore stop */
+
   g[kProcessInfo] = {
     hrstart: process.hrtime(),
     date: new Date().toISOString(),
@@ -75,7 +81,7 @@ export const getProcessInfo = (): ProcessInfoNodeData => {
     ppid: process.ppid,
     parent: getEnv('parent') || null,
     uuid: uuid(),
-    files: [],
+    files: [main],
     sources: Object.create(null),
   }
 
