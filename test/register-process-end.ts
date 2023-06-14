@@ -1,5 +1,6 @@
 import { resolve } from 'path'
 import t from 'tap'
+import { pathToFileURL } from 'url'
 
 // mocks
 const exitHandlers: ((
@@ -64,7 +65,7 @@ const mocks = {
 t.test('run the process end', async t => {
   // have to actually load the bar.min.mjs file to get its source map
   // to be loaded by node.
-  await import(bm)
+  await import(String(pathToFileURL(bm)))
   const { register } = t.mock('../dist/cjs/register-process-end.js', mocks)
   register()
   doExit(0, null)
