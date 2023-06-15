@@ -3,10 +3,11 @@
 const enabled = process.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
 import { mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { Session } from 'inspector'
-import { findSourceMap, SourceMapPayload } from 'module'
+import { findSourceMap, SourceMap, SourceMapPayload } from 'module'
 import { fileURLToPath } from 'url'
 import { getExclude } from './get-exclude.js'
 import { ProcessInfoNodeData } from './get-process-info.js'
+import {getLineLengths} from './line-lengths.js'
 
 export let SESSION: Session | undefined = undefined
 
@@ -20,7 +21,10 @@ const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 // that pass the exclusion RegExp filter. If included in this list,
 // then coverage will be recorded, even if it matches exclude.
 const cfEnv = process.env._TAPJS_PROCESSINFO_COV_FILES_ || ''
-const coveredFiles: string[] = cfEnv.trim().split('\n').filter(f => !!f)
+const coveredFiles: string[] = cfEnv
+  .trim()
+  .split('\n')
+  .filter(f => !!f)
 const fileCovered = (
   f: string,
   s?: SourceMapPayload,
@@ -68,16 +72,6 @@ export const register = () => {
   })
 }
 /* c8 ignore stop */
-
-// NB: this is the *generated* line lengths, not the source
-const lineLengths = (f: string): number[] => {
-  try {
-    const content = readFileSync(f, 'utf8')
-    return content.split(/\n|\u2028|\u2029/).map(l => l.length)
-  } catch {
-    return []
-  }
-}
 
 export const coverageOnProcessEnd = (
   cwd: string,
@@ -128,7 +122,7 @@ export const coverageOnProcessEnd = (
       if (s) {
         const { payload } = s
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {
-          lineLengths: lineLengths(f),
+          lineLengths: getLineLengths(f),
           data: payload,
         })
       }

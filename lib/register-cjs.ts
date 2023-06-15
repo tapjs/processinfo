@@ -2,6 +2,7 @@
 import { addHook } from 'pirates'
 import { getExclude } from './get-exclude.js'
 import { getProcessInfo } from './get-process-info.js'
+import { saveLineLengths } from './line-lengths.js'
 
 const kRegisterCJS = Symbol.for('@tapjs/processinfo.registerCJS')
 const g = global as typeof globalThis & {
@@ -16,8 +17,12 @@ export const register = () => {
   addHook(
     (code, filename) => {
       getProcessInfo().files.push(filename)
+      saveLineLengths(filename, code)
       return code
     },
-    { exts: ['.js', '.cjs'], matcher: filename => !exclude.test(filename) }
+    {
+      exts: ['.js', '.cjs', '.ts', '.cts', '.jsx', '.tsx'],
+      matcher: filename => !exclude.test(filename),
+    }
   )
 }

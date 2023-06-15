@@ -51,6 +51,14 @@ If you just use the normal `spawn`/`exec` methods from the Node.js
 `child_process` module, then the relevant environment variables will still
 be tracked, unless explicitly set to `''` or some other value.
 
+### Important
+
+In order to properly track `lineLengths` (required for coverage
+reporting on source mapped files), `@tapjs/processinfo` must be
+the **last** loader specified on the command line, so that it can
+get access to the transpiled source that Node.js actually
+executes.
+
 ### Interacting with Process Info
 
 To load the process info data, use the exported `ProcessInfo` class.

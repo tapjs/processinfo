@@ -103,8 +103,16 @@ t.test('coverage enabled', async t => {
 })
 
 t.test('coverage of diff module enabled', async t => {
+  const lineLengthMod = require.resolve('../dist/cjs/line-lengths.js')
   const dir = t.testdir({
     'r.js': `
+      const { saveLineLengths } = require(${JSON.stringify(lineLengthMod)})
+      const { readFileSync } = require('fs')
+      const mods = [__filename, './x.js', 'diff'].map(m => require.resolve(m))
+      for (const m of mods) {
+        const content = readFileSync(m, 'utf8')
+        saveLineLengths(m, content)
+      }
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
         mod
       )})
@@ -147,7 +155,10 @@ t.test('coverage of diff module enabled', async t => {
   t.notSame(cov['source-map-cache'], {})
   const f = String(pathToFileURL(require.resolve('diff')))
   const content = readFileSync(require.resolve('diff'), 'utf8')
-  const lineLengths = content.split(/\n/).map(l => l.length)
+  const lineLengths = content
+    .replace(/\n$/, '')
+    .split(/\n/)
+    .map(l => l.length)
   t.strictSame(lineLengths, cov['source-map-cache'][f].lineLengths)
 })
 
