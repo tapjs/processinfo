@@ -1,4 +1,5 @@
 // just here to explicitly hit the bit that C8 doesn't capture otherwise
+import { resolve } from 'path'
 import t from 'tap'
 import {
   getLineLengths,
@@ -18,10 +19,10 @@ const contentWithSM = `${contentNoSM}
 
 t.equal(getLineLengths('/content/no-sm'), undefined)
 t.equal(getLineLengths('/content/with-sm'), undefined)
-saveLineLengths('file:///content/no-sm', contentNoSM)
+saveLineLengths(`file://${resolve('/content/no-sm')}`, contentNoSM)
 saveLineLengths('/content/with-sm', contentWithSM)
 t.strictSame(getLineLengths('/content/no-sm'), [])
 t.strictSame(
-  getLineLengths('file:///content/with-sm'),
+  getLineLengths(`file://${resolve('/content/with-sm')}`),
   [19, 0, 27, 0, 16, 0, 45]
 )
