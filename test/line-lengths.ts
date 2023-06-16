@@ -17,11 +17,11 @@ const contentWithSM = `${contentNoSM}
 //# sourceMappingURL=https://www.example.com/
 `
 
-t.equal(getLineLengths('/content/no-sm'), undefined)
-t.equal(getLineLengths('/content/with-sm'), undefined)
+t.equal(getLineLengths(resolve('/content/no-sm')), undefined)
+t.equal(getLineLengths(resolve('/content/with-sm')), undefined)
 saveLineLengths(`file://${resolve('/content/no-sm')}`, contentNoSM)
-saveLineLengths('/content/with-sm', contentWithSM)
-t.strictSame(getLineLengths('/content/no-sm'), [])
+saveLineLengths(resolve('/content/with-sm'), contentWithSM)
+t.strictSame(getLineLengths(resolve('/content/no-sm')), [])
 t.strictSame(
   getLineLengths(`file://${resolve('/content/with-sm')}`),
   [19, 0, 27, 0, 16, 0, 45]
