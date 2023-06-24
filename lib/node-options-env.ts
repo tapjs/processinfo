@@ -66,12 +66,20 @@ const hasLoader = (
   return false
 }
 
+const addIgnoreLoadersWarning = (args: readonly string[]) =>
+  args.includes('--no-warnings') ||
+  args.includes('--no-warnings=ExperimentalLoader')
+    ? args
+    : args.concat('--no-warnings=ExperimentalLoader')
+
 export const nodeOptionsEnv = (
   env: NodeJS.ProcessEnv,
   args: ReadonlyArray<string>
 ) => {
   const no = nodeOptionsToArgv(env.NODE_OPTIONS)
   return argvToNodeOptions(
-    cjsOnly(args.concat(no)) ? addCJS(no) : addESM(no)
+    cjsOnly(args.concat(no))
+      ? addCJS(no)
+      : addIgnoreLoadersWarning(addESM(no))
   )
 }

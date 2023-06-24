@@ -43,16 +43,39 @@ const cases: {
   ]
 } = {
   empty: [{}, []],
+  'empty no-warnings': [{}, ['--no-warnings']],
+  'empty no-warnings=ExperimentalLoader': [
+    {},
+    ['--no-warnings=ExperimentalLoader'],
+  ],
   'has NO': [{ NODE_OPTIONS: '--x y -z' }, []],
   'has argv': [{}, ['--a', 'b']],
   'has both': [{ NODE_OPTIONS: '--x y -z' }, ['--a', 'b']],
 
+  'args has esm url with no-warnings': [
+    {},
+    ['--loader', esmURL, '--no-warnings'],
+  ],
+  'args has esm url with no-warnings=ExperimentalLoader': [
+    {},
+    ['--loader', esmURL, '--no-warnings=ExperimentalLoader'],
+  ],
   'args has esm url': [{}, ['--loader', esmURL]],
   'args has esm url =': [{}, [`--loader=${esmURL}`]],
   'args has esm relative': [{}, [`--loader=${esmRel}`]],
   'args has esm absolute': [{}, ['--loader', esmAbs]],
   'opts has esm url': [{ NODE_OPTIONS: ['--loader', esmURL] }, []],
   'opts has esm url =': [{ NODE_OPTIONS: `--loader=${esmURL}` }, []],
+  'opts has esm url = no warning': [
+    { NODE_OPTIONS: `--loader=${esmURL} --no-warnings` },
+    [],
+  ],
+  'opts has esm url = no warning=exploader': [
+    {
+      NODE_OPTIONS: `--loader=${esmURL} --no-warnings=ExperimentalLoader`,
+    },
+    [],
+  ],
   'opts has esm relative': [{ NODE_OPTIONS: [`--loader=${esmRel}`] }, []],
   'opts has esm absolute': [{ NODE_OPTIONS: ['--loader', esmAbs] }, []],
 
@@ -89,8 +112,14 @@ const cases: {
 
   'short args no sp has cjs relative': [{}, [`-r${cjsRel}`]],
   'short args no sp has cjs absolute': [{}, [`-r${cjsAbs}`]],
-  'short opts no sp has cjs relative': [{ NODE_OPTIONS: [`-r${cjsRel}`] }, []],
-  'short opts no sp has cjs absolute': [{ NODE_OPTIONS: [`-r${cjsAbs}`] }, []],
+  'short opts no sp has cjs relative': [
+    { NODE_OPTIONS: [`-r${cjsRel}`] },
+    [],
+  ],
+  'short opts no sp has cjs absolute': [
+    { NODE_OPTIONS: [`-r${cjsAbs}`] },
+    [],
+  ],
 
   'short args no sp other': [{}, [`-rfoo`]],
   'short opts no sp other': [{ NODE_OPTIONS: [`-rfoo`] }, []],
@@ -109,7 +138,10 @@ const cases: {
     ['-r', cjsRel],
   ],
 
-  'other loader in opts': [{ NODE_OPTIONS: ['--loader', 'some-file.ts'] }, []],
+  'other loader in opts': [
+    { NODE_OPTIONS: ['--loader', 'some-file.ts'] },
+    [],
+  ],
   'other loader in args': [{}, ['--loader', 'some-file.ts']],
   'other loader in both': [
     { NODE_OPTIONS: ['--loader', 'some-file.ts'] },

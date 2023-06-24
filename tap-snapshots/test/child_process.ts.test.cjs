@@ -13,7 +13,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
     Function (),
@@ -29,7 +29,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -46,7 +46,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
     Function (),
@@ -62,7 +62,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -77,7 +77,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -93,7 +93,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -109,7 +109,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
     Function (),
@@ -128,7 +128,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
     Function (),
@@ -147,7 +147,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -165,7 +165,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -185,7 +185,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
     Function (),
@@ -204,7 +204,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -221,7 +221,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -236,7 +236,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -252,7 +252,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -268,7 +268,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -283,7 +283,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -301,7 +301,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -319,7 +319,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -337,7 +337,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -356,7 +356,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -372,7 +372,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -388,7 +388,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -404,7 +404,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -419,7 +419,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -436,7 +436,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -454,7 +454,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -470,7 +470,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -489,7 +489,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -506,7 +506,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -522,7 +522,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -541,7 +541,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -559,7 +559,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -576,7 +576,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -594,7 +594,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
     },
   ],
@@ -612,7 +612,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },
@@ -629,7 +629,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/esm.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
       },
       "stdio": "ignore",
     },

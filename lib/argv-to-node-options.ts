@@ -1,2 +1,2 @@
-export const argvToNodeOptions = (argv: string[]) =>
+export const argvToNodeOptions = (argv: readonly string[]) =>
   argv.map(o => `"${o.replace(/"/g, '\\"')}"`).join(' ')

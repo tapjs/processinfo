@@ -38,7 +38,7 @@ t.type(pos.listener, Function, 'registered handler')
 
 const mjsLoader = argvToNodeOptions([
   `--loader=${pathToFileURL(require.resolve('../dist/mjs/esm.mjs'))}`,
-])
+]) + ' "--no-warnings=ExperimentalLoader"'
 const cjsLoader = argvToNodeOptions([
   `--require=${require.resolve('../dist/cjs/cjs.js')}`,
 ])
