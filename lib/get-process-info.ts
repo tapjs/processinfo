@@ -33,9 +33,9 @@ export interface ProcessInfoNodeData {
 }
 
 const envKey = (k: string) => `_TAPJS_PROCESSINFO_${k.toUpperCase()}_`
-const getEnv = (k: string) => process.env[envKey(k)]
-const setEnv = (k: string, v: string) => (process.env[envKey(k)] = v)
-const delEnv = (k: string) => delete process.env[envKey(k)]
+const getEnv = (k: string) => p.env[envKey(k)]
+const setEnv = (k: string, v: string) => (p.env[envKey(k)] = v)
+const delEnv = (k: string) => delete p.env[envKey(k)]
 
 import { register as registerCJS } from './register-cjs.js'
 import { register as registerCoverage } from './register-coverage.js'
@@ -64,21 +64,21 @@ export const reset = () => {
 export const getProcessInfo = (): ProcessInfoNodeData => {
   if (g[kProcessInfo]) return g[kProcessInfo]
 
-  const argv1 = process.argv[1]
+  const argv1 = p.argv[1]
   // we only test this in CJS, but file:// only prepended in ESM
   /* c8 ignore start */
   const main = argv1.startsWith('file://') ? fileURLToPath(argv1) : argv1
   /* c8 ignore stop */
 
   g[kProcessInfo] = {
-    hrstart: process.hrtime(),
+    hrstart: p.hrtime(),
     date: new Date().toISOString(),
-    argv: process.argv,
-    execArgv: process.execArgv,
-    NODE_OPTIONS: process.env.NODE_OPTIONS,
-    cwd: process.cwd(),
-    pid: process.pid,
-    ppid: process.ppid,
+    argv: p.argv,
+    execArgv: p.execArgv,
+    NODE_OPTIONS: p.env.NODE_OPTIONS,
+    cwd: p.cwd(),
+    pid: p.pid,
+    ppid: p.ppid,
     parent: getEnv('parent') || null,
     uuid: uuid(),
     files: [main],

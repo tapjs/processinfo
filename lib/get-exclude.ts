@@ -11,9 +11,11 @@ const parseExclude = (src: string | undefined): RegExp | undefined => {
   }
 }
 
+const proc = process
+
 export const getExclude = (k: string, useDefault = true) => {
-  const src = process.env[k]
+  const src = proc.env[k]
   const exclude = parseExclude(src) || (useDefault ? defaultExclude : /$./)
-  process.env[k] = String(exclude)
+  proc.env[k] = String(exclude)
   return exclude
 }

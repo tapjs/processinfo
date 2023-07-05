@@ -6,8 +6,10 @@ import { findSourceMap, SourceMap } from 'module'
 import { fileURLToPath } from 'url'
 import { coverageOnProcessEnd } from './register-coverage.js'
 
-const cwd = process.env._TAPJS_PROCESSINFO_CWD_ || process.cwd()
-process.env._TAPJS_PROCESSINFO_CWD_ = cwd
+const proc = process
+
+const cwd = proc.env._TAPJS_PROCESSINFO_CWD_ || proc.cwd()
+proc.env._TAPJS_PROCESSINFO_CWD_ = cwd
 const globals = new Set(Object.keys(global))
 
 const sourceMaps = new Map<string, SourceMap>()
@@ -18,7 +20,7 @@ export const register = () => {
       const processInfo = getProcessInfo()
       processInfo.code = code
       processInfo.signal = signal
-      const runtime = process.hrtime(processInfo.hrstart)
+      const runtime = proc.hrtime(processInfo.hrstart)
       delete processInfo.hrstart
       processInfo.files = [...new Set(processInfo.files)]
       // try to find the actual sources of the files we loaded

@@ -23,6 +23,8 @@ import { mkdir, readdir, rm, writeFile } from 'fs/promises'
 
 import { safeJSON, safeJSONSync } from './json-file.js'
 
+const p = process
+
 export class ProcessInfo {
   dir: string
   exclude: RegExp
@@ -34,7 +36,7 @@ export class ProcessInfo {
   externalIDs: Map<string, ProcessInfoNode> = new Map()
 
   static async load({
-    dir = resolve(process.cwd(), '.tap/processinfo'),
+    dir = resolve(p.cwd(), '.tap/processinfo'),
     exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
   }): Promise<ProcessInfo> {
     const pi = new ProcessInfo({ dir, exclude })
@@ -43,7 +45,7 @@ export class ProcessInfo {
   }
 
   static loadSync({
-    dir = resolve(process.cwd(), '.tap/processinfo'),
+    dir = resolve(p.cwd(), '.tap/processinfo'),
     exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
   }): ProcessInfo {
     const pi = new ProcessInfo({ dir, exclude })
@@ -52,7 +54,7 @@ export class ProcessInfo {
   }
 
   constructor({
-    dir = resolve(process.cwd(), '.tap/processinfo'),
+    dir = resolve(p.cwd(), '.tap/processinfo'),
     exclude = /(^|\\|\/)node_modules(\\|\/|$)/,
   } = {}) {
     this.dir = dir

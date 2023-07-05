@@ -1,6 +1,7 @@
 // start tracking coverage, unless disabled explicltly
 // export so that we know to collect at the end of the process
-const enabled = process.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
+const p = process
+const enabled = p.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
 import { mkdirSync, readFileSync, writeFileSync } from 'fs'
 import { Session } from 'inspector'
 import { findSourceMap, SourceMap, SourceMapPayload } from 'module'
@@ -20,7 +21,7 @@ const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 // If not set, or empty, then coverage is included for all files
 // that pass the exclusion RegExp filter. If included in this list,
 // then coverage will be recorded, even if it matches exclude.
-const cfEnv = process.env._TAPJS_PROCESSINFO_COV_FILES_ || ''
+const cfEnv = p.env._TAPJS_PROCESSINFO_COV_FILES_ || ''
 const coveredFiles: string[] = cfEnv
   .trim()
   .split('\n')
@@ -60,7 +61,7 @@ const fileCovered = (
 /* c8 ignore start */
 export const register = () => {
   if (!enabled) return
-  process.env._TAPJS_PROCESSINFO_COVERAGE_ = '1'
+  p.env._TAPJS_PROCESSINFO_COVERAGE_ = '1'
 
   SESSION = new Session()
   SESSION.connect()
