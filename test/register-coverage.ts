@@ -225,3 +225,89 @@ t.test('coverage of specific files enabled', async t => {
   // no sourcemaps found
   t.same(cov['source-map-cache'], {})
 })
+
+t.test('coverage of specific files enabled with esm urls', async t => {
+  const ysrc = resolve(__dirname, 'fixtures/y.mjs')
+
+  // go through a sourcemap, since that's where it was falling over
+  // also, include a search param on the url, for added chaos
+  const y = pathToFileURL(resolve(__dirname, 'fixtures/y.min.mjs'))
+  y.searchParams.set('blah', 'bloo')
+
+  const dir = t.testdir({
+    'r.cjs': `
+      const {coverageOnProcessEnd, register} = require(${JSON.stringify(
+        mod
+      )})
+      register()
+      process.on('exit', (code, signal) => {
+        coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
+          uuid: 'uuid-0',
+          files: { // not an actual array, everything included yolo
+            includes: () => true,
+          }
+        })
+      })
+    `,
+    'x.mjs': `
+      import * as y from ${
+        JSON.stringify(String(y))
+      }
+      export default y
+    `,
+  })
+
+  await spawn(
+    process.execPath,
+    ['--enable-source-maps', `--require=${dir}/r.cjs`, `${dir}/x.mjs`],
+    {
+      env: {
+        ...process.env,
+        _TAPJS_PROCESSINFO_COVERAGE_: '1',
+        // exclude nothing
+        _TAPJS_PROCESSINFO_COV_EXCLUDE_: '/$./',
+        _TAPJS_PROCESSINFO_COV_FILES_: ysrc,
+      },
+      stdio: 'inherit',
+      cwd: dir,
+    }
+  )
+
+  const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
+  // got one entries
+  t.match(cov, {
+    result: [
+      {
+        scriptId: /^[0-9]+$/,
+        url: String(y),
+        functions: [
+          {
+            functionName: '',
+            ranges: [
+              {
+                startOffset: 0,
+                endOffset: Number,
+                count: 1,
+              },
+            ],
+            isBlockCoverage: true,
+          },
+        ],
+      },
+    ],
+    timestamp: Number,
+    'source-map-cache': {
+      [String(y)]: {
+        data: {
+          version: 3,
+          sources: [String(pathToFileURL(ysrc))],
+          sourcesContent: [String],
+          mappings: String,
+          names: ['diff'],
+          sourceRoot: '',
+        },
+      }
+    },
+  })
+  t.equal(cov.result.length, 1)
+})

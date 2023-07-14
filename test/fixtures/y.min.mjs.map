@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["y.mjs"],
+  "sourcesContent": ["// just a simple file with one import\n// but we minify it to get a source map\n\nimport * as diff from 'diff'\n\nexport const d = diff\n\n// that's all folks\n"],
+  "mappings": "aAGA,UAAYA,MAAU,OAEf,aAAM,EAAIA",
+  "names": ["diff"]
+}

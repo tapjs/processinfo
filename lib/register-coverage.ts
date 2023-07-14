@@ -2,13 +2,13 @@
 // export so that we know to collect at the end of the process
 const p = process
 const enabled = p.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
-import { mkdirSync, readFileSync, writeFileSync } from 'fs'
+import { mkdirSync, writeFileSync } from 'fs'
 import { Session } from 'inspector'
-import { findSourceMap, SourceMap, SourceMapPayload } from 'module'
+import { findSourceMap, SourceMapPayload } from 'module'
 import { fileURLToPath } from 'url'
 import { getExclude } from './get-exclude.js'
 import { ProcessInfoNodeData } from './get-process-info.js'
-import {getLineLengths} from './line-lengths.js'
+import { getLineLengths } from './line-lengths.js'
 
 export let SESSION: Session | undefined = undefined
 
@@ -116,7 +116,9 @@ export const coverageOnProcessEnd = (
       }
       const f = fileURLToPath(obj.url)
       // see if it has a source map
-      const s = findSourceMap(f)
+      // need to look up via the url, not the file path, because mocks
+      // attach a tapmock search param, which is in node's internal key.
+      const s = findSourceMap(String(obj.url))
       if (!fileCovered(f, s?.payload, processInfo.files)) {
         return false
       }
