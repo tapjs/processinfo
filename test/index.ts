@@ -232,5 +232,10 @@ t.test('externalIDsChanged', async t => {
       t.equal(c.size, 1)
       t.strictSame([...c.keys()], ['blah'])
     })
+
+    t.test('exclude with a filter', async t => {
+      const c = await pi.externalIDsChanged(() => false)
+      t.equal(c.size, 0)
+    })
   })
 })

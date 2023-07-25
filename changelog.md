@@ -1,3 +1,7 @@
+# 2.4
+
+- Put a filter function on `externalIDsChanged()`
+
 # 2.3
 
 - Add `externalIDsChanged()` method

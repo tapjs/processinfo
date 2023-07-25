@@ -203,18 +203,21 @@ export class ProcessInfo {
    * Get a subset of this.externalIDs where one or more of the
    * files have changed since the date on the node.
    */
-  async externalIDsChanged() {
+  async externalIDsChanged(
+    filter: (p: string, node: ProcessInfoNode) => boolean = () => true
+  ) {
     const changed = new Map<string, ProcessInfoNode>()
     const promises: Promise<void>[] = []
     const stats = new Map<string, Stats | null>()
-    for (const node of this.externalIDs.values()) {
+    for (const [id, node] of this.externalIDs.entries()) {
+      if (!filter(id, node)) continue
       promises.push(...this.#statFiles(node, stats))
     }
     // consider limiting with promise-call-limit?
     await Promise.all(promises)
 
     for (const [id, node] of this.externalIDs.entries()) {
-      if (this.#hasNewerFiles(node, stats)) {
+      if (filter(id, node) && this.#hasNewerFiles(node, stats)) {
         changed.set(id, node)
       }
     }
