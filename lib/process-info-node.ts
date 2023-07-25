@@ -1,5 +1,5 @@
-import type { ProcessInfo } from './index.js'
 import type { ProcessInfoNodeData } from './get-process-info.js'
+import type { ProcessInfo } from './index.js'
 
 export class ProcessInfoNode {
   date!: string
@@ -15,6 +15,7 @@ export class ProcessInfoNode {
   parent?: ProcessInfoNode | null = null
   root?: ProcessInfoNode | null = null
   children?: Set<ProcessInfoNode> | null = null
+  descendants: Set<ProcessInfoNode> | null = null
   externalID: string | null = null
 
   #data: ProcessInfoNodeData
@@ -31,7 +32,7 @@ export class ProcessInfoNode {
         .map(([key, val]) =>
           val instanceof ProcessInfoNode
             ? [key, val.uuid]
-            : key === 'children'
+            : key === 'children' || key === 'descendants'
             ? [key, [...val].map(c => c.uuid)]
             : [key, val]
         )
@@ -51,6 +52,7 @@ export class ProcessInfoNode {
       this.root = this
       const pendingRoot = db.pendingRoot.get(this.uuid)
       if (pendingRoot) {
+        this.descendants = pendingRoot
         for (const n of pendingRoot) {
           n.root = this
         }
@@ -64,6 +66,9 @@ export class ProcessInfoNode {
       } else {
         db.pendingRoot.set(this.root, new Set([this]))
       }
+    } else if (this.root) {
+      this.root.descendants ??= new Set()
+      this.root.descendants.add(this)
     }
 
     if (typeof this.parent === 'string') {

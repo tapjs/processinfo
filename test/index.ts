@@ -1,3 +1,4 @@
+import { unlinkSync, utimesSync, writeFileSync } from 'fs'
 import { readdir } from 'fs/promises'
 import { resolve } from 'path'
 import t from 'tap'
@@ -107,4 +108,129 @@ t.test('re-export spawn methods', t => {
     t.equal(ProcessInfo[name as keyof typeof ProcessInfo], method)
   }
   t.end()
+})
+
+t.test('externalIDsChanged', async t => {
+  t.test('basic change test', async t => {
+    const dir = t.testdirName
+    const today = new Date()
+    const MONTH = 30 * 24 * 60 * 60 * 1000
+    const yesterday = new Date(today.getTime() - MONTH)
+    const tomorrow = new Date(today.getTime() + MONTH)
+    const future = new Date(tomorrow.getTime() + MONTH)
+
+    const zro = {
+      date: tomorrow,
+      uuid: 'uuid-0',
+      root: 'uuid-0',
+      externalID: 'blah',
+      parent: null,
+      files: [resolve(dir, 'direct'), resolve(dir, 'generated')],
+      sources: {
+        [resolve(dir, 'generated')]: [resolve(dir, 'source')],
+      },
+    }
+
+    const one = {
+      date: tomorrow,
+      uuid: 'uuid-1',
+      root: 'uuid-0',
+      parent: 'uuid-0',
+      files: [
+        resolve(dir, 'child'),
+        resolve(dir, 'childgenerated'),
+        resolve(dir, 'generated'),
+      ],
+      sources: {
+        [resolve(dir, 'generated')]: [resolve(dir, 'source')],
+        [resolve(dir, 'childgenerated')]: [resolve(dir, 'childsource')],
+      },
+    }
+
+    const two = {
+      date: tomorrow,
+      uuid: 'uuid-2',
+      parent: 'uuid-1',
+      root: 'uuid-0',
+      files: [
+        resolve(dir, 'direct'),
+        resolve(dir, 'gcdirect'),
+        resolve(dir, 'gcgenerated'),
+      ],
+      sources: {
+        [resolve(dir, 'gcgenerated')]: [resolve(dir, 'gcsource')],
+      },
+    }
+
+    t.testdir({
+      generated: '',
+      source: '',
+      child: '',
+      childgenerated: '',
+      childsource: '',
+      direct: '',
+      gcdirect: '',
+      gcgenerated: '',
+      gcsource: '',
+      '.tap': {
+        processinfo: {
+          'uuid-0.json': JSON.stringify(zro),
+          'uuid-1.json': JSON.stringify(one),
+          'uuid-2': JSON.stringify(two),
+        },
+      },
+    })
+
+    // all files are older, because date is in the future
+    const pi = ProcessInfo.loadSync({ dir: dir + '/.tap/processinfo' })
+    t.test('everything older', async t => {
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 0)
+    })
+
+    t.test('touched', async t => {
+      utimesSync(resolve(dir, 'gcdirect'), future, future)
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 1)
+      t.strictSame([...c.keys()], ['blah'])
+    })
+
+    t.test('delete one of the files', async t => {
+      unlinkSync(resolve(dir, 'gcdirect'))
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 1)
+      t.strictSame([...c.keys()], ['blah'])
+    })
+
+    t.test(
+      'touch a generated file, but source is still older',
+      async t => {
+        writeFileSync(resolve(dir, 'gcdirect'), 'x')
+        utimesSync(resolve(dir, 'gcdirect'), yesterday, yesterday)
+        utimesSync(resolve(dir, 'childgenerated'), future, future)
+        const c = await pi.externalIDsChanged()
+        t.equal(c.size, 0)
+      }
+    )
+
+    t.test('source change without gen change = no change', async t => {
+      utimesSync(resolve(dir, 'gcsource'), future, future)
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 0)
+    })
+
+    t.test('source file AND gen file = change', async t => {
+      utimesSync(resolve(dir, 'childsource'), future, future)
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 1)
+      t.strictSame([...c.keys()], ['blah'])
+    })
+
+    t.test('missing source file is a change if gen changed', async t => {
+      unlinkSync(resolve(dir, 'childsource'))
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 1)
+      t.strictSame([...c.keys()], ['blah'])
+    })
+  })
 })

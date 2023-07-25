@@ -86,6 +86,7 @@ const ProcessInfo = require('@tapjs/processinfo')
 //   parent: <ProcessInfo.Node or null for root node>,
 //   root: <ProcessInfo.Node>,
 //   children: [ProcessInfo.Node, ...],
+//   descendants: [ProcessInfo.Node, ...],
 //   files: [ filename, ... ],
 //   code: unix exit code,
 //   signal: terminating signal or null,

@@ -8,22 +8,24 @@ import {
   spawnSync,
 } from './child_process.js'
 
-export { WithExternalID } from './spawn-opts.js'
-
 export * from './child_process.js'
 export { ProcessInfoNodeData } from './get-process-info.js'
 export * from './process-info-node.js'
+export { WithExternalID } from './spawn-opts.js'
 
 import { basename, resolve } from 'path'
 
 import { ProcessInfoNode } from './process-info-node.js'
 
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'fs'
-import { mkdir, readdir, rm, writeFile } from 'fs/promises'
+import { mkdirSync, readdirSync, rmSync, Stats, writeFileSync } from 'fs'
+import { mkdir, readdir, rm, stat, writeFile } from 'fs/promises'
 
 import { safeJSON, safeJSONSync } from './json-file.js'
 
 const p = process
+const tryStat = async (f: string, stats: Map<string, Stats | null>) => {
+  stats.set(f, await stat(f).catch(() => null))
+}
 
 export class ProcessInfo {
   dir: string
@@ -139,6 +141,84 @@ export class ProcessInfo {
     }
 
     return this
+  }
+
+  #statFiles(node: ProcessInfoNode, stats: Map<string, Stats | null>) {
+    const promises: Promise<void>[] = []
+
+    for (const f of node.files) {
+      // race
+      /* c8 ignore start */
+      if (stats.has(f)) continue
+      /* c8 ignore stop */
+      promises.push(tryStat(f, stats))
+      if (node.sources[f]) {
+        for (const s of node.sources[f]) {
+          /* c8 ignore start */
+          if (stats.has(s)) continue
+          /* c8 ignore stop */
+          promises.push(tryStat(s, stats))
+        }
+      }
+    }
+    for (const c of node.descendants ?? []) {
+      promises.push(...this.#statFiles(c, stats))
+    }
+    return promises
+  }
+
+  // if any files are newer than the date, or null, then add it
+  // if a file has changed, but its sources haven't, then assume
+  // it's still the same content, and not "changed"
+  #hasNewerFiles(node: ProcessInfoNode, stats: Map<string, Stats | null>) {
+    const p = Date.parse(node.date)
+    for (const f of node.files) {
+      const st = stats.get(f)
+      if (!st) {
+        return true
+      }
+      let c = Number(st.mtime) > p
+      if (!c) continue
+      if (!node.sources[f]?.length) return true
+      else {
+        for (const s of node.sources[f]) {
+          const sst = stats.get(s)
+          if (!sst || Number(sst.mtime) > p) {
+            return true
+          }
+        }
+      }
+    }
+    // no direct files are newer, check descendants
+    // if one of them have a changed file, then that's a yes
+    for (const c of node.descendants ?? []) {
+      if (this.#hasNewerFiles(c, stats)) {
+        return true
+      }
+    }
+    return false
+  }
+
+  /**
+   * Get a subset of this.externalIDs where one or more of the
+   * files have changed since the date on the node.
+   */
+  async externalIDsChanged() {
+    const changed = new Map<string, ProcessInfoNode>()
+    const promises: Promise<void>[] = []
+    const stats = new Map<string, Stats | null>()
+    for (const node of this.externalIDs.values()) {
+      promises.push(...this.#statFiles(node, stats))
+    }
+    // consider limiting with promise-call-limit?
+    await Promise.all(promises)
+
+    for (const [id, node] of this.externalIDs.entries()) {
+      if (this.#hasNewerFiles(node, stats)) {
+        changed.set(id, node)
+      }
+    }
+    return changed
   }
 
   static get Node() {

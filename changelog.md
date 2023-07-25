@@ -1,3 +1,8 @@
+# 2.3
+
+- Add `externalIDsChanged()` method
+- Add `descendants` to ProcessInfoNode
+
 # 2.2
 
 - capture source map sources in processinfo data
