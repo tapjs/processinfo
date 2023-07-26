@@ -1,9 +1,10 @@
 import t from 'tap'
+import { ProcessInfoNodeData } from '../dist/cjs/get-process-info.js'
 import { ProcessInfo } from '../dist/cjs/index.js'
 import { ProcessInfoNode } from '../dist/cjs/process-info-node.js'
 
 t.test('basic instance stuff', t => {
-  type N = 'root'|'parent'|'child'|'child2'
+  type N = 'root' | 'parent' | 'child' | 'child2'
   // run it in every order
   const orders: N[][] = [
     ['root', 'parent', 'child', 'child2'],
@@ -116,5 +117,37 @@ t.test('basic instance stuff', t => {
       t.end()
     })
   }
+  t.end()
+})
+
+t.test('newer externalID clobbers older one', t => {
+  const db = new ProcessInfo()
+  const one = new ProcessInfoNode({
+    uuid: 'one',
+    externalID: 'test',
+    date: '2010-10-10T10:10:10.101Z',
+  } as ProcessInfoNodeData)
+  const two = new ProcessInfoNode({
+    uuid: 'two',
+    externalID: 'test',
+    date: '2022-02-02T22:22:22.222Z',
+  } as ProcessInfoNodeData)
+  const tre = new ProcessInfoNode({
+    uuid: 'tre',
+    externalID: 'test',
+    date: '2023-03-03T03:33:33.333Z',
+  } as ProcessInfoNodeData)
+
+  two.link(db)
+  t.equal(db.externalIDs.get('test'), two)
+
+  // newer one clobbers it
+  tre.link(db)
+  t.equal(db.externalIDs.get('test'), tre)
+
+  // older one does not
+  one.link(db)
+  t.equal(db.externalIDs.get('test'), tre)
+
   t.end()
 })

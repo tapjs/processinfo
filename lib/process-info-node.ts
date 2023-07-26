@@ -105,6 +105,11 @@ export class ProcessInfoNode {
     }
 
     if (this.externalID) {
+      // newer tagged entry wins
+      const e = db.externalIDs.get(this.externalID)
+      if (e && Date.parse(e.date) > Date.parse(this.date)) {
+        return
+      }
       db.externalIDs.set(this.externalID, this)
     }
   }
