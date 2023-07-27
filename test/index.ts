@@ -195,6 +195,17 @@ t.test('externalIDsChanged', async t => {
       t.strictSame([...c.keys()], ['blah'])
     })
 
+    t.test('exclude a file', async t => {
+      const e = process.env._TAPJS_PROCESSINFO_EXCLUDE_
+      t.teardown(() => {
+        if (!e) delete process.env._TAPJS_PROCESSINFO_EXCLUDE_
+        else process.env._TAPJS_PROCESSINFO_EXCLUDE_ = e
+      })
+      process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/gcdirect/'
+      const c = await pi.externalIDsChanged()
+      t.equal(c.size, 0)
+    })
+
     t.test('delete one of the files', async t => {
       unlinkSync(resolve(dir, 'gcdirect'))
       const c = await pi.externalIDsChanged()

@@ -82,6 +82,7 @@ Object {
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
+      "globalsAdded": undefined,
       "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
       "parent": &ref_2 Object {
         "argv": Array [
@@ -108,6 +109,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -142,6 +144,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -162,6 +165,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -199,6 +203,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -233,6 +238,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -253,6 +259,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -286,6 +293,7 @@ Object {
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
+      "globalsAdded": undefined,
       "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
       "parent": &ref_2 Object {
         "argv": Array [
@@ -311,6 +319,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -345,6 +354,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -366,6 +376,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -402,6 +413,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -436,6 +448,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -457,6 +470,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -495,6 +509,7 @@ Object {
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
+      "globalsAdded": undefined,
       "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
       "parent": &ref_2 Object {
         "argv": Array [
@@ -521,6 +536,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -545,6 +561,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -582,6 +599,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51730,
@@ -606,6 +624,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -639,6 +658,7 @@ Object {
       "files": Array [
         "{CWD}/test/tap-testdir-esm/file.mjs",
       ],
+      "globalsAdded": undefined,
       "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
       "parent": &ref_2 Object {
         "argv": Array [
@@ -664,6 +684,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -689,6 +710,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -725,6 +747,7 @@ Object {
             "files": Array [
               "{CWD}/test/tap-testdir-esm/file.mjs",
             ],
+            "globalsAdded": undefined,
             "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
             "parent": <*ref_2>,
             "pid": 51731,
@@ -750,6 +773,7 @@ Object {
           "{CWD}/lib/node-options-to-argv.cjs",
           "{CWD}/lib/argv-to-node-options.cjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": undefined,
         "parent": null,
         "pid": 51729,
@@ -775,6 +799,7 @@ Object {
     "{CWD}/lib/node-options-to-argv.cjs",
     "{CWD}/lib/argv-to-node-options.cjs",
   ],
+  "globalsAdded": undefined,
   "NODE_OPTIONS": undefined,
   "parent": null,
   "pid": 51729,
@@ -803,6 +828,7 @@ Object {
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
         "parent": <*ref_2>,
         "pid": 51731,
@@ -831,6 +857,7 @@ Object {
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
         "parent": <*ref_2>,
         "pid": 51730,
@@ -864,6 +891,7 @@ Object {
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
         "parent": <*ref_2>,
         "pid": 51731,
@@ -892,6 +920,7 @@ Object {
         "files": Array [
           "{CWD}/test/tap-testdir-esm/file.mjs",
         ],
+        "globalsAdded": undefined,
         "NODE_OPTIONS": "\\"--loader=file://{CWD}/lib/esm.mjs\\"",
         "parent": <*ref_2>,
         "pid": 51730,
@@ -912,6 +941,7 @@ Object {
       "{CWD}/lib/node-options-to-argv.cjs",
       "{CWD}/lib/argv-to-node-options.cjs",
     ],
+    "globalsAdded": undefined,
     "NODE_OPTIONS": undefined,
     "parent": null,
     "pid": 51729,

@@ -10,6 +10,10 @@ export class ProcessInfoNode {
   pid!: number
   ppid!: number
   uuid!: string
+  code?: number | null
+  signal?: NodeJS.Signals | null
+  runtime?: number
+  globalsAdded?: string[]
   files: string[] = []
   sources: Record<string, string[]> = Object.create(null)
   parent?: ProcessInfoNode | null = null

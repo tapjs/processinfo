@@ -13,14 +13,12 @@ export { ProcessInfoNodeData } from './get-process-info.js'
 export * from './process-info-node.js'
 export { WithExternalID } from './spawn-opts.js'
 
-import { basename, resolve } from 'path'
-
-import { ProcessInfoNode } from './process-info-node.js'
-
 import { mkdirSync, readdirSync, rmSync, Stats, writeFileSync } from 'fs'
 import { mkdir, readdir, rm, stat, writeFile } from 'fs/promises'
-
+import { basename, resolve } from 'path'
+import { getExclude } from './get-exclude.js'
 import { safeJSON, safeJSONSync } from './json-file.js'
+import { ProcessInfoNode } from './process-info-node.js'
 
 const p = process
 const tryStat = async (f: string, stats: Map<string, Stats | null>) => {
@@ -143,10 +141,15 @@ export class ProcessInfo {
     return this
   }
 
-  #statFiles(node: ProcessInfoNode, stats: Map<string, Stats | null>) {
+  #statFiles(
+    node: ProcessInfoNode,
+    stats: Map<string, Stats | null>,
+    exclude: RegExp
+  ) {
     const promises: Promise<void>[] = []
 
     for (const f of node.files) {
+      if (exclude.test(f)) continue
       // race
       /* c8 ignore start */
       if (stats.has(f)) continue
@@ -162,7 +165,7 @@ export class ProcessInfo {
       }
     }
     for (const c of node.descendants ?? []) {
-      promises.push(...this.#statFiles(c, stats))
+      promises.push(...this.#statFiles(c, stats, exclude))
     }
     return promises
   }
@@ -170,9 +173,14 @@ export class ProcessInfo {
   // if any files are newer than the date, or null, then add it
   // if a file has changed, but its sources haven't, then assume
   // it's still the same content, and not "changed"
-  #hasNewerFiles(node: ProcessInfoNode, stats: Map<string, Stats | null>) {
+  #hasNewerFiles(
+    node: ProcessInfoNode,
+    stats: Map<string, Stats | null>,
+    exclude: RegExp
+  ) {
     const p = Date.parse(node.date)
     for (const f of node.files) {
+      if (exclude.test(f)) continue
       const st = stats.get(f)
       if (!st) {
         return true
@@ -192,7 +200,7 @@ export class ProcessInfo {
     // no direct files are newer, check descendants
     // if one of them have a changed file, then that's a yes
     for (const c of node.descendants ?? []) {
-      if (this.#hasNewerFiles(c, stats)) {
+      if (this.#hasNewerFiles(c, stats, exclude)) {
         return true
       }
     }
@@ -206,18 +214,19 @@ export class ProcessInfo {
   async externalIDsChanged(
     filter: (p: string, node: ProcessInfoNode) => boolean = () => true
   ) {
+    const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
     const changed = new Map<string, ProcessInfoNode>()
     const promises: Promise<void>[] = []
     const stats = new Map<string, Stats | null>()
     for (const [id, node] of this.externalIDs.entries()) {
       if (!filter(id, node)) continue
-      promises.push(...this.#statFiles(node, stats))
+      promises.push(...this.#statFiles(node, stats, exclude))
     }
     // consider limiting with promise-call-limit?
     await Promise.all(promises)
 
     for (const [id, node] of this.externalIDs.entries()) {
-      if (filter(id, node) && this.#hasNewerFiles(node, stats)) {
+      if (filter(id, node) && this.#hasNewerFiles(node, stats, exclude)) {
         changed.set(id, node)
       }
     }
