@@ -10,6 +10,15 @@ import { getExclude } from './get-exclude.js'
 import { ProcessInfoNodeData } from './get-process-info.js'
 import { getLineLengths } from './line-lengths.js'
 
+// this can throw in some cases in node 19
+/* c8 ignore start */
+const findSourceMapSafe = (s: string) => {
+  try {
+    return findSourceMap(s)
+  } catch {}
+}
+/* c8 ignore stop */
+
 export let SESSION: Session | undefined = undefined
 
 // NB: coverage exclusion is in addition to processinfo
@@ -118,7 +127,7 @@ export const coverageOnProcessEnd = (
       // see if it has a source map
       // need to look up via the url, not the file path, because mocks
       // attach a tapmock search param, which is in node's internal key.
-      const s = findSourceMap(String(obj.url))
+      const s = findSourceMapSafe(String(obj.url))
       if (!fileCovered(f, s?.payload, processInfo.files)) {
         return false
       }
