@@ -2,10 +2,11 @@
 // export so that we know to collect at the end of the process
 const p = process
 const enabled = p.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
-import { mkdirSync, writeFileSync } from 'fs'
-import { Session } from 'inspector'
-import { findSourceMap, SourceMapPayload } from 'module'
-import { fileURLToPath } from 'url'
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { Session } from 'node:inspector'
+import { findSourceMap, SourceMapPayload } from 'node:module'
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { getExclude } from './get-exclude.js'
 import { ProcessInfoNodeData } from './get-process-info.js'
 import { getLineLengths } from './line-lengths.js'
@@ -43,7 +44,9 @@ const fileCovered = (
   const testFiles = [f]
   if (s) {
     for (const src of s.sources || []) {
-      testFiles.push(fileURLToPath(src))
+      testFiles.push(
+        resolve(src.startsWith('file://') ? fileURLToPath(src) : src)
+      )
     }
   }
   if (!testFiles.some(f => files.includes(f))) return false
