@@ -122,8 +122,8 @@ export const coverageOnProcessEnd = (
       if (!fileCovered(f, s?.payload, processInfo.files)) {
         return false
       }
-      if (s) {
-        const { payload } = s
+      const { payload } = s || { payload: null }
+      if (payload) {
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {
           lineLengths: getLineLengths(f),
           data: payload,
