@@ -22,6 +22,12 @@
         "default": "./dist/cjs/index.js"
       }
     },
+    "./esm": {
+      "import": {
+        "types": "./dist/mjs/esm.d.mts",
+        "default": "./dist/mjs/esm.mjs"
+      }
+    },
     "./cjs": {
       "require": {
         "types": "./dist/mjs/cjs.d.mts",

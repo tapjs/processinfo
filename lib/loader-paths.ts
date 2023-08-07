@@ -1,5 +1,5 @@
-import { resolve } from './require-resolve.js'
 import { resolve as pathResolve } from 'path'
+import { resolve } from './require-resolve.js'
 
 import { fileURLToPath, pathToFileURL } from 'url'
 
@@ -10,15 +10,11 @@ export const esmLoader = String(pathToFileURL(esmLoaderPath))
 const res = (p: string) =>
   /^\.?\.[\\/]/.test(p) ? resolve(pathResolve(p)) : resolve(p)
 
-
 // functions to test if a given path is the loader path
 // we care about.
 export const cjsMatch = (p: string): boolean => {
   try {
-    return (
-      p === '@tapjs/processinfo/cjs' ||
-      res(p) === cjsLoader
-    )
+    return p === '@tapjs/processinfo/cjs' || res(p) === cjsLoader
   } catch {
     return false
   }
@@ -29,7 +25,12 @@ export const esmMatch = (p: string): boolean => {
     ? fileURLToPath(p)
     : decodeURIComponent(p)
   try {
-    return d === '@tapjs/processinfo' || res(d) === esmLoaderPath
+    return (
+      d === '@tapjs/processinfo/esm' ||
+      d === '@tapjs/processinfo' ||
+      p === esmLoader ||
+      res(d) === esmLoaderPath
+    )
   } catch {
     return false
   }
