@@ -12,14 +12,17 @@ g[kLLC] = cache
 const sourceMapComment = '//# sourceMappingURL='
 export const saveLineLengths = (filename: string, content: string) => {
   if (filename.startsWith('file://')) filename = fileURLToPath(filename)
-  if (cache.has(filename)) return
   // no need if it's not sourcemapped
-  const ll = !content.includes(sourceMapComment)
-    ? []
-    : content
-        .replace(/[\n\u2028\u2029]$/, '')
-        .split(/\n|\u2028|\u2029/)
-        .map(l => l.length)
+  // don't cache an empty array, though, because ts-node files will show
+  // up first as source, and then as their built content.
+  const last = content.trimEnd().split('\n').pop()
+  if (cache.has(filename) || !last?.startsWith(sourceMapComment)) return
+  const ll = content
+    .replace(/[\n\u2028\u2029]$/, '')
+    .split(/\n|\u2028|\u2029/)
+    .map(l => l.length)
+  cache.set(filename, ll)
+
   cache.set(filename, ll)
 }
 
