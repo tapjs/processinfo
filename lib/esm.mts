@@ -31,7 +31,7 @@ export const globalPreload = (context: { port?: GPPort }) => {
   PORT = port
   return `
 if (typeof port !== 'undefined') {
-  const { createRequire, findSourceMap } = getBuiltin('module')
+  const { createRequire } = getBuiltin('module')
   const { fileURLToPath } = getBuiltin('url')
   const require = createRequire(${JSON.stringify(base)})
   const { getProcessInfo } = require('./get-process-info.js')

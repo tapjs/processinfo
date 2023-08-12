@@ -2,8 +2,9 @@ import { onExit } from 'signal-exit'
 import { getProcessInfo } from './get-process-info.js'
 
 import { mkdirSync, writeFileSync } from 'fs'
-import { findSourceMap, SourceMap } from 'module'
+import { SourceMap } from 'module'
 import { fileURLToPath } from 'url'
+import { findSourceMapSafe } from './find-source-map-safe.js'
 import { coverageOnProcessEnd } from './register-coverage.js'
 
 const proc = process
@@ -27,13 +28,14 @@ export const register = () => {
       // This can't be done up front, because the sourcemap isn't
       // present during the load phase, since it's in the contents.
       for (const file of processInfo.files) {
-        const sm = sourceMaps.get(file) || findSourceMap(file)
+        const sm = sourceMaps.get(file) || findSourceMapSafe(file)
         if (sm && !sourceMaps.has(file)) sourceMaps.set(file, sm)
-        const sources = sm?.payload.sources?.map(s =>
-          // it SHOULD always start with file://, but could in theory
-          // be literally any string.
-          /* c8 ignore start */
-          s.startsWith('file://') ? fileURLToPath(s) : s
+        const sources = sm?.payload.sources?.map(
+          s =>
+            // it SHOULD always start with file://, but could in theory
+            // be literally any string.
+            /* c8 ignore start */
+            s.startsWith('file://') ? fileURLToPath(s) : s
           /* c8 ignore stop */
         )
         if (sources) processInfo.sources[file] = sources

@@ -4,21 +4,13 @@ const p = process
 const enabled = p.env._TAPJS_PROCESSINFO_COVERAGE_ !== '0'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { Session } from 'node:inspector'
-import { findSourceMap, SourceMapPayload } from 'node:module'
+import { SourceMapPayload } from 'node:module'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getExclude } from './get-exclude.js'
 import { ProcessInfoNodeData } from './get-process-info.js'
 import { getLineLengths } from './line-lengths.js'
-
-// this can throw in some cases in node 19
-/* c8 ignore start */
-const findSourceMapSafe = (s: string) => {
-  try {
-    return findSourceMap(s)
-  } catch {}
-}
-/* c8 ignore stop */
 
 export let SESSION: Session | undefined = undefined
 
