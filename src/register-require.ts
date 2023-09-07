@@ -4,14 +4,14 @@ import { getExclude } from './get-exclude.js'
 import { getProcessInfo } from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
 
-const kRegisterCJS = Symbol.for('@tapjs/processinfo.registerCJS')
+const kRegisterRequire = Symbol.for('@tapjs/processinfo.registerRequire')
 const g = global as typeof globalThis & {
-  [kRegisterCJS]?: boolean
+  [kRegisterRequire]?: boolean
 }
 
 export const register = () => {
-  if (g[kRegisterCJS]) return
-  g[kRegisterCJS] = true
+  if (g[kRegisterRequire]) return
+  g[kRegisterRequire] = true
   // by default we include everything in processInfo.files
   const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
   addHook(

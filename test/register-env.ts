@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import t from 'tap'
 import { pathToFileURL } from 'url'
 import { argvToNodeOptions } from '../dist/cjs/argv-to-node-options.js'
@@ -13,7 +14,13 @@ const pos: {
 
 const registerEnv = t.mock('../dist/cjs/register-env.js', {
   'process-on-spawn': pos,
+  '../dist/cjs/node-options-env.js': {
+    nodeOptionsEnv: (env: { NODE_OPTIONS?: string }) => {
+      return (env.NODE_OPTIONS || '<empty>') + ' added loader'
+    },
+  },
 })
+
 registerEnv.register()
 t.type(pos.listener, Function, 'registered handler')
 
@@ -36,25 +43,18 @@ t.type(pos.listener, Function, 'registered handler')
   process.env._TAPJS_PROCESSINFO_TESTING_REGENV_ = '1'
 }
 
-const mjsLoader = argvToNodeOptions([
-  `--loader=${pathToFileURL(require.resolve('../dist/mjs/esm.mjs'))}`,
-]) + ' "--no-warnings=ExperimentalLoader"'
-const cjsLoader = argvToNodeOptions([
-  `--require=${require.resolve('../dist/cjs/cjs.js')}`,
-])
-
 t.same(pos.listener?.({}), {
   env: {
     ...process.env,
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: mjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 
 t.same(pos.listener?.({ env: {} }), {
   env: {
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: mjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 
@@ -62,7 +62,7 @@ t.same(pos.listener?.({ x: 1, env: {} }), {
   x: 1,
   env: {
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: mjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 
@@ -70,7 +70,7 @@ t.same(pos.listener?.({ env: { x: '1' } }), {
   env: {
     x: '1',
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: mjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 
@@ -78,12 +78,13 @@ t.same(
   pos.listener?.({
     env: {
       _TAPJS_PROCESSINFO_TESTING_REGENV_: '2',
+      NODE_OPTIONS: 'something'
     },
   }),
   {
     env: {
       _TAPJS_PROCESSINFO_TESTING_REGENV_: '2',
-      NODE_OPTIONS: mjsLoader,
+      NODE_OPTIONS: 'something added loader',
     },
   }
 )
@@ -93,16 +94,18 @@ t.same(pos.listener?.({}), {
   env: {
     ...process.env,
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: mjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 
-process.execArgv = [`--require=${require.resolve('../dist/cjs/cjs.js')}`]
+process.execArgv = [
+  `--require=${resolve(__dirname, '../dist/cjs/register-require.js')}`,
+]
 t.same(pos.listener?.({}), {
   env: {
     ...process.env,
     _TAPJS_PROCESSINFO_TESTING_REGENV_: '1',
-    NODE_OPTIONS: cjsLoader,
+    NODE_OPTIONS: '<empty> added loader',
   },
 })
 

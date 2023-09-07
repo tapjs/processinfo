@@ -1,0 +1,8 @@
+{
+  "extends": "./build.json",
+  "exclude": ["../src/*-mjs.ts", "../src/*.mts"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "../dist-tmp/cjs"
+  }
+}

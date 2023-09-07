@@ -1,9 +1,10 @@
 import t from 'tap'
-import { argvToNodeOptions } from '../dist/cjs/argv-to-node-options.js'
-import { nodeOptionsEnv } from '../dist/cjs/node-options-env.js'
 import { removePath } from './fixtures/remove-path'
 
-import { relative, sep } from 'path'
+import Module from 'module'
+import { argvToNodeOptions } from '../dist/cjs/argv-to-node-options'
+
+import { relative, resolve, sep } from 'path'
 import { pathToFileURL } from 'url'
 
 t.formatSnapshot = o =>
@@ -13,167 +14,139 @@ t.formatSnapshot = o =>
     '{CWD}'
   )
 
-const esmAbs = require.resolve('../dist/mjs/esm.mjs')
-const esmRel = './' + relative(process.cwd(), esmAbs)
-const esmURL = String(pathToFileURL(esmAbs))
-const cjsAbs = require.resolve('../dist/cjs/cjs.js')
-const cjsRel = '.' + sep + relative(process.cwd(), cjsAbs)
+const legacyAbs = resolve(__dirname, '../dist/mjs/loader-legacy.mjs')
+const legacyRel = './' + relative(process.cwd(), legacyAbs)
+const legacyURL = String(pathToFileURL(legacyAbs))
+const importAbs = resolve('../dist/mjs/import.mjs')
+const importRel = '.' + sep + relative(process.cwd(), importAbs)
+const importURL = String(pathToFileURL(importAbs))
 
 const cwdEnc = encodeURIComponent(process.cwd().replace(/\\/g, '/'))
 
 t.cleanSnapshot = s =>
   s
-    .split(esmURL)
-    .join('{ESMURL}')
-    .split(esmRel.replace(/"/g, '\\"'))
-    .join('{ESMREL}')
-    .split(esmAbs.replace(/"/g, '\\"'))
-    .join('{ESMABS}')
-    .split(cjsAbs.replace(/"/g, '\\"'))
-    .join('{CJSABS}')
-    .split(cjsRel.replace(/"/g, '\\"'))
-    .join('{CJSREL}')
+    .split(legacyURL)
+    .join('{LOADER URL}')
+    .split(legacyRel.replace(/"/g, '\\"'))
+    .join('{LOADER REL}')
+    .split(legacyAbs.replace(/"/g, '\\"'))
+    .join('{LOADER ABS}')
+    .split(importAbs.replace(/"/g, '\\"'))
+    .join('{IMPORT ABS}')
+    .split(importRel.replace(/"/g, '\\"'))
+    .join('{IMPORT REL}')
     .split(cwdEnc.replace(/"/g, '\\"'))
     .join('{CWD}')
 
-const cases: {
-  [name: string]: [
-    env: { NODE_OPTIONS?: string | string[] },
-    args: string[]
-  ]
-} = {
-  empty: [{}, []],
-  'empty no-warnings': [{}, ['--no-warnings']],
-  'empty no-warnings=ExperimentalLoader': [
-    {},
-    ['--no-warnings=ExperimentalLoader'],
+const cases: Record<string, string | undefined | string[]> = {
+  empty: undefined,
+  'empty no-warnings': '--no-warnings',
+  'empty no-warnings=ExperimentalLoader':
+    '--no-warnings=ExperimentalLoader',
+  'some random stuff': '--x y -z',
+  'legacy loader url with no-warnings': [
+    '--loader',
+    legacyURL,
+    '--no-warnings',
   ],
-  'has NO': [{ NODE_OPTIONS: '--x y -z' }, []],
-  'has argv': [{}, ['--a', 'b']],
-  'has both': [{ NODE_OPTIONS: '--x y -z' }, ['--a', 'b']],
-
-  'args has esm url with no-warnings': [
-    {},
-    ['--loader', esmURL, '--no-warnings'],
-  ],
-  'args has esm url with no-warnings=ExperimentalLoader': [
-    {},
-    ['--loader', esmURL, '--no-warnings=ExperimentalLoader'],
-  ],
-  'args has esm url': [{}, ['--loader', esmURL]],
-  'args has esm url =': [{}, [`--loader=${esmURL}`]],
-  'args has esm relative': [{}, [`--loader=${esmRel}`]],
-  'args has esm absolute': [{}, ['--loader', esmAbs]],
-  'opts has esm url': [{ NODE_OPTIONS: ['--loader', esmURL] }, []],
-  'opts has esm url =': [{ NODE_OPTIONS: `--loader=${esmURL}` }, []],
-  'opts has esm url = no warning': [
-    { NODE_OPTIONS: `--loader=${esmURL} --no-warnings` },
-    [],
-  ],
-  'opts has esm url = no warning=exploader': [
-    {
-      NODE_OPTIONS: `--loader=${esmURL} --no-warnings=ExperimentalLoader`,
-    },
-    [],
-  ],
-  'opts has esm relative': [{ NODE_OPTIONS: [`--loader=${esmRel}`] }, []],
-  'opts has esm absolute': [{ NODE_OPTIONS: ['--loader', esmAbs] }, []],
-
-  'exp args has esm url': [{}, ['--experimental-loader', esmURL]],
-  'exp args has esm url =': [{}, [`--experimental-loader=${esmURL}`]],
-  'exp args has esm relative': [{}, [`--experimental-loader=${esmRel}`]],
-  'exp args has esm absolute': [{}, ['--experimental-loader', esmAbs]],
-  'exp opts has esm url': [
-    { NODE_OPTIONS: ['--experimental-loader', esmURL] },
-    [],
-  ],
-  'exp opts has esm url =': [
-    { NODE_OPTIONS: `--experimental-loader=${esmURL}` },
-    [],
-  ],
-  'exp opts has esm relative': [
-    { NODE_OPTIONS: [`--experimental-loader=${esmRel}`] },
-    [],
-  ],
-  'exp opts has esm absolute': [
-    { NODE_OPTIONS: ['--experimental-loader', esmAbs] },
-    [],
+  'legacy loader url with no-warnings=ExperimentalLoader': [
+    '--loader',
+    legacyURL,
+    '--no-warnings=ExperimentalLoader',
   ],
 
-  'args has cjs relative': [{}, [`--require=${cjsRel}`]],
-  'args has cjs absolute': [{}, ['--require', cjsAbs]],
-  'opts has cjs relative': [{ NODE_OPTIONS: [`--require=${cjsRel}`] }, []],
-  'opts has cjs absolute': [{ NODE_OPTIONS: ['--require', cjsAbs] }, []],
+  'legacy loader url': ['--loader', legacyURL],
+  'args has legacy loader url =': [`--loader=${legacyURL}`],
+  'args has legacy loader relative': [`--loader=${legacyRel}`],
+  'args has esm absolute': ['--loader', legacyAbs],
+  'esm url': ['--loader', legacyURL],
+  'esm url =': `--loader=${legacyURL}`,
+  'esm url = no warning': `--loader=${legacyURL} --no-warnings`,
+  'esm url = no warning=exploader': `--loader=${legacyURL} --no-warnings=ExperimentalLoader`,
 
-  'short args has cjs relative': [{}, ['-r', cjsRel]],
-  'short args has cjs absolute': [{}, ['-r', cjsAbs]],
-  'short opts has cjs relative': [{ NODE_OPTIONS: ['-r', cjsRel] }, []],
-  'short opts has cjs absolute': [{ NODE_OPTIONS: ['-r', cjsAbs] }, []],
+  'esm relative': `--loader=${legacyRel}`,
+  'esm absolute': ['--loader', legacyAbs],
 
-  'short args no sp has cjs relative': [{}, [`-r${cjsRel}`]],
-  'short args no sp has cjs absolute': [{}, [`-r${cjsAbs}`]],
-  'short opts no sp has cjs relative': [
-    { NODE_OPTIONS: [`-r${cjsRel}`] },
-    [],
-  ],
-  'short opts no sp has cjs absolute': [
-    { NODE_OPTIONS: [`-r${cjsAbs}`] },
-    [],
-  ],
+  'exp args esm url': ['--experimental-loader', legacyURL],
+  'exp args esm url =': [`--experimental-loader=${legacyURL}`],
+  'exp args esm relative': `--experimental-loader=${legacyRel}`,
+  'exp args esm absolute': ['--experimental-loader', legacyAbs],
 
-  'short args no sp other': [{}, [`-rfoo`]],
-  'short opts no sp other': [{ NODE_OPTIONS: [`-rfoo`] }, []],
+  'import relative': [`--import=${importRel}`],
+  'import absolute': ['--import', importAbs],
 
-  'args has both': [{}, ['-r', cjsRel, '--loader=' + esmURL]],
-  'opts has both': [
-    { NODE_OPTIONS: ['-r', cjsRel, '--loader=' + esmURL] },
-    [],
-  ],
-  'opts esm, args cjs': [
-    { NODE_OPTIONS: ['-r', cjsRel] },
-    ['--loader=' + esmURL],
-  ],
-  'opts cjs, args cjs': [
-    { NODE_OPTIONS: ['--loader=' + esmURL] },
-    ['-r', cjsRel],
-  ],
-
-  'other loader in opts': [
-    { NODE_OPTIONS: ['--loader', 'some-file.ts'] },
-    [],
-  ],
-  'other loader in args': [{}, ['--loader', 'some-file.ts']],
-  'other loader in both': [
-    { NODE_OPTIONS: ['--loader', 'some-file.ts'] },
-    ['--loader', '/some/path/to/index.cjs'],
-  ],
+  'has both': ['--import', importRel, '--loader=' + legacyURL],
+  'other loader': ['--loader', 'some-file.ts'],
   'multiple loaders': [
-    {
-      NODE_OPTIONS: [
-        '--loader',
-        'some-file.ts',
-        '--loader',
-        '/some/path/to/index.cjs',
-      ],
-    },
-    [],
+    '--loader',
+    'some-file.ts',
+    '--loader',
+    '/some/path/to/index.import',
   ],
 
-  'opts loader not found': [
-    { NODE_OPTIONS: ['--loader', 'not foud'] },
-    [],
+  'other import': ['--import', 'some-file.ts'],
+  'multiple import': [
+    '--import',
+    'some-file.ts',
+    '--import',
+    '/some/path/to/index.import',
   ],
-  'args loader not found': [{}, ['--loader', 'not foud']],
-  'opts loader missing': [{ NODE_OPTIONS: ['--loader'] }, []],
-  'args loader missing': [{}, ['--loader']],
+
+  'loader not found': ['--loader', 'not foud'],
+  'loader value missing': ['--loader'],
+  'import not found': ['--import', 'not foud'],
+  'import value missing': ['--import'],
+  'import multiple times': [
+    '--import',
+    importURL,
+    `--import=${importRel}`,
+    `--import=${importAbs}`,
+    '--import',
+    importURL,
+    `--import=${importRel}`,
+    `--import=${importAbs}`,
+  ],
+  'loader multiple times': [
+    '--loader',
+    legacyURL,
+    `--loader=${legacyRel}`,
+    `--loader=${legacyAbs}`,
+    '--loader',
+    legacyURL,
+    `--loader=${legacyRel}`,
+    `--loader=${legacyAbs}`,
+  ],
+
+  doubledash: ['--import=whatever', '--', `--loader=${legacyURL}`],
 }
 
-for (const [name, [env, argv]] of Object.entries(cases)) {
-  if (Array.isArray(env.NODE_OPTIONS)) {
-    env.NODE_OPTIONS = argvToNodeOptions(env.NODE_OPTIONS)
+const run = (
+  nodeOptionsEnv: typeof import('../dist/cjs/node-options-env')['nodeOptionsEnv'],
+  t: Tap.Test
+) => {
+  for (const [name, opt] of Object.entries(cases)) {
+    const v: string | undefined =
+      opt === undefined || typeof opt === 'string'
+        ? opt
+        : argvToNodeOptions(opt)
+    t.test(name, t => {
+      t.plan(1)
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }), name)
+    })
   }
-  t.matchSnapshot(
-    nodeOptionsEnv(env as { NODE_OPTIONS?: string }, argv),
-    name
-  )
+  t.end()
 }
+
+t.test('no require.register available', t => {
+  const { nodeOptionsEnv } = t.mock('../dist/cjs/node-options-env.js', {
+    module: Object.assign(Module, { register: undefined }),
+  })
+  run(nodeOptionsEnv, t)
+})
+
+t.test('with require.register available', t => {
+  const { nodeOptionsEnv } = t.mock('../dist/cjs/node-options-env.js', {
+    module: Object.assign(Module, { register: () => {} }),
+  })
+  run(nodeOptionsEnv, t)
+})

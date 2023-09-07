@@ -3,9 +3,10 @@
 /.*
 
 !/typedoc.json
-!/tsconfig*.json
-!/bin/
-!/lib/
+!/tsconfig.json
+!/tsconfig
+!/tsconfig/*.json
+!/src/
 !/docs/
 !/package.json
 !/package-lock.json

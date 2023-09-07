@@ -15,17 +15,17 @@ const getEnvs = (env?: NodeJS.ProcessEnv) => {
         ([k]) => !(env && hasOwnProperty.call(env, k)) && envRE.test(k)
       )
       .concat([
-        ['NODE_OPTIONS', nodeOptionsEnv(p.env, p.execArgv)],
+        ['NODE_OPTIONS', nodeOptionsEnv(env?.NODE_OPTIONS ? env : p.env)],
       ])
   )
 }
 
 export const register = () => {
   processOnSpawn.addListener(obj => {
-    obj.env = Object.assign(
-      obj.env || { ...p.env },
-      getEnvs(obj.env)
-    )
+    obj.env = {
+      ...(obj.env || p.env),
+      ...getEnvs(obj.env),
+    }
     return obj
   })
 }

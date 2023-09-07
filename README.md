@@ -14,11 +14,11 @@ Run the top level process with a `--loader` or `--require` argument to
 track all Node.js child processes.
 
 ```sh
-# wrap both CommonJS and ESM
-node --loader=@tapjs/processinfo file.js
+# wrap both CommonJS and ESM, node versions less than 20.6
+node --loader=@tapjs/processinfo/loader file.js
 
-# wrap only CommonJS, idk why you'd want to do this, but it works
-node --require=@tapjs/processinfo/cjs
+# for node versions 20.6 and higher:
+node --import=@tapjs/processinfo/import
 ```
 
 To spawn a wrapped process from JavaScript, you can run:
@@ -64,7 +64,7 @@ executes.
 To load the process info data, use the exported `ProcessInfo` class.
 
 ```js
-const ProcessInfo = require('@tapjs/processinfo')
+import { ProcessInfo } from '@tapjs/processinfo'
 
 // returns
 // {

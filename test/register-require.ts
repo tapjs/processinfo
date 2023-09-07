@@ -1,9 +1,10 @@
 import t from 'tap'
-process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
 import { getProcessInfo } from '../dist/cjs/get-process-info.js'
+import { register } from '../dist/cjs/register-require.js'
+process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
 // this one does not showup, because not registered yet
 require('../dist/cjs/argv-to-node-options.js')
-require('../dist/cjs/cjs.js')
+register()
 require('../dist/cjs/json-file.js')
 const dir = t.testdir({ 'file.js': 'module.exports = "hello"' })
 t.equal(require(dir + '/file.js'), 'hello')

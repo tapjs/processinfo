@@ -1,22 +1,34 @@
 #!/usr/bin/env bash
 
-rm -rf dist
-mv dist-tmp dist
+# dialect-specific workarounds
+# copy all -{mjs,cjs}.* files to their expected locations
+types=(cjs mjs)
+shopt -s nullglob
+for dir in ./dist-tmp/*; do
+  t=$(basename -- $dir)
+  if [ -d "$dir" ]; then
+    for file in $dir/*-${t}.js; do
+      base="$(basename -- $file)"
+      stem=${base%-$t.js}
+      for stemfile in $dir/$stem.*; do
+        rm $stemfile
+      done
+      mv $dir/$stem-$t.js $dir/$stem.js
+      mv $dir/$stem-$t.d.ts $dir/$stem.d.ts
+    done
+  fi
+done
 
-# the loader paths have to be determined in different ways in esm
-# vs commonjs, because of the availability of import.meta.url
-rm dist/cjs/require-resolve.*
-mv dist/cjs/require-resolve-cjs.js dist/cjs/require-resolve.js
-mv dist/cjs/require-resolve-cjs.d.ts dist/cjs/require-resolve.d.ts
-
-cat >dist/cjs/package.json <<!EOF
+cat >dist-tmp/cjs/package.json <<!EOF
 {
   "type": "commonjs"
 }
 !EOF
 
-cat >dist/mjs/package.json <<!EOF
+cat >dist-tmp/mjs/package.json <<!EOF
 {
   "type": "module"
 }
 !EOF
+
+sync-content dist-tmp dist

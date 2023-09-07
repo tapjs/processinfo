@@ -1,54 +1,33 @@
 // we always want this
 const p = process as NodeJS.Process & {
   setSourceMapsEnabled(v: boolean): void
+  _eval?: string
 }
 p.setSourceMapsEnabled(true)
 
-import { fileURLToPath } from 'node:url'
 import { v4 as uuid } from 'uuid'
-export interface ProcessInfoNodeData {
-  // set initially, but deleted before it is written
-  hrstart?: [number, number]
-
-  // always set
-  date: string
-  argv: string[]
-  execArgv: string[]
-  NODE_OPTIONS?: string
-  cwd: string
-  pid: number
-  ppid: number
-  parent: string | null
-  uuid: string
-  files: string[]
-  sources: Record<string, string[]>
-
-  // fields that are only set when the process completes
-  root?: string | null
-  externalID?: string | null
-  code?: number | null
-  signal?: NodeJS.Signals | null
-  runtime?: number
-  globalsAdded?: string[]
-}
+import { getMain } from './get-main.js'
+import { ProcessInfoNodeData } from './process-info-node.js'
 
 const envKey = (k: string) => `_TAPJS_PROCESSINFO_${k.toUpperCase()}_`
 const getEnv = (k: string) => p.env[envKey(k)]
 const setEnv = (k: string, v: string) => (p.env[envKey(k)] = v)
 const delEnv = (k: string) => delete p.env[envKey(k)]
 
-import { register as registerCJS } from './register-cjs.js'
 import { register as registerCoverage } from './register-coverage.js'
 import { register as registerEnv } from './register-env.js'
 import { register as registerProcessEnd } from './register-process-end.js'
+import { register as registerRequire } from './register-require.js'
 
-// this module is hybridized.  In node v20, it's the *commonjs* one that
-// gets loaded, because the esm loader context can't modify the main thread
-// except via communication over the port to the globalPreload env.
-// So, we have to store our singleton on the global.
+// this module is hybridized.  In node v20.0 = v20.6, it's the *commonjs* one
+// that gets loaded, because the esm loader context can't modify the main
+// thread except via communication over the port to the globalPreload env. So,
+// we have to store our singleton on the global.
 //
 // If it later loads the esm form of this module, that's fine, because it'll
 // see the global processInfo object, and not re-register anything.
+//
+// CJS registration can be removed once node < 20.6 is no longer supported.
 
 const kProcessInfo = Symbol.for('@tapjs/processinfo.ProcessInfoNodeData')
 const g = global as typeof globalThis & {
@@ -64,12 +43,6 @@ export const reset = () => {
 export const getProcessInfo = (): ProcessInfoNodeData => {
   if (g[kProcessInfo]) return g[kProcessInfo]
 
-  const argv1 = p.argv[1]
-  // we only test this in CJS, but file:// only prepended in ESM
-  /* c8 ignore start */
-  const main = argv1.startsWith('file://') ? fileURLToPath(argv1) : argv1
-  /* c8 ignore stop */
-
   g[kProcessInfo] = {
     hrstart: p.hrtime(),
     date: new Date().toISOString(),
@@ -81,7 +54,7 @@ export const getProcessInfo = (): ProcessInfoNodeData => {
     ppid: p.ppid,
     parent: getEnv('parent') || null,
     uuid: uuid(),
-    files: [main],
+    files: [getMain()],
     sources: Object.create(null),
   }
 
@@ -100,10 +73,20 @@ export const getProcessInfo = (): ProcessInfoNodeData => {
     delEnv('external_id')
   }
 
-  registerCJS()
-  registerEnv()
-  registerCoverage()
-  registerProcessEnd()
+  // switch to turn off registration for some tests.
+  // excluded from coverage because that's the reason why it's here
+  // in the first place, it confuses c8.
+  /* c8 ignore start */
+  if (
+    process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__ !==
+    String(process.pid)
+  ) {
+    registerRequire()
+    registerEnv()
+    registerCoverage()
+    registerProcessEnd()
+  }
+  /* c8 ignore stop */
 
   return g[kProcessInfo]
 }

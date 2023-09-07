@@ -10,7 +10,7 @@ export const spawnOpts = <T extends { [k: string]: any }>(
 ): Omit<T, 'externalID'> & { env: ProcessEnvOptions } => {
   const { externalID, ...rest } = options
   const env = { ...(options.env || p.env) }
-  env.NODE_OPTIONS = nodeOptionsEnv(env, [])
+  env.NODE_OPTIONS = nodeOptionsEnv(env)
   if (externalID) {
     env._TAPJS_PROCESSINFO_EXTERNAL_ID_ = externalID
   }

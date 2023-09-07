@@ -38,7 +38,7 @@ const otherHooks = [
 ].map(s => `--loader=${pathToFileURL(resolve(dir, s))}`)
 
 const esmLoader = String(
-  pathToFileURL(resolve(__dirname, '../dist/mjs/esm.mjs'))
+  pathToFileURL(resolve(__dirname, '../dist/mjs/loader-legacy.mjs'))
 )
 
 t.test('alone', async t => {

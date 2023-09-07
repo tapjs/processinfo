@@ -1,3 +1,5 @@
+delete process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__
+
 import t from 'tap'
 import type { ProcessInfoNodeData } from '../dist/cjs/index.js'
 
@@ -44,12 +46,14 @@ t.formatSnapshot = obj => {
 }
 
 const requireGetProcessInfo = (t: Tap.Test) =>
-  t.mock('../dist/cjs/get-process-info.js', {
-    uuid: mockUUID,
-    '../dist/cjs/register-env.js': { register: () => {} },
-    '../dist/cjs/register-coverage.js': { register: () => {} },
-    '../dist/cjs/register-process-end.js': { register: () => {} },
-  }).reset()
+  t
+    .mock('../dist/cjs/get-process-info.js', {
+      uuid: mockUUID,
+      '../dist/cjs/register-env.js': { register: () => {} },
+      '../dist/cjs/register-coverage.js': { register: () => {} },
+      '../dist/cjs/register-process-end.js': { register: () => {} },
+    })
+    .reset()
 
 const getEnvs = () =>
   Object.fromEntries(
@@ -126,5 +130,25 @@ t.test('get the process info', t => {
     t.end()
   })
 
+  t.end()
+})
+
+t.test('coverage for the test switch to turn off registration', t => {
+  t.teardown(() => {
+    delete process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__
+  })
+  process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__ = String(
+    process.pid
+  )
+
+  const { getProcessInfo } = t.mock('../dist/cjs/get-process-info.js', {
+    '../dist/cjs/register-require.js': {
+      registerRequire() {
+        throw new Error('should not register')
+      },
+    },
+  })
+  getProcessInfo()
+  t.pass('did not register')
   t.end()
 })

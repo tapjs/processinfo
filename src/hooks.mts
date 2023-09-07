@@ -1,32 +1,24 @@
-// usage: node '--loader=@tapjs/processinfo/esm' foo.mjs
-import { parse } from 'path'
-import { fileURLToPath } from 'url'
-import type { Serializable } from 'worker_threads'
+// hooks used by loader-legacy.mjs and loader.mjs
+
+import { parse } from 'node:path'
+import { fileURLToPath } from 'node:url'
+import type { MessagePort } from 'node:worker_threads'
 import { getExclude } from './get-exclude.js'
-import { getProcessInfo } from './get-process-info.js'
+import { getImportMetaURL } from './get-import-meta-url.js'
+import { fakeMains } from './get-main.js'
+import {
+  getProcessInfo as _getProcessInfo,
+  reset as processInfoReset,
+} from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
-import { resolve } from './require-resolve.js'
+let getProcessInfo = _getProcessInfo
 
-// copy main module so that we can --loader=@tapjs/processinfo and use
-// this as the entry point as well.
-export * from './index.js'
+let PORT: undefined | MessagePort = undefined
 
-// on Node v20, loaders are executed in a separate isolated environment
-// As a result, to register coverage and track files, we need to act in
-// the globalPreload function. The load() method posts a message with the
-// filename being loaded, because any registrations that happen in the
-// loader thread will not have any effect.
-// The check for the 'port' being undefined is to allow for support back to
-// 16.12, which had a globalPreload method, but did not have a sendMessage
-// port in that environment.
-type GPPort = {
-  postMessage: (x: Serializable) => any
-}
-let PORT: undefined | GPPort = undefined
-export const globalPreload = (context: { port?: GPPort }) => {
+export const globalPreload = (context: { port?: MessagePort }) => {
   // this will be something like path/to/dist/mjs/lib/esm.mjs
   // but we need path/to/dist/cjs/cjs.js
-  const base = resolve('../cjs/cjs.js')
+  const base = getImportMetaURL('../cjs/[global preload].js')
   const { port } = context || {}
   PORT = port
   return `
@@ -49,10 +41,21 @@ if (typeof port !== 'undefined') {
 `
 }
 
+export const initialize = ({ port }: { port: MessagePort }) => {
+  PORT = port
+}
+
 const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
+
 const record = (url: string, content?: string) => {
   const filename = url.startsWith('file://') ? fileURLToPath(url) : url
-  if (exclude.test(filename)) return
+  if (exclude.test(filename)) {
+    return
+  }
+  if (fakeMains.includes(filename)) {
+    return
+  }
+
   if (PORT) {
     PORT.postMessage({ filename, content })
   } else {
@@ -86,4 +89,10 @@ export const load = async (
   const ret = await nextLoad(url, context)
   record(url, String(ret.source))
   return ret
+}
+
+// just for testing purposes
+export const reset = () => {
+  PORT = undefined
+  getProcessInfo = processInfoReset().getProcessInfo
 }

@@ -1,5 +1,30 @@
-import type { ProcessInfoNodeData } from './get-process-info.js'
 import type { ProcessInfo } from './index.js'
+
+export interface ProcessInfoNodeData {
+  // set initially, but deleted before it is written
+  hrstart?: [number, number]
+
+  // always set
+  date: string
+  argv: string[]
+  execArgv: string[]
+  NODE_OPTIONS?: string
+  cwd: string
+  pid: number
+  ppid: number
+  parent: string | null
+  uuid: string
+  files: string[]
+  sources: Record<string, string[]>
+
+  // fields that are only set when the process completes
+  root?: string | null
+  externalID?: string | null
+  code?: number | null
+  signal?: NodeJS.Signals | null
+  runtime?: number
+  globalsAdded?: string[]
+}
 
 export class ProcessInfoNode {
   date!: string

@@ -9,7 +9,7 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getExclude } from './get-exclude.js'
-import { ProcessInfoNodeData } from './get-process-info.js'
+import { ProcessInfoNodeData } from './process-info-node.js'
 import { getLineLengths } from './line-lengths.js'
 
 export let SESSION: Session | undefined = undefined

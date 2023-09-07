@@ -1,7 +1,9 @@
 import t from 'tap'
-import { ProcessInfoNodeData } from '../dist/cjs/get-process-info.js'
 import { ProcessInfo } from '../dist/cjs/index.js'
-import { ProcessInfoNode } from '../dist/cjs/process-info-node.js'
+import {
+  ProcessInfoNode,
+  ProcessInfoNodeData,
+} from '../dist/cjs/process-info-node.js'
 
 t.test('basic instance stuff', t => {
   type N = 'root' | 'parent' | 'child' | 'child2'

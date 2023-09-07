@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "rootDir": "..",
+  "include": ["**/*.ts", "**/*.mts", "**/*.cts"],
+  "exclude": [],
+  "compilerOptions": {
+    "module": "commonjs"
+  }
+}
