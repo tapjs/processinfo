@@ -1,6 +1,5 @@
 // hooks used by loader-legacy.mjs and loader.mjs
 
-import { readFile } from 'node:fs/promises'
 import { parse } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { MessagePort } from 'node:worker_threads'
@@ -58,10 +57,6 @@ const record = async (url: string, content?: string) => {
     return
   }
 
-  // try to get the actual contents of the file on disk, since it has
-  // likely been transpiled by the time we get at it.
-  content = await readFile(filename, 'utf8').catch(() => content)
-
   if (PORT) {
     PORT.postMessage({ filename, content })
   } else {
@@ -83,15 +78,19 @@ export const load = async (
     // instead of just naming their extensioned file and letting npm
     // symlink it for them. Don't blow up when this happens, just tell
     // node that it's commonjs.
+    // TODO: should we just let this fail? It fails *without* the loader,
+    // after all.
     if (!ext) {
       await record(url)
       return {
+        ...context,
         format: 'commonjs',
         shortCircuit: true,
       }
     }
   }
 
+  // we actually need the transpiled
   const ret = await nextLoad(url, context)
   await record(url, ret.source)
   return ret
