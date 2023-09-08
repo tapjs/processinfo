@@ -1,5 +1,6 @@
 // hooks used by loader-legacy.mjs and loader.mjs
 
+import { readFile } from 'node:fs/promises'
 import { parse } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { MessagePort } from 'node:worker_threads'
@@ -11,6 +12,7 @@ import {
   reset as processInfoReset,
 } from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
+
 let getProcessInfo = _getProcessInfo
 
 let PORT: undefined | MessagePort = undefined
@@ -47,7 +49,7 @@ export const initialize = ({ port }: { port: MessagePort }) => {
 
 const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
 
-const record = (url: string, content?: string) => {
+const record = async (url: string, content?: string) => {
   const filename = url.startsWith('file://') ? fileURLToPath(url) : url
   if (exclude.test(filename)) {
     return
@@ -56,12 +58,16 @@ const record = (url: string, content?: string) => {
     return
   }
 
+  // try to get the actual contents of the file on disk, since it has
+  // likely been transpiled by the time we get at it.
+  content = await readFile(filename, 'utf8').catch(() => content)
+
   if (PORT) {
     PORT.postMessage({ filename, content })
   } else {
     // call lazily so we don't double-register
     getProcessInfo().files.push(filename)
-    if (content) saveLineLengths(filename, content)
+    saveLineLengths(filename, content)
   }
 }
 
@@ -78,7 +84,7 @@ export const load = async (
     // symlink it for them. Don't blow up when this happens, just tell
     // node that it's commonjs.
     if (!ext) {
-      record(url)
+      await record(url)
       return {
         format: 'commonjs',
         shortCircuit: true,
@@ -87,7 +93,7 @@ export const load = async (
   }
 
   const ret = await nextLoad(url, context)
-  record(url, String(ret.source))
+  await record(url, ret.source)
   return ret
 }
 

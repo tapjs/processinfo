@@ -10,7 +10,9 @@ const cache = g[kLLC] || new Map<string, number[]>()
 g[kLLC] = cache
 
 const sourceMapComment = '//# sourceMappingURL='
-export const saveLineLengths = (filename: string, content: string) => {
+export const saveLineLengths = (filename: string, content?: string | Buffer) => {
+  if (content === undefined) return
+  if (typeof content === 'object') content = String(content)
   if (filename.startsWith('file://')) filename = fileURLToPath(filename)
   // no need if it's not sourcemapped
   // don't cache an empty array, though, because ts-node files will show
