@@ -88,7 +88,7 @@ const addIgnoreLoadersWarning = (args: readonly string[]) =>
   args.includes('--no-warnings') ||
   args.includes('--no-warnings=ExperimentalLoader')
     ? args
-    : args.concat('--no-warnings=ExperimentalLoader')
+    : args.concat('--no-warnings')
 
 export const nodeOptionsEnv = (
   env: NodeJS.ProcessEnv,

@@ -645,7 +645,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
     Function (),
@@ -661,7 +661,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -678,7 +678,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
     Function (),
@@ -694,7 +694,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -709,7 +709,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -725,7 +725,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -741,7 +741,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
     Function (),
@@ -760,7 +760,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
     Function (),
@@ -779,7 +779,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -797,7 +797,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -817,7 +817,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
     Function (),
@@ -836,7 +836,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -853,7 +853,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -868,7 +868,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -884,7 +884,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -900,7 +900,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -915,7 +915,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -933,7 +933,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -951,7 +951,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -969,7 +969,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -988,7 +988,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1004,7 +1004,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1020,7 +1020,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1036,7 +1036,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1051,7 +1051,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1068,7 +1068,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1086,7 +1086,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1102,7 +1102,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1121,7 +1121,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1138,7 +1138,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1154,7 +1154,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1173,7 +1173,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1191,7 +1191,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1208,7 +1208,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1226,7 +1226,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
     },
   ],
@@ -1244,7 +1244,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
@@ -1261,7 +1261,7 @@ Array [
     Object {
       "env": Object {
         "_TAPJS_PROCESSINFO_EXCLUDE_": "/(^|[////])(node_modules|/.tap|tap-testdir-.*?|tap-snapshots|tests?|[^////]+/.test/.([cm]?[jt]s|[jt]sx?)|__tests?__)([////]|$)/i",
-        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings=ExperimentalLoader\\"",
+        "NODE_OPTIONS": "\\"--loader=file://{CWD}/dist/mjs/loader-legacy.mjs\\" \\"--no-warnings\\"",
       },
       "stdio": "ignore",
     },
