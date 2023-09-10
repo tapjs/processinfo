@@ -9,15 +9,10 @@ import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getExclude } from './get-exclude.js'
-import { ProcessInfoNodeData } from './process-info-node.js'
 import { getLineLengths } from './line-lengths.js'
+import { ProcessInfoNodeData } from './process-info-node.js'
 
 export let SESSION: Session | undefined = undefined
-
-// NB: coverage exclusion is in addition to processinfo
-// exclusion.  Only show coverage for a file we care
-// about at least somewhat, but coverage is a subset.
-const exclude = getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_')
 
 // This is a \n delimited list of files to show coverage for
 // If not set, or empty, then coverage is included for all files
@@ -28,6 +23,20 @@ const coveredFiles: string[] = cfEnv
   .trim()
   .split('\n')
   .filter(f => !!f)
+
+// NB: coverage exclusion is in addition to processinfo
+// exclusion.  Only show coverage for a file we care
+// about at least somewhat, but coverage is a subset.
+const cxEnv = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_FILES_ || ''
+const uncoveredFiles: string[] = cxEnv
+  .trim()
+  .split('\n')
+  .filter(f => !!f)
+
+const exclude = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_
+  ? getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_', false)
+  : undefined
+
 const fileCovered = (
   f: string,
   s?: SourceMapPayload,
@@ -41,6 +50,8 @@ const fileCovered = (
       )
     }
   }
+
+  // never include coverage if the file is fully ignored.
   if (!testFiles.some(f => files.includes(f))) return false
 
   // if at least one of them are explicitly covered, then include it,
@@ -49,10 +60,11 @@ const fileCovered = (
     return testFiles.some(f => coveredFiles.includes(f))
   }
 
-  for (const f of testFiles) {
-    if (!exclude.test(f)) return true
-  }
-  return false
+  // if any of the filenames are explicitly excluded, no coverage
+  // otherwise, it is covered
+  return !testFiles.some(
+    f => uncoveredFiles.includes(f) || exclude?.test(f)
+  )
 }
 
 // C8 can't see that this function runs, best theory is that it
