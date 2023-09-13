@@ -17,7 +17,7 @@ t.formatSnapshot = o =>
 const legacyAbs = resolve(__dirname, '../dist/mjs/loader-legacy.mjs')
 const legacyRel = './' + relative(process.cwd(), legacyAbs)
 const legacyURL = String(pathToFileURL(legacyAbs))
-const importAbs = resolve('../dist/mjs/import.mjs')
+const importAbs = resolve(__dirname, '../dist/mjs/import.mjs')
 const importRel = '.' + sep + relative(process.cwd(), importAbs)
 const importURL = String(pathToFileURL(importAbs))
 
@@ -31,6 +31,8 @@ t.cleanSnapshot = s =>
     .join('{LOADER REL}')
     .split(legacyAbs.replace(/"/g, '\\"'))
     .join('{LOADER ABS}')
+    .split(importURL)
+    .join('{IMPORT URL}')
     .split(importAbs.replace(/"/g, '\\"'))
     .join('{IMPORT ABS}')
     .split(importRel.replace(/"/g, '\\"'))
