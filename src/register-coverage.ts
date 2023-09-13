@@ -134,7 +134,7 @@ export const coverageOnProcessEnd = (
       // see if it has a source map
       // need to look up via the url, not the file path, because mocks
       // attach a tapmock search param, which is in node's internal key.
-      const s = findSourceMapSafe(String(obj.url))
+      const s = findSourceMapSafe(obj.url)
       if (!fileCovered(f, s?.payload, processInfo.files)) {
         return false
       }
