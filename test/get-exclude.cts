@@ -1,6 +1,9 @@
 import t from 'tap'
 
-import { defaultExclude, getExclude } from '../dist/commonjs/get-exclude.js'
+import {
+  defaultExclude,
+  getExclude,
+} from '../dist/commonjs/get-exclude.js'
 
 const k = '_TESTING_TAPJS_PROCESSINFO_EXCLUDE_'
 const ex = process.env[k]

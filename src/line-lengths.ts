@@ -10,7 +10,10 @@ const cache = g[kLLC] || new Map<string, number[]>()
 g[kLLC] = cache
 
 const sourceMapComment = '//# sourceMappingURL='
-export const saveLineLengths = (filename: string, content?: string | Buffer) => {
+export const saveLineLengths = (
+  filename: string,
+  content?: string | Buffer
+) => {
   if (content === undefined) return
   if (typeof content === 'object') content = String(content)
   if (filename.startsWith('file://')) filename = fileURLToPath(filename)

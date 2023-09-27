@@ -69,7 +69,7 @@ for (const loader of ['--import', '--loader']) {
         fork: (...args: any[]) => ['fork', args],
       },
       module: Object.assign(Module, {
-        register: loader === '--import' ? () => {} : undefined
+        register: loader === '--import' ? () => {} : undefined,
       }),
     })
 
@@ -85,7 +85,10 @@ for (const loader of ['--import', '--loader']) {
         'spawn, no args, options'
       )
       t.matchSnapshot(cp.spawnSync('cmd'), 'spawnSync no args no options')
-      t.matchSnapshot(cp.spawnSync('cmd', ['args']), 'spawnSync no options')
+      t.matchSnapshot(
+        cp.spawnSync('cmd', ['args']),
+        'spawnSync no options'
+      )
       t.matchSnapshot(
         cp.spawnSync('cmd', ['args'], { stdio: 'ignore' }),
         'spawnSync options'
@@ -115,7 +118,11 @@ for (const loader of ['--import', '--loader']) {
         'p exec, no options'
       )
       t.matchSnapshot(
-        await promisify(cp.exec)('cmd args', { stdio: 'ignore' }, () => {}),
+        await promisify(cp.exec)(
+          'cmd args',
+          { stdio: 'ignore' },
+          () => {}
+        ),
         'p exec options'
       )
       t.matchSnapshot(

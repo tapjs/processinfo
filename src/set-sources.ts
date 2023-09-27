@@ -1,6 +1,6 @@
 import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getProcessInfo } from './get-process-info.js'
-import {urlToPath} from './url-to-path.js'
+import { urlToPath } from './url-to-path.js'
 
 // set the processInfo.sources for a given file, but don't clobber
 // if called multiple times, or create duplicate entries.

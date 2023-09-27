@@ -1,1 +1,4 @@
-test/fixtures
+/test/fixtures
+/tap-snapshots
+/coverage
+/.*

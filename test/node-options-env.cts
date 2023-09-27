@@ -140,15 +140,21 @@ const run = (
 }
 
 t.test('no require.register available', t => {
-  const { nodeOptionsEnv } = t.mock('../dist/commonjs/node-options-env.js', {
-    module: Object.assign(Module, { register: undefined }),
-  })
+  const { nodeOptionsEnv } = t.mock(
+    '../dist/commonjs/node-options-env.js',
+    {
+      module: Object.assign(Module, { register: undefined }),
+    }
+  )
   run(nodeOptionsEnv, t)
 })
 
 t.test('with require.register available', t => {
-  const { nodeOptionsEnv } = t.mock('../dist/commonjs/node-options-env.js', {
-    module: Object.assign(Module, { register: () => {} }),
-  })
+  const { nodeOptionsEnv } = t.mock(
+    '../dist/commonjs/node-options-env.js',
+    {
+      module: Object.assign(Module, { register: () => {} }),
+    }
+  )
   run(nodeOptionsEnv, t)
 })

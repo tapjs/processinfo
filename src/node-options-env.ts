@@ -65,10 +65,7 @@ const addLoader = (args: string[]) => {
       continue
     }
     if (!eq) i++
-    if (
-      doNotWantKeys.includes(k) &&
-      (importMatch(v) || legacyMatch(v))
-    ) {
+    if (doNotWantKeys.includes(k) && (importMatch(v) || legacyMatch(v))) {
       // it's ours, but not how we want it, omit
       continue
     }
@@ -80,7 +77,7 @@ const addLoader = (args: string[]) => {
       added.push(arg)
       const next = args[i]
       if (!eq && typeof next === 'string') added.push(next)
-    } else  {
+    } else {
       // not ours
       added.push(arg)
       const next = args[i]
@@ -98,9 +95,7 @@ const addIgnoreLoadersWarning = (args: readonly string[]) =>
     ? args
     : args.concat('--no-warnings')
 
-export const nodeOptionsEnv = (
-  env: NodeJS.ProcessEnv,
-) => {
+export const nodeOptionsEnv = (env: NodeJS.ProcessEnv) => {
   const no = nodeOptionsToArgv(env.NODE_OPTIONS)
   return argvToNodeOptions(addLoader(no))
 }

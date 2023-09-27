@@ -141,13 +141,16 @@ t.test('coverage for the test switch to turn off registration', t => {
     process.pid
   )
 
-  const { getProcessInfo } = t.mock('../dist/commonjs/get-process-info.js', {
-    '../dist/commonjs/register-require.js': {
-      registerRequire() {
-        throw new Error('should not register')
+  const { getProcessInfo } = t.mock(
+    '../dist/commonjs/get-process-info.js',
+    {
+      '../dist/commonjs/register-require.js': {
+        registerRequire() {
+          throw new Error('should not register')
+        },
       },
-    },
-  })
+    }
+  )
   getProcessInfo()
   t.pass('did not register')
   t.end()
