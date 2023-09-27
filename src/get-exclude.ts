@@ -3,7 +3,9 @@ export const defaultExclude =
 
 const parseExclude = (src: string | undefined): RegExp | undefined => {
   if (!src) return
-  const parsed = src.match(/^\/(.*)\/([a-z]*)$/)
+  const parsed = src.match(/^\/(.*)\/([a-z]*)$/) as
+    | null
+    | [string, string, string]
   if (parsed) {
     try {
       return new RegExp(parsed[1], parsed[2])

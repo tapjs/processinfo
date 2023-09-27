@@ -5,13 +5,13 @@ process.env._TAPJS_PROCESSINFO_EXCLUDE_ =
   '/.*[\\/\\\\]test-processinfo-exclude.js$/'
 
 import { MessageChannel } from 'node:worker_threads'
-import { getProcessInfo } from '../dist/mjs/get-process-info.js'
+import { getProcessInfo } from '../dist/esm/get-process-info.js'
 import {
   globalPreload,
   initialize,
   load,
   reset,
-} from '../dist/mjs/hooks.mjs'
+} from '../dist/esm/hooks.mjs'
 
 import { fileURLToPath } from 'node:url'
 import t from 'tap'

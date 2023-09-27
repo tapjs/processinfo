@@ -1,0 +1,15 @@
+{
+  "extends": "./build.json",
+  "include": [
+    "../src/**/*.ts",
+    "../src/**/*.cts",
+    "../src/**/*.tsx"
+  ],
+  "exclude": [
+    ".../src/**/*.mts",
+    "../src/get-import-meta-url.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "../.tshy-build-tmp/commonjs"
+  }
+}

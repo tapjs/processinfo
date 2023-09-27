@@ -14,8 +14,11 @@ const getKeyValue = (
   i: number
 ): [boolean, string, string | undefined] => {
   const arg = args[i]
+  /* c8 ignore start */
+  if (typeof arg !== 'string') throw new Error('invalid arg')
+  /* c8 ignore stop */
   if (arg.includes('=')) {
-    const [k, ...rest] = arg.split('=')
+    const [k, ...rest] = arg.split('=') as [string, ...string[]]
     return [true, k, rest.join('=')]
   } else if (i < args.length - 1) {
     return [false, arg, args[i + 1]]
@@ -42,6 +45,9 @@ const addLoader = (args: string[]) => {
   let found = false
   for (let i = 0; i < args.length; i++) {
     const arg = args[i]
+    /* c8 ignore start */
+    if (typeof arg !== 'string') throw new Error('invalid arg')
+    /* c8 ignore stop */
     if (!arg.startsWith('--') || doubledash) {
       added.push(arg)
       continue
@@ -72,11 +78,13 @@ const addLoader = (args: string[]) => {
       if (found) continue
       found = true
       added.push(arg)
-      if (!eq) added.push(args[i])
+      const next = args[i]
+      if (!eq && typeof next === 'string') added.push(next)
     } else  {
       // not ours
       added.push(arg)
-      if (!eq) added.push(args[i])
+      const next = args[i]
+      if (!eq && typeof next === 'string') added.push(next)
       continue
     }
   }

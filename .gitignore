@@ -5,6 +5,7 @@
 !/typedoc.json
 !/tsconfig.json
 !/tsconfig
+!/.tshy
 !/tsconfig/*.json
 !/src/
 !/docs/

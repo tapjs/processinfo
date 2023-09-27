@@ -17,9 +17,9 @@ let getProcessInfo = _getProcessInfo
 let PORT: undefined | MessagePort = undefined
 
 export const globalPreload = (context: { port?: MessagePort }) => {
-  // this will be something like path/to/dist/mjs/lib/esm.mjs
-  // but we need path/to/dist/cjs/cjs.js
-  const base = getImportMetaURL('../cjs/[global preload].js')
+  // this will be something like path/to/dist/esm/lib/esm.mjs
+  // but we need path/to/dist/commonjs/cjs.js
+  const base = getImportMetaURL('../commonjs/[global preload].js')
   const { port } = context || {}
   PORT = port
   return `

@@ -154,8 +154,9 @@ export class ProcessInfo {
       if (stats.has(f)) continue
       /* c8 ignore stop */
       promises.push(tryStat(f, stats))
-      if (node.sources[f]) {
-        for (const s of node.sources[f]) {
+      const src = node.sources[f]
+      if (src) {
+        for (const s of src) {
           /* c8 ignore start */
           if (stats.has(s)) continue
           /* c8 ignore stop */
@@ -186,9 +187,10 @@ export class ProcessInfo {
       }
       let c = Number(st.mtime) > p
       if (!c) continue
-      if (!node.sources[f]?.length) return true
+      const src = node.sources[f]
+      if (!src?.length) return true
       else {
-        for (const s of node.sources[f]) {
+        for (const s of src) {
           const sst = stats.get(s)
           if (!sst || Number(sst.mtime) > p) {
             return true

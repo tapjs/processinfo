@@ -1,8 +1,0 @@
-{
-  "extends": "./build.json",
-  "exclude": ["../src/*-cjs.ts"],
-  "compilerOptions": {
-    "module": "esnext",
-    "outDir": "../dist-tmp/mjs"
-  }
-}

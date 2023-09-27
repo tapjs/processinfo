@@ -3,8 +3,8 @@ import { getImportMetaURL } from './get-import-meta-url.js'
 
 import { fileURLToPath } from 'url'
 
-export const legacyLoader = getImportMetaURL('../mjs/loader-legacy.mjs')
-export const importLoader = getImportMetaURL('../mjs/import.mjs')
+export const legacyLoader = getImportMetaURL('../esm/loader-legacy.mjs')
+export const importLoader = getImportMetaURL('../esm/import.mjs')
 const legacyLoaderPath = fileURLToPath(legacyLoader)
 const importLoaderPath = fileURLToPath(importLoader)
 
