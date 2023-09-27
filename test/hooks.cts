@@ -83,11 +83,14 @@ t.test('with others', async t => {
   )
   t.equal(result.status, 0)
   const lines = result.stdout.toString().trim().split('\n')
-  t.match(new Set(lines), new Set([
-    /^otherhook load file:.*?\/file.mjs\?otherhook-resolve\?otherresolve$/,
-    /^otherload file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load$/,
-    /^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
-  ]))
+  t.match(
+    new Set(lines),
+    new Set([
+      /^otherhook load file:.*?\/file.mjs\?otherhook-resolve\?otherresolve$/,
+      /^otherload file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load$/,
+      /^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
+    ])
+  )
 })
 
 t.test('extensionless does not blow up, it is just cjs', async t => {
