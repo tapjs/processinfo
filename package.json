@@ -11,7 +11,7 @@
     "main": true,
     "exports": {
       ".": "./src/index.ts",
-      "./loader": "./src/loader.mts",
+      "./loader": "./src/loader-legacy.mts",
       "./import": "./src/import.mts"
     }
   },
@@ -28,8 +28,8 @@
     },
     "./loader": {
       "import": {
-        "types": "./dist/esm/loader.d.mts",
-        "default": "./dist/esm/loader.mjs"
+        "types": "./dist/esm/loader-legacy.d.mts",
+        "default": "./dist/esm/loader-legacy.mjs"
       }
     },
     "./import": {
