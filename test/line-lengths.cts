@@ -24,7 +24,7 @@ saveLineLengths(resolve('/content/with-sm'), contentWithSM)
 t.strictSame(getLineLengths(resolve('/content/no-sm')), undefined)
 t.strictSame(
   getLineLengths(`file://${resolve('/content/with-sm')}`),
-  [19, 0, 27, 0, 16, 0, 45]
+  [19, 0, 27, 0, 16, 0, 45, 0]
 )
 // but then the file gets transpiled, and now has a sm
 saveLineLengths(

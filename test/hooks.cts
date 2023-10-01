@@ -13,6 +13,7 @@ const dir = t.testdir({
       console.log('otherload', url)
       return next(url + '?otherload', context, next)
     }
+//# sourceMappingURL=not.valid.map
   `,
   'otherresolve.mjs': `
     export const resolve = async (url, context, next) => {

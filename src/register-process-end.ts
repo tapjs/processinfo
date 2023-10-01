@@ -23,9 +23,7 @@ export const register = () => {
       // try to find the actual sources of the files we loaded
       // This can't be done up front, because the sourcemap isn't
       // present during the load phase, since it's in the contents.
-      for (const file of processInfo.files) {
-        setSources(file)
-      }
+      setSources(processInfo)
       processInfo.runtime = runtime[0] * 1e3 + runtime[1] / 1e6
       const globalsAdded = Object.keys(global).filter(k => !globals.has(k))
       if (globalsAdded.length) {

@@ -16,12 +16,21 @@ import t from 'tap'
 
 t.afterEach(reset)
 
+const mockContent = `//transpiled
+src
+//# sourceMappingURL=not.actual.source.map
+`
+
 t.test('simulate --import', t => {
   t.plan(3)
   const { port1, port2 } = new MessageChannel()
   initialize({ port: port2 })
   port1.on('message', msg => {
-    t.strictSame(msg, { filename: fileURLToPath(u), content: 'src' })
+    t.strictSame(msg, {
+      url: u,
+      filename: fileURLToPath(u),
+      content: mockContent,
+    })
     port1.unref()
     port2.unref()
   })
@@ -30,7 +39,9 @@ t.test('simulate --import', t => {
   load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')
     t.equal(url, u)
-    return { source: 'src' }
+    return {
+      source: mockContent,
+    }
   })
 })
 
@@ -39,7 +50,11 @@ t.test('simulate global preload', t => {
   const { port1, port2 } = new MessageChannel()
   t.equal(typeof globalPreload({ port: port2 }), 'string')
   port1.on('message', msg => {
-    t.strictSame(msg, { filename: fileURLToPath(u), content: 'src' })
+    t.strictSame(msg, {
+      url: u,
+      filename: fileURLToPath(u),
+      content: mockContent,
+    })
     port1.unref()
     port2.unref()
   })
@@ -48,7 +63,7 @@ t.test('simulate global preload', t => {
   load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')
     t.equal(url, u)
-    return { source: 'src' }
+    return { source: mockContent }
   })
 })
 
@@ -59,7 +74,7 @@ t.test('run on main thread, no port', async t => {
   await load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')
     t.equal(url, u)
-    return { source: 'src' }
+    return { source: mockContent }
   })
   t.strictSame(pi.files, [
     fileURLToPath(import.meta.url),
@@ -76,7 +91,7 @@ t.test('excluded file, no recording', async t => {
   await load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')
     t.equal(url, u)
-    return { source: 'src' }
+    return { source: mockContent }
   })
   t.strictSame(pi.files, [fileURLToPath(import.meta.url)])
 })
@@ -88,7 +103,7 @@ t.test('fake main script, no recording', async t => {
   await load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')
     t.equal(url, u)
-    return { source: 'src' }
+    return { source: mockContent }
   })
   t.strictSame(pi.files, [fileURLToPath(import.meta.url)])
 })

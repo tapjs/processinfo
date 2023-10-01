@@ -9,6 +9,7 @@
   "types": "./dist/commonjs/index.d.ts",
   "tshy": {
     "main": true,
+    "selfLink": false,
     "exports": {
       ".": "./src/index.ts",
       "./loader": "./src/loader-legacy.mts",

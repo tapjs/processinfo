@@ -6,15 +6,17 @@ import { MessageChannel } from 'node:worker_threads'
 import { getProcessInfo } from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
 import { getImportMetaURL } from './get-import-meta-url.js'
+import {likelyHasSourceMap} from './lookup-sources.js'
 
 const { port1, port2 } = new MessageChannel()
 
 // must be called eagerly here.
 // this does all the registration as well.
 const processInfo = getProcessInfo()
-port1.on('message', ({ filename, content }) => {
+port1.on('message', ({ filename, content, url }) => {
   processInfo.files.push(filename)
   saveLineLengths(filename, content)
+  if (url) likelyHasSourceMap(url)
 })
 
 port1.unref()

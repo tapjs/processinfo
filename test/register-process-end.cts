@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import t from 'tap'
 import { pathToFileURL } from 'url'
+import * as LS from '../dist/commonjs/lookup-sources'
 
 // mocks
 const exitHandlers: ((
@@ -37,6 +38,7 @@ t.teardown(() => {
 
 const f = resolve(__dirname, 'fixtures', 'foo.mjs')
 const bm = resolve(__dirname, 'fixtures/bar.min.mjs')
+const bmu = String(pathToFileURL(bm))
 const b = resolve(__dirname, 'fixtures/bar.mjs')
 const processInfo = {
   uuid: 'uuid',
@@ -60,6 +62,7 @@ const mocks = {
   fs: { ...require('fs'), ...fsMock },
   '../dist/commonjs/register-coverage.js': registerCoverage,
   '../dist/commonjs/get-process-info.js': { getProcessInfo },
+  '../dist/commonjs/lookup-sources.js': LS,
 }
 
 t.test('run the process end', async t => {
@@ -70,6 +73,7 @@ t.test('run the process end', async t => {
     '../dist/commonjs/register-process-end.js',
     mocks
   )
+  LS.likelyHasSourceMap(bmu)
   register()
   doExit(0, null)
 

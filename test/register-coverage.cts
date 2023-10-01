@@ -8,11 +8,13 @@ import t from 'tap'
 // have to mock anyway.
 
 import spawn from '@npmcli/promise-spawn'
-import fs, { readFileSync } from 'fs'
-import { resolve } from 'path'
-import { pathToFileURL } from 'url'
+import fs, {readFileSync} from 'fs'
+import {resolve} from 'path'
+import {pathToFileURL} from 'url'
 
 const mod = require.resolve('../dist/commonjs/register-coverage.js')
+const sourcesMod = require.resolve('../dist/commonjs/lookup-sources.js')
+const fsmMod = require.resolve('../dist/commonjs/find-source-map-safe.js')
 
 t.test('coverage disabled', async t => {
   const dir = t.testdir({
@@ -104,6 +106,7 @@ t.test('coverage enabled', async t => {
 
 t.test('coverage of diff module enabled', async t => {
   const lineLengthMod = require.resolve('../dist/commonjs/line-lengths.js')
+  const diffUrl = String(pathToFileURL(require.resolve('diff')))
   const dir = t.testdir({
     'r.js': `
       const { saveLineLengths } = require(${JSON.stringify(lineLengthMod)})
@@ -116,8 +119,12 @@ t.test('coverage of diff module enabled', async t => {
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
         mod
       )})
+      const {findSourceMapSafe} = require(${JSON.stringify(
+        fsmMod
+      )})
       register()
       process.on('exit', (code, signal) => {
+        findSourceMapSafe(${JSON.stringify(diffUrl)})
         coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
           uuid: 'uuid-0',
           files: { // not an actual array, everything included yolo
@@ -156,7 +163,6 @@ t.test('coverage of diff module enabled', async t => {
   const f = String(pathToFileURL(require.resolve('diff')))
   const content = readFileSync(require.resolve('diff'), 'utf8')
   const lineLengths = content
-    .replace(/\n$/, '')
     .split(/\n/)
     .map(l => l.length)
   t.strictSame(lineLengths, cov['source-map-cache'][f].lineLengths)
@@ -303,7 +309,11 @@ t.test('coverage of specific files enabled with esm urls', async t => {
         mod
       )})
       register()
+      const {likelyHasSourceMap} = require(${JSON.stringify(sourcesMod)})
+      const {findSourceMapSafe} = require(${JSON.stringify(fsmMod)})
       process.on('exit', (code, signal) => {
+        findSourceMapSafe(${JSON.stringify(String(y))})
+        likelyHasSourceMap(${JSON.stringify(String(y))})
         coverageOnProcessEnd(${JSON.stringify(t.testdirName)}, {
           uuid: 'uuid-0',
           files: { // not an actual array, everything included yolo

@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url'
 import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getExclude } from './get-exclude.js'
 import { getLineLengths } from './line-lengths.js'
+import { lookupSources } from './lookup-sources.js'
 import { ProcessInfoNodeData } from './process-info-node.js'
 
 export let SESSION: Session | undefined = undefined
@@ -39,16 +40,14 @@ const exclude = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_
 
 const fileCovered = (
   f: string,
-  s?: SourceMapPayload,
+  sources: string[] = [],
   files: string[] = []
 ) => {
   const testFiles = [f]
-  if (s) {
-    for (const src of s.sources || []) {
-      testFiles.push(
-        resolve(src.startsWith('file://') ? fileURLToPath(src) : src)
-      )
-    }
+  for (const src of sources || []) {
+    testFiles.push(
+      resolve(src.startsWith('file://') ? fileURLToPath(src) : src)
+    )
   }
 
   // never include coverage if the file is fully ignored.
@@ -134,14 +133,22 @@ export const coverageOnProcessEnd = (
       // see if it has a source map
       // need to look up via the url, not the file path, because mocks
       // attach a tapmock search param, which is in node's internal key.
-      const s = findSourceMapSafe(obj.url)
-      if (!fileCovered(f, s?.payload, processInfo.files)) {
+      const sources = lookupSources(obj.url)
+      if (!fileCovered(f, sources, processInfo.files)) {
         return false
       }
+      // Most of the time this will be cached at the time of recording, but
+      // if it's the last module loaded, or transpiled in-place by ts-node,
+      // the sourcemap won't be pre-loaded and will have to be looked up.
+      const s = findSourceMapSafe(obj.url)
       const { payload } = s || { payload: null }
       if (payload) {
         sourceMapCache[obj.url] = Object.assign(Object.create(null), {
-          lineLengths: getLineLengths(f),
+          /* c8 ignore start */
+          // node's SourceMap objects provide this as of 20.5.0
+          //@ts-ignore
+          lineLengths: s?.lineLengths || getLineLengths(f),
+          /* c8 ignore stop */
           data: payload,
         })
       }
