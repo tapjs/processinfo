@@ -50,7 +50,7 @@
     "test": "c8 tap",
     "snap": "c8 tap",
     "format": "prettier --write . --loglevel warn",
-    "typedoc": "typedoc --tsconfig .tshy/esm.json ./lib/*.*ts"
+    "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts ./src/*.mts"
   },
   "tap": {
     "coverage": false,
