@@ -24,12 +24,15 @@ export const sourcesCache = new Map<string, string[]>()
 export const loadPendingSourceMaps = () => {
   for (const url of maybeSM) {
     const sm = findSourceMapSafe(url)
+    // only possible on node 19+
+    /* c8 ignore start */
     if (sm === false) {
       // can only happen if node found the SM comment, and tried to load it,
       // but got an error creating the sourcemap, because it's invalid or
       // the file is not present. No need to keep trying.
       maybeSM.delete(url)
     } else {
+      /* c8 ignore stop */
       const sources = sm?.payload?.sources
       if (sources) {
         sourcesCache.set(url, sources)

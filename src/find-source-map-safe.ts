@@ -17,7 +17,10 @@ export const findSourceMapSafe = (
     const sm = findSourceMap(mod)
     if (sm) sourceMaps.set(mod, sm)
     return sm
+    // only throws on node 20
+    /* c8 ignore start */
   } catch {
     return false
   }
+  /* c8 ignore stop */
 }
