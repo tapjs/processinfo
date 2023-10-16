@@ -63,7 +63,7 @@ Object {
     "/usr/local/bin/node",
     "{CWD}/test/esm.mjs",
   ],
-  "children": Set {
+  "children": Array [
     &ref_1 Object {
       "argv": Array [
         "/usr/local/bin/node",
@@ -486,7 +486,7 @@ Object {
       "sources": Object {},
       "uuid": "e3a69c13-bca9-4634-968d-c122ffad113d",
     },
-  },
+  ],
   "code": 1,
   "cwd": "{CWD}",
   "date": "2022-04-22T03:50:31.466Z",

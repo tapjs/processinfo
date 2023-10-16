@@ -53,10 +53,8 @@ t.test('basic instantiation and usage', async t => {
   t.matchSnapshot(
     {
       ...r,
-      children: new Set(
-        [...(r?.children || [])].sort((a, b) =>
-          a.uuid.localeCompare(b.uuid, 'en')
-        )
+      children: [...(r?.children || [])].sort((a, b) =>
+        a.uuid.localeCompare(b.uuid, 'en')
       ),
     },
     'root node'
