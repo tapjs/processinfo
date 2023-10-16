@@ -42,10 +42,15 @@ export const loadPendingSourceMaps = () => {
   }
 }
 
-export const lookupSources = (url: string) => getSources().get(url)
+export const lookupSources = (url: string, processEnd?: boolean) =>
+  getSources(processEnd).get(url)
 
-export const getSources = () => {
-  if (maybeSM.size) loadPendingSourceMaps()
+let didFinalLookupAttempt = false
+export const getSources = (processEnd: boolean = false) => {
+  if (maybeSM.size && (!processEnd || !didFinalLookupAttempt)) {
+    if (processEnd) didFinalLookupAttempt = true
+    loadPendingSourceMaps()
+  }
   return sourcesCache
 }
 

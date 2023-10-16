@@ -30,5 +30,10 @@ t.test('loading modules and sources', async t => {
   const smMap = new Map(
     [missingSM, hasSM, noSM].map(m => [m, lookupSources(m)])
   )
+  // do the final lookup attempt, for coverage
+  const smMapProcessEnd = new Map(
+    [missingSM, hasSM, noSM].map(m => [m, lookupSources(m, true)])
+  )
   t.match(smMap, expect)
+  t.match(smMapProcessEnd, expect)
 })

@@ -3,10 +3,10 @@
 // work, and then registers the loader without globalPreload
 import { register } from 'node:module'
 import { MessageChannel } from 'node:worker_threads'
+import { getImportMetaURL } from './get-import-meta-url.js'
 import { getProcessInfo } from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
-import { getImportMetaURL } from './get-import-meta-url.js'
-import {likelyHasSourceMap} from './lookup-sources.js'
+import { likelyHasSourceMap } from './lookup-sources.js'
 
 const { port1, port2 } = new MessageChannel()
 

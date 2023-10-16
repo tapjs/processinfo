@@ -22,9 +22,7 @@ export const saveLineLengths = (
   // up first as source, and then as their built content.
   const last = content.trimEnd().split('\n').pop()
   if (cache.has(filename) || !last?.startsWith(sourceMapComment)) return
-  const ll = content
-    .split(/\n|\u2028|\u2029/)
-    .map(l => l.length)
+  const ll = content.split(/\n|\u2028|\u2029/).map(l => l.length)
 
   cache.set(filename, ll)
 }

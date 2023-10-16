@@ -8,9 +8,9 @@ import t from 'tap'
 // have to mock anyway.
 
 import spawn from '@npmcli/promise-spawn'
-import fs, {readFileSync} from 'fs'
-import {resolve} from 'path'
-import {pathToFileURL} from 'url'
+import fs, { readFileSync } from 'fs'
+import { resolve } from 'path'
+import { pathToFileURL } from 'url'
 
 const mod = require.resolve('../dist/commonjs/register-coverage.js')
 const sourcesMod = require.resolve('../dist/commonjs/lookup-sources.js')
@@ -119,9 +119,7 @@ t.test('coverage of diff module enabled', async t => {
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
         mod
       )})
-      const {findSourceMapSafe} = require(${JSON.stringify(
-        fsmMod
-      )})
+      const {findSourceMapSafe} = require(${JSON.stringify(fsmMod)})
       register()
       process.on('exit', (code, signal) => {
         findSourceMapSafe(${JSON.stringify(diffUrl)})
@@ -162,9 +160,7 @@ t.test('coverage of diff module enabled', async t => {
   t.notSame(cov['source-map-cache'], {})
   const f = String(pathToFileURL(require.resolve('diff')))
   const content = readFileSync(require.resolve('diff'), 'utf8')
-  const lineLengths = content
-    .split(/\n/)
-    .map(l => l.length)
+  const lineLengths = content.split(/\n/).map(l => l.length)
   t.strictSame(lineLengths, cov['source-map-cache'][f].lineLengths)
 })
 
