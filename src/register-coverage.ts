@@ -7,6 +7,7 @@ import { Session } from 'node:inspector'
 import { SourceMapPayload } from 'node:module'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { canonicalSource } from './canonical-source.js'
 import { findSourceMapSafe } from './find-source-map-safe.js'
 import { getExclude } from './get-exclude.js'
 import { getLineLengths } from './line-lengths.js'
@@ -36,7 +37,7 @@ const uncoveredFiles: string[] = cxEnv
 
 const exclude = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_
   ? getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_', false)
-  : undefined
+  : /[\\\/]node_modules[\\\/]/
 
 const fileCovered = (
   f: string,
@@ -51,7 +52,9 @@ const fileCovered = (
   }
 
   // never include coverage if the file is fully ignored.
-  if (!testFiles.some(f => files.includes(f))) return false
+  if (!testFiles.some(f => files.includes(f))) {
+    return false
+  }
 
   // if at least one of them are explicitly covered, then include it,
   // otherwise omit if we explicitly listed
@@ -129,6 +132,7 @@ export const coverageOnProcessEnd = (
       if (!/^file:/.test(obj.url)) {
         return false
       }
+      obj.url = canonicalSource(obj.url)
       const f = fileURLToPath(obj.url)
       // see if it has a source map
       // need to look up via the url, not the file path, because mocks
@@ -149,7 +153,10 @@ export const coverageOnProcessEnd = (
           //@ts-ignore
           lineLengths: s?.lineLengths || getLineLengths(f),
           /* c8 ignore stop */
-          data: payload,
+          data: {
+            ...payload,
+            sources: payload.sources?.map(s => canonicalSource(s)),
+          },
         })
       }
       return true
