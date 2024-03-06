@@ -19,7 +19,7 @@ import { register as registerEnv } from './register-env.js'
 import { register as registerProcessEnd } from './register-process-end.js'
 import { register as registerRequire } from './register-require.js'
 
-// this module is hybridized.  In node v20.0 = v20.6, it's the *commonjs* one
+// this module is hybridized.  In node v20.0 - v20.6, it's the *commonjs* one
 // that gets loaded, because the esm loader context can't modify the main
 // thread except via communication over the port to the globalPreload env. So,
 // we have to store our singleton on the global.

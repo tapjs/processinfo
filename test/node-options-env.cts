@@ -132,8 +132,14 @@ const run = (
         ? opt
         : argvToNodeOptions(opt)
     t.test(name, t => {
-      t.plan(1)
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }), name)
+      t.plan(7)
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, []), name)
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, [`--loader=${legacyURL}`]), name + ' with legacy loader')
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, [`--import=${importURL}`]), name + ' with import')
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--loader', legacyURL]), name + ' with legacy loader no =')
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--import', importURL]), name + ' with import no =')
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--xyz']), name + ' with trailing flag')
+      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--', `--import=${importURL}`]), name + ' with --')
     })
   }
   t.end()

@@ -1,16 +1,16 @@
 import { argvToNodeOptions } from './argv-to-node-options.js'
 import {
-  legacyLoader,
-  legacyMatch,
   importLoader,
   importMatch,
+  legacyLoader,
+  legacyMatch,
 } from './loader-paths.js'
 import { nodeOptionsToArgv } from './node-options-to-argv.js'
 
 import Module from 'node:module'
 
 const getKeyValue = (
-  args: string[],
+  args: readonly string[],
   i: number
 ): [boolean, string, string | undefined] => {
   const arg = args[i]
@@ -30,6 +30,73 @@ const getKeyValue = (
 const useImport = !!(Module as { register?: (...a: any[]) => any })
   .register
 
+// JUST test if we need to do anything at all with the env.
+// if the loader is set already in the args, even incorrectly, return true
+const hasLoader = (args: readonly string[]): boolean => {
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i]
+    /* c8 ignore start */
+    if (typeof arg !== 'string') throw new Error('invalid arg')
+    /* c8 ignore stop */
+    if (!arg.startsWith('--') || arg === '--') break
+    const [eq, k, v] = getKeyValue(args, i)
+    if (!v) {
+      // wasn't a key-value pair
+      continue
+    }
+    if (!eq) i++
+    if (
+      (k === '--experimental-loader' || k === '--loader') &&
+      legacyMatch(v)
+    ) {
+      return true
+    }
+    if (k === '--import' && importMatch(v)) return true
+  }
+  return false
+}
+
+const rmLoader = (args: string[]) => {
+  const doNotWantKeys = ['--experimental-loader', '--loader', '--import']
+
+  const result: string[] = []
+
+  let doubledash = false
+  for (let i = 0; i < args.length; i++) {
+    const arg = args[i]
+    /* c8 ignore start */
+    if (typeof arg !== 'string') throw new Error('invalid arg')
+    /* c8 ignore stop */
+    if (!arg.startsWith('--') || doubledash) {
+      result.push(arg)
+      continue
+    }
+    if (arg === '--') {
+      result.push(arg)
+      doubledash = true
+      continue
+    }
+
+    const [eq, k, v] = getKeyValue(args, i)
+    if (!v) {
+      // wasn't a key-value pair
+      result.push(arg)
+      continue
+    }
+    if (!eq) i++
+    if (doNotWantKeys.includes(k) && (importMatch(v) || legacyMatch(v))) {
+      // it's ours, remove it
+      continue
+    }
+    // not ours, leave it
+    result.push(arg)
+    const next = args[i]
+    if (!eq && typeof next === 'string') result.push(next)
+    continue
+  }
+  return result
+}
+
 const addLoader = (args: string[]) => {
   const addKey = useImport ? '--import' : '--loader'
   const addValue = useImport ? importLoader : legacyLoader
@@ -39,7 +106,7 @@ const addLoader = (args: string[]) => {
   ]
   const test = useImport ? importMatch : legacyMatch
 
-  const added: string[] = []
+  const result: string[] = []
 
   let doubledash = false
   let found = false
@@ -49,11 +116,11 @@ const addLoader = (args: string[]) => {
     if (typeof arg !== 'string') throw new Error('invalid arg')
     /* c8 ignore stop */
     if (!arg.startsWith('--') || doubledash) {
-      added.push(arg)
+      result.push(arg)
       continue
     }
     if (arg === '--') {
-      added.push(arg)
+      result.push(arg)
       doubledash = true
       continue
     }
@@ -61,7 +128,7 @@ const addLoader = (args: string[]) => {
     const [eq, k, v] = getKeyValue(args, i)
     if (!v) {
       // wasn't a key-value pair
-      added.push(arg)
+      result.push(arg)
       continue
     }
     if (!eq) i++
@@ -74,19 +141,19 @@ const addLoader = (args: string[]) => {
       // already present, don't let it be set multiple times.
       if (found) continue
       found = true
-      added.push(arg)
+      result.push(arg)
       const next = args[i]
-      if (!eq && typeof next === 'string') added.push(next)
+      if (!eq && typeof next === 'string') result.push(next)
     } else {
       // not ours
-      added.push(arg)
+      result.push(arg)
       const next = args[i]
-      if (!eq && typeof next === 'string') added.push(next)
+      if (!eq && typeof next === 'string') result.push(next)
       continue
     }
   }
-  if (!found) added.push(`${addKey}=${addValue}`)
-  return !useImport ? addIgnoreLoadersWarning(added) : added
+  if (!found) result.push(`${addKey}=${addValue}`)
+  return !useImport ? addIgnoreLoadersWarning(result) : result
 }
 
 const addIgnoreLoadersWarning = (args: readonly string[]) =>
@@ -95,7 +162,11 @@ const addIgnoreLoadersWarning = (args: readonly string[]) =>
     ? args
     : args.concat('--no-warnings')
 
-export const nodeOptionsEnv = (env: NodeJS.ProcessEnv) => {
+export const nodeOptionsEnv = (
+  env: NodeJS.ProcessEnv,
+  args: readonly string[]
+) => {
+  // if we already have the loader in args, don't add to NODE_OPTIONS
   const no = nodeOptionsToArgv(env.NODE_OPTIONS)
-  return argvToNodeOptions(addLoader(no))
+  return argvToNodeOptions(hasLoader(args) ? rmLoader(no) : addLoader(no))
 }

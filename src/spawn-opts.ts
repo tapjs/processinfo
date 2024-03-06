@@ -6,11 +6,18 @@ const p = process
 
 export const spawnOpts = <T extends { [k: string]: any }>(
   options: WithExternalID<T>,
-  exclude?: RegExp | string
+  exclude?: RegExp | string,
+  args?: readonly string[]
 ): Omit<T, 'externalID'> & { env: ProcessEnvOptions } => {
   const { externalID, ...rest } = options
   const env = { ...(options.env || p.env) }
-  env.NODE_OPTIONS = nodeOptionsEnv(env)
+  // only add if lacking in args, but this can come in multiple ways
+  const a = [
+    ...(options.execArgv ?? []),
+    ...(args ?? []),
+    ...(options.args ?? []),
+  ]
+  env.NODE_OPTIONS = nodeOptionsEnv(env, a)
   if (externalID) {
     env._TAPJS_PROCESSINFO_EXTERNAL_ID_ = externalID
   }

@@ -195,7 +195,7 @@ export function spawn(
     options = args
     args = []
   }
-  return cpSpawn(cmd, args || [], spawnOpts(options || {}, getExclude(k)))
+  return cpSpawn(cmd, args || [], spawnOpts(options || {}, getExclude(k), args))
 }
 
 export function spawnSync(command: string): SpawnSyncReturns<Buffer>
@@ -250,7 +250,7 @@ export function spawnSync(
   return cpSpawnSync(
     cmd,
     args || [],
-    spawnOpts(options || {}, getExclude(k))
+    spawnOpts(options || {}, getExclude(k), args)
   )
 }
 
@@ -326,11 +326,11 @@ export type ExecArgs =
 export function exec(...args: ExecArgs): ChildProcess {
   const [cmd, options, callback] = args
   if (typeof options === 'function') {
-    return cpExec(cmd, spawnOpts<ExecOptions>({}, getExclude(k)), options)
+    return cpExec(cmd, spawnOpts<ExecOptions>({}, getExclude(k), []), options)
   } else if (!options) {
     return cpExec(
       cmd,
-      spawnOpts<ExecOptions>({}, getExclude(k)),
+      spawnOpts<ExecOptions>({}, getExclude(k), []),
       callback as (
         error: ExecException | null,
         stdout: string | Buffer,
@@ -341,7 +341,7 @@ export function exec(...args: ExecArgs): ChildProcess {
 
   return cpExec(
     cmd,
-    spawnOpts(options, getExclude(k)),
+    spawnOpts(options, getExclude(k), []),
     callback as (
       error: ExecException | null,
       stdout: string | Buffer,
@@ -602,7 +602,7 @@ export function execFile(
   return cpExecFile(
     file,
     args,
-    spawnOpts(options, getExclude(k)),
+    spawnOpts(options, getExclude(k), args),
     callback
   )
 }
@@ -742,7 +742,7 @@ export namespace execFile {
     }
     return customPromisify(cpExecFile)(
       file,
-      spawnOpts(options || {}, getExclude(k))
+      spawnOpts(options || {}, getExclude(k), args as readonly string[])
     )
   }
   Object.assign(execFile, { [promisify]: __promisify__ })
@@ -809,7 +809,7 @@ export function execFileSync(
   return cpExecFileSync(
     file,
     args || [],
-    spawnOpts(options || {}, getExclude(k))
+    spawnOpts(options || {}, getExclude(k), args)
   )
 }
 
@@ -831,5 +831,5 @@ export function fork(
     options = args
     args = []
   }
-  return cpFork(modulePath, args, spawnOpts(options || {}, getExclude(k)))
+  return cpFork(modulePath, args, spawnOpts(options || {}, getExclude(k), args))
 }
