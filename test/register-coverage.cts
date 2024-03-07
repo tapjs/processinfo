@@ -73,6 +73,7 @@ t.test('coverage enabled', async t => {
     {
       env: {
         ...process.env,
+        _TAPJS_PROCESSINFO_EXCLUDE_: '/r\\.js$/',
         _TAPJS_PROCESSINFO_COVERAGE_: '1',
       },
       stdio: 'inherit',

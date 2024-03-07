@@ -38,6 +38,7 @@ const uncoveredFiles: string[] = cxEnv
 const exclude = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_
   ? getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_', false)
   : /[\\\/]node_modules[\\\/]/
+const fileEx = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
 
 const fileCovered = (
   f: string,
@@ -53,7 +54,15 @@ const fileCovered = (
 
   // never include coverage if the file is fully ignored.
   if (!testFiles.some(f => files.includes(f))) {
-    return false
+    // just in case it was missed somehow, make sure it *should* be excluded
+    for (const f of testFiles) {
+      if (fileEx.test(f)) {
+        return false
+      }
+    }
+    // otherwise, it was missed by the loader recording somehow
+    // this can happen with commonjs transpilations in some cases
+    files.push(f)
   }
 
   // if at least one of them are explicitly covered, then include it,
