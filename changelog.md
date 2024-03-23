@@ -1,3 +1,18 @@
+# 3.1
+
+- Add ability to exclude specific files from coverage by path
+- Use correct legacy loader for pre-20.6 node versions
+- pre-load source maps to minimize calls at exit
+- Only attempt final sourcemap lookup one time
+- canonicalize source paths in sourcemap data
+- do not add loader to NODE_OPTIONS if in args
+- record unrecorded files that show up in coverage
+
+# 3.0
+
+- add support for --import and Module.register(), for node 20.6
+  and beyond
+
 # 2.4
 
 - Put a filter function on `externalIDsChanged()`
