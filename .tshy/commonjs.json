@@ -6,10 +6,9 @@
     "../src/**/*.tsx"
   ],
   "exclude": [
-    ".../src/**/*.mts",
-    "../src/get-import-meta-url.ts"
+    "../src/**/*.mts"
   ],
   "compilerOptions": {
-    "outDir": "../.tshy-build-tmp/commonjs"
+    "outDir": "../.tshy-build/commonjs"
   }
 }
