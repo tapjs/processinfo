@@ -5,6 +5,7 @@ const p = process as NodeJS.Process & {
 }
 p.setSourceMapsEnabled(true)
 
+import { resolve } from 'path'
 import { v4 as uuid } from 'uuid'
 import { getMain } from './get-main.js'
 import { ProcessInfoNodeData } from './process-info-node.js'
@@ -57,6 +58,10 @@ export const getProcessInfo = (): ProcessInfoNodeData => {
     files: [getMain()],
     sources: Object.create(null),
   }
+  if (process.env.TAP_BEFORE)
+    g[kProcessInfo].files.push(resolve(process.env.TAP_BEFORE))
+  if (process.env.TAP_AFTER)
+    g[kProcessInfo].files.push(resolve(process.env.TAP_AFTER))
 
   if (!g[kProcessInfo].parent) {
     g[kProcessInfo].root = g[kProcessInfo].uuid

@@ -71,6 +71,8 @@ Object {
   "externalID": "external id",
   "files": Array [
     "{CWD}/test/get-process-info.cts",
+    "{CWD}/before",
+    "{CWD}/after",
   ],
   "hrstart": Array [
     true,

@@ -113,6 +113,12 @@ t.test('get the process info', t => {
     process.argv = [process.execPath, __filename, 'eid process']
     const externalID = 'external id'
     process.env._TAPJS_PROCESSINFO_EXTERNAL_ID_ = externalID
+    process.env.TAP_BEFORE = 'before'
+    process.env.TAP_AFTER = 'after'
+    t.teardown(() => {
+      delete process.env.TAP_BEFORE
+      delete process.env.TAP_AFTER
+    })
     const { getProcessInfo } = requireGetProcessInfo(t)
     const processInfo = (eid = getProcessInfo())
     if (!root) {
