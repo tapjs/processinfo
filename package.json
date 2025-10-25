@@ -88,7 +88,7 @@
   "engines": {
     "node": ">=16.17"
   },
-  "license": "ISC",
+  "license": "BlueOak-1.0.0",
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
     "@types/node": "^20.1.2",
