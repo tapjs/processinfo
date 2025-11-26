@@ -2,7 +2,7 @@ import t from 'tap'
 import { removePath } from './fixtures/remove-path'
 
 import Module from 'module'
-import { argvToNodeOptions } from '../dist/commonjs/argv-to-node-options'
+import { argvToNodeOptions } from 'node-options-to-argv'
 
 import { relative, resolve, sep } from 'path'
 import { pathToFileURL } from 'url'

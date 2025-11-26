@@ -3,7 +3,7 @@ import { getProcessInfo } from '../dist/commonjs/get-process-info.js'
 import { register } from '../dist/commonjs/register-require.js'
 process.env._TAPJS_PROCESSINFO_EXCLUDE_ = '/node_modules/'
 // this one does not showup, because not registered yet
-require('../dist/commonjs/argv-to-node-options.js')
+require('../dist/commonjs/node-options-env.js')
 register()
 require('../dist/commonjs/json-file.js')
 const dir = t.testdir({ 'file.js': 'module.exports = "hello"' })

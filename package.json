@@ -80,6 +80,7 @@
     "endOfLine": "lf"
   },
   "dependencies": {
+    "node-options-to-argv": "^1.0.0",
     "pirates": "^4.0.5",
     "process-on-spawn": "^1.0.0",
     "signal-exit": "^4.0.2",

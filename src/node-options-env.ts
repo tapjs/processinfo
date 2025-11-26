@@ -1,11 +1,10 @@
-import { argvToNodeOptions } from './argv-to-node-options.js'
+import { nodeOptionsToArgv, argvToNodeOptions } from 'node-options-to-argv'
 import {
   importLoader,
   importMatch,
   legacyLoader,
   legacyMatch,
 } from './loader-paths.js'
-import { nodeOptionsToArgv } from './node-options-to-argv.js'
 
 import Module from 'node:module'
 

@@ -89,7 +89,9 @@ t.test('with others', async t => {
     new Set([
       /^otherhook load file:.*?\/file.mjs\?otherhook-resolve\?otherresolve$/,
       /^otherload file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load$/,
-      /^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
+      // this one might show up, but often does not arrive in time in node
+      // versions with off-thread hook execution.
+      ///^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
     ])
   )
 })

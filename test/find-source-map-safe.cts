@@ -13,7 +13,7 @@ const [v] = process.versions.node
 
 t.test(
   'throwing source map lookup returns false',
-  { skip: v < 19 ? 'only throws on node 19+' : false },
+  { skip: v !== 19 ? 'only throws on node 19' : false },
   async t => {
     await import('./fixtures/missing-sm.min.mjs')
     t.throws(() =>
