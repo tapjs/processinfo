@@ -62,109 +62,109 @@ const isNotArray = <T extends { [k: string]: any }>(o: any): o is T =>
 
 export function spawn(
   command: string,
-  options?: WithExternalID<SpawnOptionsWithoutStdio>
+  options?: WithExternalID<SpawnOptionsWithoutStdio>,
 ): ChildProcessWithoutNullStreams
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioPipe>
-  >
+  >,
 ): ChildProcessByStdio<Writable, Readable, Readable>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioNull>
-  >
+  >,
 ): ChildProcessByStdio<Writable, Readable, null>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioPipe>
-  >
+  >,
 ): ChildProcessByStdio<Writable, null, Readable>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioPipe>
-  >
+  >,
 ): ChildProcessByStdio<null, Readable, Readable>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioNull>
-  >
+  >,
 ): ChildProcessByStdio<Writable, null, null>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioNull>
-  >
+  >,
 ): ChildProcessByStdio<null, Readable, null>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioPipe>
-  >
+  >,
 ): ChildProcessByStdio<null, null, Readable>
 export function spawn(
   command: string,
   options: WithExternalID<
     SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioNull>
-  >
+  >,
 ): ChildProcessByStdio<null, null, null>
 export function spawn(
   command: string,
-  options: WithExternalID<SpawnOptions>
+  options: WithExternalID<SpawnOptions>,
 ): ChildProcess
 export function spawn(
   command: string,
   args?: ReadonlyArray<string>,
-  options?: SpawnOptionsWithoutStdio
+  options?: SpawnOptionsWithoutStdio,
 ): ChildProcessWithoutNullStreams
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioPipe>
+  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioPipe>,
 ): ChildProcessByStdio<Writable, Readable, Readable>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioNull>
+  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioPipe, StdioNull>,
 ): ChildProcessByStdio<Writable, Readable, null>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioPipe>
+  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioPipe>,
 ): ChildProcessByStdio<Writable, null, Readable>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioPipe>
+  options: SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioPipe>,
 ): ChildProcessByStdio<null, Readable, Readable>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioNull>
+  options: SpawnOptionsWithStdioTuple<StdioPipe, StdioNull, StdioNull>,
 ): ChildProcessByStdio<Writable, null, null>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioNull>
+  options: SpawnOptionsWithStdioTuple<StdioNull, StdioPipe, StdioNull>,
 ): ChildProcessByStdio<null, Readable, null>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioPipe>
+  options: SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioPipe>,
 ): ChildProcessByStdio<null, null, Readable>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioNull>
+  options: SpawnOptionsWithStdioTuple<StdioNull, StdioNull, StdioNull>,
 ): ChildProcessByStdio<null, null, null>
 export function spawn(
   command: string,
   args: ReadonlyArray<string>,
-  options: SpawnOptions
+  options: SpawnOptions,
 ): ChildProcess
 
 export function spawn(
@@ -189,46 +189,50 @@ export function spawn(
           StdioNull | StdioPipe,
           StdioNull | StdioPipe
         >
-      >
+      >,
 ): ChildProcess | ChildProcessWithoutNullStreams {
   if (isNotArray<SpawnOptions>(args)) {
     options = args
     args = []
   }
-  return cpSpawn(cmd, args || [], spawnOpts(options || {}, getExclude(k), args))
+  return cpSpawn(
+    cmd,
+    args || [],
+    spawnOpts(options || {}, getExclude(k), args),
+  )
 }
 
 export function spawnSync(command: string): SpawnSyncReturns<Buffer>
 export function spawnSync(
   command: string,
-  options: WithExternalID<SpawnSyncOptionsWithStringEncoding>
+  options: WithExternalID<SpawnSyncOptionsWithStringEncoding>,
 ): SpawnSyncReturns<string>
 export function spawnSync(
   command: string,
-  options: WithExternalID<SpawnSyncOptionsWithBufferEncoding>
+  options: WithExternalID<SpawnSyncOptionsWithBufferEncoding>,
 ): SpawnSyncReturns<Buffer>
 export function spawnSync(
   command: string,
-  options?: WithExternalID<SpawnSyncOptions>
+  options?: WithExternalID<SpawnSyncOptions>,
 ): SpawnSyncReturns<string | Buffer>
 export function spawnSync(
   command: string,
-  args: ReadonlyArray<string>
+  args: ReadonlyArray<string>,
 ): SpawnSyncReturns<Buffer>
 export function spawnSync(
   command: string,
   args: ReadonlyArray<string>,
-  options: WithExternalID<SpawnSyncOptionsWithStringEncoding>
+  options: WithExternalID<SpawnSyncOptionsWithStringEncoding>,
 ): SpawnSyncReturns<string>
 export function spawnSync(
   command: string,
   args: ReadonlyArray<string>,
-  options: WithExternalID<SpawnSyncOptionsWithBufferEncoding>
+  options: WithExternalID<SpawnSyncOptionsWithBufferEncoding>,
 ): SpawnSyncReturns<Buffer>
 export function spawnSync(
   command: string,
   args?: ReadonlyArray<string>,
-  options?: WithExternalID<SpawnSyncOptions>
+  options?: WithExternalID<SpawnSyncOptions>,
 ): SpawnSyncReturns<string | Buffer>
 
 export function spawnSync(
@@ -241,7 +245,7 @@ export function spawnSync(
   options?:
     | WithExternalID<SpawnSyncOptionsWithStringEncoding>
     | WithExternalID<SpawnSyncOptionsWithBufferEncoding>
-    | WithExternalID<SpawnSyncOptions>
+    | WithExternalID<SpawnSyncOptions>,
 ) {
   if (isNotArray<SpawnSyncOptions>(args)) {
     options = args
@@ -250,7 +254,7 @@ export function spawnSync(
   return cpSpawnSync(
     cmd,
     args || [],
-    spawnOpts(options || {}, getExclude(k), args)
+    spawnOpts(options || {}, getExclude(k), args),
   )
 }
 
@@ -260,8 +264,8 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       command: string,
@@ -273,8 +277,8 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: Buffer,
-        stderr: Buffer
-      ) => void
+        stderr: Buffer,
+      ) => void,
     ]
   | [
       command: string,
@@ -286,8 +290,8 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       command: string,
@@ -299,8 +303,8 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: string | Buffer,
-        stderr: string | Buffer
-      ) => void
+        stderr: string | Buffer,
+      ) => void,
     ]
   | [
       command: string,
@@ -308,8 +312,8 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       command: string,
@@ -320,13 +324,17 @@ export type ExecArgs =
       callback?: (
         error: ExecException | null,
         stdout: string | Buffer,
-        stderr: string | Buffer
-      ) => void
+        stderr: string | Buffer,
+      ) => void,
     ]
 export function exec(...args: ExecArgs): ChildProcess {
   const [cmd, options, callback] = args
   if (typeof options === 'function') {
-    return cpExec(cmd, spawnOpts<ExecOptions>({}, getExclude(k), []), options)
+    return cpExec(
+      cmd,
+      spawnOpts<ExecOptions>({}, getExclude(k), []),
+      options,
+    )
   } else if (!options) {
     return cpExec(
       cmd,
@@ -334,8 +342,8 @@ export function exec(...args: ExecArgs): ChildProcess {
       callback as (
         error: ExecException | null,
         stdout: string | Buffer,
-        stderr: string | Buffer
-      ) => void
+        stderr: string | Buffer,
+      ) => void,
     )
   }
 
@@ -345,8 +353,8 @@ export function exec(...args: ExecArgs): ChildProcess {
     callback as (
       error: ExecException | null,
       stdout: string | Buffer,
-      stderr: string | Buffer
-    ) => void
+      stderr: string | Buffer,
+    ) => void,
   )
 }
 
@@ -361,7 +369,7 @@ export namespace exec {
       {
         encoding: 'buffer' | null
       } & ExecOptions
-    >
+    >,
   ): PromiseWithChild<{
     stdout: Buffer
     stderr: Buffer
@@ -372,21 +380,21 @@ export namespace exec {
       {
         encoding: BufferEncoding
       } & ExecOptions
-    >
+    >,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
   }>
   export function __promisify__(
     command: string,
-    options: WithExternalID<ExecOptions>
+    options: WithExternalID<ExecOptions>,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
   }>
   export function __promisify__(
     command: string,
-    options?: WithExternalID<ObjectEncodingOptions & ExecOptions> | null
+    options?: WithExternalID<ObjectEncodingOptions & ExecOptions> | null,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
@@ -406,14 +414,14 @@ export namespace exec {
         >
       | WithExternalID<ExecOptions>
       | WithExternalID<ObjectEncodingOptions & ExecOptions>
-      | null
+      | null,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
   }> {
     return customPromisify(cpExec)(
       command,
-      spawnOpts(options || {}, getExclude(k))
+      spawnOpts(options || {}, getExclude(k)),
     )
   }
 
@@ -425,15 +433,15 @@ export namespace exec {
 export function execSync(command: string): Buffer
 export function execSync(
   command: string,
-  options: WithExternalID<ExecSyncOptionsWithStringEncoding>
+  options: WithExternalID<ExecSyncOptionsWithStringEncoding>,
 ): string
 export function execSync(
   command: string,
-  options: WithExternalID<ExecSyncOptionsWithBufferEncoding>
+  options: WithExternalID<ExecSyncOptionsWithBufferEncoding>,
 ): Buffer
 export function execSync(
   command: string,
-  options?: WithExternalID<ExecSyncOptions>
+  options?: WithExternalID<ExecSyncOptions>,
 ): string | Buffer
 export function execSync(
   cmd: string,
@@ -441,11 +449,11 @@ export function execSync(
     | WithExternalID<ExecSyncOptions>
     | WithExternalID<ExecSyncOptionsWithBufferEncoding>
     | WithExternalID<ExecSyncOptionsWithStringEncoding>
-    | WithExternalID<ExecSyncOptionsWithBufferEncoding>
+    | WithExternalID<ExecSyncOptionsWithBufferEncoding>,
 ): string | Buffer {
   return cpExecSync(
     cmd,
-    spawnOpts<ExecSyncOptions>(options || {}, getExclude(k))
+    spawnOpts<ExecSyncOptions>(options || {}, getExclude(k)),
   )
 }
 
@@ -455,7 +463,7 @@ export type ExecFileArgs =
       options:
         | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
         | undefined
-        | null
+        | null,
     ]
   | [args?: ReadonlyArray<string> | null]
   | [
@@ -463,30 +471,30 @@ export type ExecFileArgs =
       options:
         | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
         | undefined
-        | null
+        | null,
     ]
   | [
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       options: WithExternalID<ExecFileOptionsWithBufferEncoding>,
       callback: (
         error: ExecFileException | null,
         stdout: Buffer,
-        stderr: Buffer
-      ) => void
+        stderr: Buffer,
+      ) => void,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
@@ -494,16 +502,16 @@ export type ExecFileArgs =
       callback: (
         error: ExecFileException | null,
         stdout: Buffer,
-        stderr: Buffer
-      ) => void
+        stderr: Buffer,
+      ) => void,
     ]
   | [
       options: WithExternalID<ExecFileOptionsWithStringEncoding>,
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
@@ -511,16 +519,16 @@ export type ExecFileArgs =
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       options: WithExternalID<ExecFileOptionsWithOtherEncoding>,
       callback: (
         error: ExecFileException | null,
         stdout: string | Buffer,
-        stderr: string | Buffer
-      ) => void
+        stderr: string | Buffer,
+      ) => void,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
@@ -528,16 +536,16 @@ export type ExecFileArgs =
       callback: (
         error: ExecFileException | null,
         stdout: string | Buffer,
-        stderr: string | Buffer
-      ) => void
+        stderr: string | Buffer,
+      ) => void,
     ]
   | [
       options: WithExternalID<ExecFileOptions>,
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
@@ -545,8 +553,8 @@ export type ExecFileArgs =
       callback: (
         error: ExecFileException | null,
         stdout: string,
-        stderr: string
-      ) => void
+        stderr: string,
+      ) => void,
     ]
   | [
       options:
@@ -557,10 +565,10 @@ export type ExecFileArgs =
         | ((
             error: ExecFileException | null,
             stdout: string | Buffer,
-            stderr: string | Buffer
+            stderr: string | Buffer,
           ) => void)
         | undefined
-        | null
+        | null,
     ]
   | [
       args: ReadonlyArray<string> | undefined | null,
@@ -572,10 +580,10 @@ export type ExecFileArgs =
         | ((
             error: ExecFileException | null,
             stdout: string | Buffer,
-            stderr: string | Buffer
+            stderr: string | Buffer,
           ) => void)
         | undefined
-        | null
+        | null,
     ]
 export function execFile(
   file: string,
@@ -591,7 +599,7 @@ export function execFile(
       arg &&
       typeof arg === 'object' &&
       isNotArray<WithExternalID<ObjectEncodingOptions & ExecFileOptions>>(
-        arg
+        arg,
       )
     ) {
       options = arg
@@ -603,7 +611,7 @@ export function execFile(
     file,
     args,
     spawnOpts(options, getExclude(k), args),
-    callback
+    callback,
   )
 }
 
@@ -614,14 +622,14 @@ export namespace execFile {
   }>
   export function __promisify__(
     file: string,
-    args: ReadonlyArray<string> | undefined | null
+    args: ReadonlyArray<string> | undefined | null,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
   }>
   export function __promisify__(
     file: string,
-    options: WithExternalID<ExecFileOptionsWithBufferEncoding>
+    options: WithExternalID<ExecFileOptionsWithBufferEncoding>,
   ): PromiseWithChild<{
     stdout: Buffer
     stderr: Buffer
@@ -629,14 +637,14 @@ export namespace execFile {
   export function __promisify__(
     file: string,
     args: ReadonlyArray<string> | undefined | null,
-    options: WithExternalID<ExecFileOptionsWithBufferEncoding>
+    options: WithExternalID<ExecFileOptionsWithBufferEncoding>,
   ): PromiseWithChild<{
     stdout: Buffer
     stderr: Buffer
   }>
   export function __promisify__(
     file: string,
-    options: WithExternalID<ExecFileOptionsWithStringEncoding>
+    options: WithExternalID<ExecFileOptionsWithStringEncoding>,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
@@ -644,14 +652,14 @@ export namespace execFile {
   export function __promisify__(
     file: string,
     args: ReadonlyArray<string> | undefined | null,
-    options: WithExternalID<ExecFileOptionsWithStringEncoding>
+    options: WithExternalID<ExecFileOptionsWithStringEncoding>,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
   }>
   export function __promisify__(
     file: string,
-    options: WithExternalID<ExecFileOptionsWithOtherEncoding>
+    options: WithExternalID<ExecFileOptionsWithOtherEncoding>,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
@@ -659,14 +667,14 @@ export namespace execFile {
   export function __promisify__(
     file: string,
     args: ReadonlyArray<string> | undefined | null,
-    options: WithExternalID<ExecFileOptionsWithOtherEncoding>
+    options: WithExternalID<ExecFileOptionsWithOtherEncoding>,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
   }>
   export function __promisify__(
     file: string,
-    options: WithExternalID<ExecFileOptions>
+    options: WithExternalID<ExecFileOptions>,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
@@ -674,7 +682,7 @@ export namespace execFile {
   export function __promisify__(
     file: string,
     args: ReadonlyArray<string> | undefined | null,
-    options: WithExternalID<ExecFileOptions>
+    options: WithExternalID<ExecFileOptions>,
   ): PromiseWithChild<{
     stdout: string
     stderr: string
@@ -684,7 +692,7 @@ export namespace execFile {
     options:
       | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
       | undefined
-      | null
+      | null,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
@@ -695,7 +703,7 @@ export namespace execFile {
     options:
       | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
       | undefined
-      | null
+      | null,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
@@ -720,7 +728,7 @@ export namespace execFile {
       | WithExternalID<ExecFileOptionsWithOtherEncoding>
       | WithExternalID<ExecFileOptions>
       | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
-      | WithExternalID<ObjectEncodingOptions & ExecFileOptions>
+      | WithExternalID<ObjectEncodingOptions & ExecFileOptions>,
   ): PromiseWithChild<{
     stdout: string | Buffer
     stderr: string | Buffer
@@ -742,7 +750,7 @@ export namespace execFile {
     }
     return customPromisify(cpExecFile)(
       file,
-      spawnOpts(options || {}, getExclude(k), args as readonly string[])
+      spawnOpts(options || {}, getExclude(k), args as readonly string[]),
     )
   }
   Object.assign(execFile, { [promisify]: __promisify__ })
@@ -753,34 +761,34 @@ export namespace execFile {
 export function execFileSync(file: string): Buffer
 export function execFileSync(
   file: string,
-  options: WithExternalID<ExecFileSyncOptionsWithStringEncoding>
+  options: WithExternalID<ExecFileSyncOptionsWithStringEncoding>,
 ): string
 export function execFileSync(
   file: string,
-  options: WithExternalID<ExecFileSyncOptionsWithBufferEncoding>
+  options: WithExternalID<ExecFileSyncOptionsWithBufferEncoding>,
 ): Buffer
 export function execFileSync(
   file: string,
-  options?: WithExternalID<ExecFileSyncOptions>
+  options?: WithExternalID<ExecFileSyncOptions>,
 ): string | Buffer
 export function execFileSync(
   file: string,
-  args: ReadonlyArray<string>
+  args: ReadonlyArray<string>,
 ): Buffer
 export function execFileSync(
   file: string,
   args: ReadonlyArray<string>,
-  options: WithExternalID<ExecFileSyncOptionsWithStringEncoding>
+  options: WithExternalID<ExecFileSyncOptionsWithStringEncoding>,
 ): string
 export function execFileSync(
   file: string,
   args: ReadonlyArray<string>,
-  options: WithExternalID<ExecFileSyncOptionsWithBufferEncoding>
+  options: WithExternalID<ExecFileSyncOptionsWithBufferEncoding>,
 ): Buffer
 export function execFileSync(
   file: string,
   args?: ReadonlyArray<string>,
-  options?: WithExternalID<ExecFileSyncOptions>
+  options?: WithExternalID<ExecFileSyncOptions>,
 ): string | Buffer
 export function execFileSync(
   file: string,
@@ -792,7 +800,7 @@ export function execFileSync(
   options?:
     | WithExternalID<ExecFileSyncOptions>
     | WithExternalID<ExecFileSyncOptionsWithStringEncoding>
-    | WithExternalID<ExecFileSyncOptionsWithBufferEncoding>
+    | WithExternalID<ExecFileSyncOptionsWithBufferEncoding>,
 ): string | Buffer {
   if (
     args &&
@@ -809,27 +817,31 @@ export function execFileSync(
   return cpExecFileSync(
     file,
     args || [],
-    spawnOpts(options || {}, getExclude(k), args)
+    spawnOpts(options || {}, getExclude(k), args),
   )
 }
 
 export function fork(
   modulePath: string,
-  options?: ForkOptions
+  options?: ForkOptions,
 ): ChildProcess
 export function fork(
   modulePath: string,
   args?: ReadonlyArray<string>,
-  options?: WithExternalID<ForkOptions>
+  options?: WithExternalID<ForkOptions>,
 ): ChildProcess
 export function fork(
   modulePath: string,
   args?: ForkOptions | ReadonlyArray<string>,
-  options?: WithExternalID<ForkOptions>
+  options?: WithExternalID<ForkOptions>,
 ): ChildProcess {
   if (isNotArray<ForkOptions>(args)) {
     options = args
     args = []
   }
-  return cpFork(modulePath, args, spawnOpts(options || {}, getExclude(k), args))
+  return cpFork(
+    modulePath,
+    args,
+    spawnOpts(options || {}, getExclude(k), args),
+  )
 }

@@ -86,7 +86,7 @@ t.test('excluded file, no recording', async t => {
   const pi = getProcessInfo()
   const ctx = {}
   const u = String(
-    pathToFileURL(resolve('/test/exclude/test-processinfo-exclude.js'))
+    pathToFileURL(resolve('/test/exclude/test-processinfo-exclude.js')),
   )
   await load(u, ctx, async (url, c) => {
     t.equal(c, ctx, 'got context in nextLoad')

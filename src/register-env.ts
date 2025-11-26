@@ -5,18 +5,24 @@ const p = process
 const envRE = /^_TAPJS_PROCESSINFO_/
 const { hasOwnProperty } = Object.prototype
 
-const getEnvs = (env?: NodeJS.ProcessEnv, args: readonly string[] = []) => {
+const getEnvs = (
+  env?: NodeJS.ProcessEnv,
+  args: readonly string[] = [],
+) => {
   // load it here so that it isn't cached before the loader attaches
   // in self-test scenario.
   // copy all of OUR envs, if not specifically set on the env object
   return Object.fromEntries(
     Object.entries(p.env)
       .filter(
-        ([k]) => !(env && hasOwnProperty.call(env, k)) && envRE.test(k)
+        ([k]) => !(env && hasOwnProperty.call(env, k)) && envRE.test(k),
       )
       .concat([
-        ['NODE_OPTIONS', nodeOptionsEnv(env?.NODE_OPTIONS ? env : p.env, args)],
-      ])
+        [
+          'NODE_OPTIONS',
+          nodeOptionsEnv(env?.NODE_OPTIONS ? env : p.env, args),
+        ],
+      ]),
   )
 }
 

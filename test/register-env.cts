@@ -84,7 +84,7 @@ t.same(
       _TAPJS_PROCESSINFO_TESTING_REGENV_: '2',
       NODE_OPTIONS: 'something added loader',
     },
-  }
+  },
 )
 
 process.execArgv = ['--x', 'xyz']
@@ -99,7 +99,7 @@ t.same(pos.listener?.({}), {
 process.execArgv = [
   `--require=${resolve(
     __dirname,
-    '../dist/commonjs/register-require.js'
+    '../dist/commonjs/register-require.js',
   )}`,
 ]
 t.same(pos.listener?.({}), {

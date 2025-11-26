@@ -17,11 +17,11 @@ t.test(
   async t => {
     await import('./fixtures/missing-sm.min.mjs')
     t.throws(() =>
-      findSourceMap(require.resolve('./fixtures/missing-sm.min.mjs'))
+      findSourceMap(require.resolve('./fixtures/missing-sm.min.mjs')),
     )
     const missing = findSourceMapSafe(
-      require.resolve('./fixtures/missing-sm.min.mjs')
+      require.resolve('./fixtures/missing-sm.min.mjs'),
     )
     t.equal(missing, false)
-  }
+  },
 )

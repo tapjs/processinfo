@@ -13,8 +13,11 @@ export const canonicalSource = (s: string): string => {
     const u = new URL(s)
     const hash = u.hash
     const search = u.search
-    return String(pathToFileURL(canonicalPath(fileURLToPath(s)))) +
-      hash + search
+    return (
+      String(pathToFileURL(canonicalPath(fileURLToPath(s)))) +
+      hash +
+      search
+    )
   }
   // re-resolve it relative to the cwd
   // back to a file: url

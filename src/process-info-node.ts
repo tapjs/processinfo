@@ -59,12 +59,11 @@ export class ProcessInfoNode {
       Object.entries(this)
         .filter(([_, val]) => val !== null && val !== undefined)
         .map(([key, val]) =>
-          val instanceof ProcessInfoNode
-            ? [key, val.uuid]
-            : key === 'children' || key === 'descendants'
-            ? [key, [...val].map(c => c.uuid)]
-            : [key, val]
-        )
+          val instanceof ProcessInfoNode ? [key, val.uuid]
+          : key === 'children' || key === 'descendants' ?
+            [key, [...val].map(c => c.uuid)]
+          : [key, val],
+        ),
     )
   }
 

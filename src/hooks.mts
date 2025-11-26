@@ -55,7 +55,7 @@ export const initialize = ({ port }: { port: MessagePort }) => {
 const record = async (
   url: string,
   content?: string,
-  originSource?: string
+  originSource?: string,
 ) => {
   const filename = url.startsWith('file://') ? fileURLToPath(url) : url
   if (exclude.test(filename)) {
@@ -94,7 +94,7 @@ const record = async (
 export const load = async (
   url: string,
   context: any,
-  nextLoad: Function
+  nextLoad: Function,
 ) => {
   if (url.startsWith('file://')) {
     const filename = fileURLToPath(url)

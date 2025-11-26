@@ -50,7 +50,7 @@
     "presnap": "npm run prepare",
     "test": "c8 tap",
     "snap": "c8 tap",
-    "format": "prettier --write . --loglevel warn",
+    "format": "prettier --write . --log-level warn",
     "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts ./src/*.mts"
   },
   "tap": {
@@ -67,17 +67,6 @@
     ],
     "ts": false,
     "test-regex": "test/.*\\.[mc]?[jt]s$"
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 75,
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "jsxSingleQuote": false,
-    "bracketSameLine": true,
-    "arrowParens": "avoid",
-    "endOfLine": "lf"
   },
   "dependencies": {
     "node-options-to-argv": "^1.0.0",
@@ -98,7 +87,7 @@
     "@types/uuid": "^9.0.1",
     "c8": "^7.13.0",
     "diff": "^5.0.0",
-    "prettier": "^2.6.2",
+    "prettier": "^3.6.2",
     "sync-content": "^1.0.2",
     "tap": "^16.3.9",
     "ts-node": "^10.9.1",

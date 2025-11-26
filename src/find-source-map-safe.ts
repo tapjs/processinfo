@@ -4,7 +4,7 @@ import { pathToURL } from './path-to-url.js'
 const sourceMaps = new Map<string, SourceMap>()
 
 export const findSourceMapSafe = (
-  s: string | URL
+  s: string | URL,
 ): false | undefined | SourceMap => {
   // Have to look up by URL, because the ?tapmock param will be in
   // the internal key used by node, as those are "different" modules.

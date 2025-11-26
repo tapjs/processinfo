@@ -17,7 +17,7 @@ t.test('canonical path win32', t => {
     '../dist/commonjs/canonical-source.js',
     {
       path: win32,
-    }
+    },
   )
   const sources: [string, string][] = [
     ['c:/a/b/c', 'C:\\a\\b\\c'],

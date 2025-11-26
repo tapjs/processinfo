@@ -23,6 +23,6 @@ export const register = () => {
     {
       exts: ['.js', '.cjs', '.ts', '.cts', '.jsx', '.tsx'],
       matcher: filename => !exclude.test(filename),
-    }
+    },
   )
 }

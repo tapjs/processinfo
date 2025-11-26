@@ -9,10 +9,10 @@ import {
 
 t.test('loading modules and sources', async t => {
   const missingSM = String(
-    pathToFileURL(require.resolve('./fixtures/missing-sm.min.mjs'))
+    pathToFileURL(require.resolve('./fixtures/missing-sm.min.mjs')),
   )
   const hasSM = String(
-    pathToFileURL(require.resolve('./fixtures/y.min.mjs'))
+    pathToFileURL(require.resolve('./fixtures/y.min.mjs')),
   )
   const noSM = String(pathToFileURL(require.resolve('./fixtures/y.mjs')))
 
@@ -28,11 +28,11 @@ t.test('loading modules and sources', async t => {
 
   const expect = getSources()
   const smMap = new Map(
-    [missingSM, hasSM, noSM].map(m => [m, lookupSources(m)])
+    [missingSM, hasSM, noSM].map(m => [m, lookupSources(m)]),
   )
   // do the final lookup attempt, for coverage
   const smMapProcessEnd = new Map(
-    [missingSM, hasSM, noSM].map(m => [m, lookupSources(m, true)])
+    [missingSM, hasSM, noSM].map(m => [m, lookupSources(m, true)]),
   )
   t.match(smMap, expect)
   t.match(smMapProcessEnd, expect)

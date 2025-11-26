@@ -11,7 +11,7 @@ t.formatSnapshot = o =>
   removePath(
     removePath(o, process.cwd(), '{CWD}'),
     '/Users/isaacs/dev/tapjs/processinfo',
-    '{CWD}'
+    '{CWD}',
   )
 
 const legacyAbs = resolve(__dirname, '../dist/esm/loader-legacy.mjs')
@@ -123,23 +123,44 @@ const cases: Record<string, string | undefined | string[]> = {
 }
 
 const run = (
-  nodeOptionsEnv: typeof import('../dist/commonjs/node-options-env')['nodeOptionsEnv'],
-  t: Tap.Test
+  nodeOptionsEnv: (typeof import('../dist/commonjs/node-options-env'))['nodeOptionsEnv'],
+  t: Tap.Test,
 ) => {
   for (const [name, opt] of Object.entries(cases)) {
     const v: string | undefined =
-      opt === undefined || typeof opt === 'string'
-        ? opt
-        : argvToNodeOptions(opt)
+      opt === undefined || typeof opt === 'string' ?
+        opt
+      : argvToNodeOptions(opt)
     t.test(name, t => {
       t.plan(7)
       t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, []), name)
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, [`--loader=${legacyURL}`]), name + ' with legacy loader')
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, [`--import=${importURL}`]), name + ' with import')
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--loader', legacyURL]), name + ' with legacy loader no =')
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--import', importURL]), name + ' with import no =')
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--xyz']), name + ' with trailing flag')
-      t.matchSnapshot(nodeOptionsEnv({ NODE_OPTIONS: v }, ['--', `--import=${importURL}`]), name + ' with --')
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, [`--loader=${legacyURL}`]),
+        name + ' with legacy loader',
+      )
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, [`--import=${importURL}`]),
+        name + ' with import',
+      )
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, ['--loader', legacyURL]),
+        name + ' with legacy loader no =',
+      )
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, ['--import', importURL]),
+        name + ' with import no =',
+      )
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, ['--xyz']),
+        name + ' with trailing flag',
+      )
+      t.matchSnapshot(
+        nodeOptionsEnv({ NODE_OPTIONS: v }, [
+          '--',
+          `--import=${importURL}`,
+        ]),
+        name + ' with --',
+      )
     })
   }
   t.end()
@@ -150,7 +171,7 @@ t.test('no require.register available', t => {
     '../dist/commonjs/node-options-env.js',
     {
       module: Object.assign(Module, { register: undefined }),
-    }
+    },
   )
   run(nodeOptionsEnv, t)
 })
@@ -160,7 +181,7 @@ t.test('with require.register available', t => {
     '../dist/commonjs/node-options-env.js',
     {
       module: Object.assign(Module, { register: () => {} }),
-    }
+    },
   )
   run(nodeOptionsEnv, t)
 })

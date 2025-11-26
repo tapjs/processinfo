@@ -27,20 +27,14 @@ t.formatSnapshot = obj => {
   } else {
     return Object.fromEntries(
       Object.entries(obj).map(([k, v]) =>
-        k === 'hrstart'
-          ? [k, [Array.isArray(v), (v as Array<any>).length]]
-          : k === 'NODE_OPTIONS'
-          ? [k, '']
-          : k === 'date'
-          ? [k, typeof k]
-          : k === 'execArgv'
-          ? [k, []]
-          : k === 'pid'
-          ? [k, v === process.pid]
-          : k === 'ppid'
-          ? [k, v === process.ppid]
-          : [k, t.formatSnapshot(v)]
-      )
+        k === 'hrstart' ? [k, [Array.isArray(v), (v as Array<any>).length]]
+        : k === 'NODE_OPTIONS' ? [k, '']
+        : k === 'date' ? [k, typeof k]
+        : k === 'execArgv' ? [k, []]
+        : k === 'pid' ? [k, v === process.pid]
+        : k === 'ppid' ? [k, v === process.ppid]
+        : [k, t.formatSnapshot(v)],
+      ),
     )
   }
 }
@@ -58,8 +52,8 @@ const requireGetProcessInfo = (t: Tap.Test) =>
 const getEnvs = () =>
   Object.fromEntries(
     Object.entries(process.env).filter(([k]) =>
-      /^_TAPJS_PROCESSINFO_/.test(k)
-    )
+      /^_TAPJS_PROCESSINFO_/.test(k),
+    ),
   )
 const saveEnvs = getEnvs()
 
@@ -144,7 +138,7 @@ t.test('coverage for the test switch to turn off registration', t => {
     delete process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__
   })
   process.env.__TAPJS_PROCESSINFO_TESTING_NO_REGISTER__ = String(
-    process.pid
+    process.pid,
   )
 
   const { getProcessInfo } = t.mock(
@@ -155,7 +149,7 @@ t.test('coverage for the test switch to turn off registration', t => {
           throw new Error('should not register')
         },
       },
-    }
+    },
   )
   getProcessInfo()
   t.pass('did not register')

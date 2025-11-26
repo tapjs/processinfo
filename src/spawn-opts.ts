@@ -7,7 +7,7 @@ const p = process
 export const spawnOpts = <T extends { [k: string]: any }>(
   options: WithExternalID<T>,
   exclude?: RegExp | string,
-  args?: readonly string[]
+  args?: readonly string[],
 ): Omit<T, 'externalID'> & { env: ProcessEnvOptions } => {
   const { externalID, ...rest } = options
   const env = { ...(options.env || p.env) }

@@ -9,9 +9,8 @@ const legacyLoaderPath = fileURLToPath(legacyLoader)
 const importLoaderPath = fileURLToPath(importLoader)
 
 export const legacyMatch = (p: string): boolean => {
-  const d = p.startsWith('file://')
-    ? fileURLToPath(p)
-    : decodeURIComponent(p)
+  const d =
+    p.startsWith('file://') ? fileURLToPath(p) : decodeURIComponent(p)
   return (
     d === '@tapjs/processinfo/loader' ||
     p === legacyLoader ||
@@ -20,9 +19,8 @@ export const legacyMatch = (p: string): boolean => {
 }
 
 export const importMatch = (p: string): boolean => {
-  const d = p.startsWith('file://')
-    ? fileURLToPath(p)
-    : decodeURIComponent(p)
+  const d =
+    p.startsWith('file://') ? fileURLToPath(p) : decodeURIComponent(p)
   return (
     d === '@tapjs/processinfo/import' ||
     p === importLoader ||

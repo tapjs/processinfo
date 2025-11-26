@@ -12,14 +12,14 @@ t.formatSnapshot = o =>
   removePath(
     removePath(o, process.cwd(), '{CWD}'),
     '/Users/isaacs/dev/tapjs/processinfo',
-    '{CWD}'
+    '{CWD}',
   )
 
 t.test('basic instantiation and usage', async t => {
   t.equal(
     ProcessInfo,
     ProcessInfo.ProcessInfo,
-    'exported as default and named'
+    'exported as default and named',
   )
   t.equal(ProcessInfo.Node, ProcessInfoNode, 'Node class exported')
   {
@@ -38,26 +38,26 @@ t.test('basic instantiation and usage', async t => {
   for (const [uuid, node] of pi.uuids) {
     t.ok(
       node.root && pi.roots.has(node.root),
-      'root found in roots for uuid ' + uuid
+      'root found in roots for uuid ' + uuid,
     )
   }
   t.notOk(
     pi.uuids.has('not-a-processinfo-file-just-some-json'),
-    'does not load non-pi jsons'
+    'does not load non-pi jsons',
   )
   t.notOk(
     pi.uuids.has('not-a-processinfo-file-not-even-json'),
-    'does not load non-json files'
+    'does not load non-json files',
   )
   const r = pi.uuids.get('eb967f55-a436-4542-aba2-efd8cb82b471')
   t.matchSnapshot(
     {
       ...r,
       children: [...(r?.children || [])].sort((a, b) =>
-        a.uuid.localeCompare(b.uuid, 'en')
+        a.uuid.localeCompare(b.uuid, 'en'),
       ),
     },
-    'root node'
+    'root node',
   )
 
   const piSync = ProcessInfo.loadSync({
@@ -219,7 +219,7 @@ t.test('externalIDsChanged', async t => {
         utimesSync(resolve(dir, 'childgenerated'), future, future)
         const c = await pi.externalIDsChanged()
         t.equal(c.size, 0)
-      }
+      },
     )
 
     t.test('source change without gen change = no change', async t => {

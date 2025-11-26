@@ -10,7 +10,7 @@ import Module from 'node:module'
 
 const getKeyValue = (
   args: readonly string[],
-  i: number
+  i: number,
 ): [boolean, string, string | undefined] => {
   const arg = args[i]
   /* c8 ignore start */
@@ -156,14 +156,16 @@ const addLoader = (args: string[]) => {
 }
 
 const addIgnoreLoadersWarning = (args: readonly string[]) =>
-  args.includes('--no-warnings') ||
-  args.includes('--no-warnings=ExperimentalLoader')
-    ? args
-    : args.concat('--no-warnings')
+  (
+    args.includes('--no-warnings') ||
+    args.includes('--no-warnings=ExperimentalLoader')
+  ) ?
+    args
+  : args.concat('--no-warnings')
 
 export const nodeOptionsEnv = (
   env: NodeJS.ProcessEnv,
-  args: readonly string[]
+  args: readonly string[],
 ) => {
   // if we already have the loader in args, don't add to NODE_OPTIONS
   const no = nodeOptionsToArgv(env.NODE_OPTIONS)

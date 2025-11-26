@@ -24,16 +24,16 @@ saveLineLengths(resolve('/content/with-sm'), contentWithSM)
 t.strictSame(getLineLengths(resolve('/content/no-sm')), undefined)
 t.strictSame(
   getLineLengths(`file://${resolve('/content/with-sm')}`),
-  [19, 0, 27, 0, 16, 0, 45, 0]
+  [19, 0, 27, 0, 16, 0, 45, 0],
 )
 // but then the file gets transpiled, and now has a sm
 saveLineLengths(
   `file://${resolve('/content/no-sm')}`,
-  Buffer.from(contentWithSM)
+  Buffer.from(contentWithSM),
 )
 t.strictSame(
   getLineLengths(`file://${resolve('/content/no-sm')}`),
-  getLineLengths(`file://${resolve('/content/with-sm')}`)
+  getLineLengths(`file://${resolve('/content/with-sm')}`),
 )
 
 // this is a no-op

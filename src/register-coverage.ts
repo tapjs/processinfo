@@ -35,20 +35,21 @@ const uncoveredFiles: string[] = cxEnv
   .split('\n')
   .filter(f => !!f)
 
-const exclude = p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_
-  ? getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_', false)
+const exclude =
+  p.env._TAPJS_PROCESSINFO_COV_EXCLUDE_ ?
+    getExclude('_TAPJS_PROCESSINFO_COV_EXCLUDE_', false)
   : /[\\\/]node_modules[\\\/]/
 const fileEx = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
 
 const fileCovered = (
   f: string,
   sources: string[] = [],
-  files: string[] = []
+  files: string[] = [],
 ) => {
   const testFiles = [f]
   for (const src of sources || []) {
     testFiles.push(
-      resolve(src.startsWith('file://') ? fileURLToPath(src) : src)
+      resolve(src.startsWith('file://') ? fileURLToPath(src) : src),
     )
   }
 
@@ -74,7 +75,7 @@ const fileCovered = (
   // if any of the filenames are explicitly excluded, no coverage
   // otherwise, it is covered
   return !testFiles.some(
-    f => uncoveredFiles.includes(f) || exclude?.test(f)
+    f => uncoveredFiles.includes(f) || exclude?.test(f),
   )
 }
 
@@ -103,7 +104,7 @@ export const register = () => {
 
 export const coverageOnProcessEnd = (
   cwd: string,
-  processInfo: ProcessInfoNodeData
+  processInfo: ProcessInfoNodeData,
 ) => {
   // Similar to the coverage tracking bootstrap problem above, c8
   // doesn't see that this function runs, even though it DOES see

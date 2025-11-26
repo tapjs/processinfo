@@ -12,7 +12,7 @@ g[kLLC] = cache
 const sourceMapComment = '//# sourceMappingURL='
 export const saveLineLengths = (
   filename: string,
-  content?: string | Buffer
+  content?: string | Buffer,
 ) => {
   if (content === undefined) return
   if (typeof content === 'object') content = String(content)

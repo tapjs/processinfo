@@ -109,7 +109,7 @@ export class ProcessInfo {
             return
           }
           new ProcessInfoNode(data).link(this)
-        })
+        }),
       )
     }
     await Promise.all(promises)
@@ -143,7 +143,7 @@ export class ProcessInfo {
   #statFiles(
     node: ProcessInfoNode,
     stats: Map<string, Stats | null>,
-    exclude: RegExp
+    exclude: RegExp,
   ) {
     const promises: Promise<void>[] = []
 
@@ -176,7 +176,7 @@ export class ProcessInfo {
   #hasNewerFiles(
     node: ProcessInfoNode,
     stats: Map<string, Stats | null>,
-    exclude: RegExp
+    exclude: RegExp,
   ) {
     const p = Date.parse(node.date)
     for (const f of node.files) {
@@ -213,7 +213,7 @@ export class ProcessInfo {
    * files have changed since the date on the node.
    */
   async externalIDsChanged(
-    filter: (p: string, node: ProcessInfoNode) => boolean = () => true
+    filter: (p: string, node: ProcessInfoNode) => boolean = () => true,
   ) {
     const exclude = getExclude('_TAPJS_PROCESSINFO_EXCLUDE_', false)
     const changed = new Map<string, ProcessInfoNode>()

@@ -20,7 +20,7 @@ t.test('coverage disabled', async t => {
   const dir = t.testdir({
     'r.js': `
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       register()
       process.on('beforeExit', (code, signal) => {
@@ -44,7 +44,7 @@ t.test('coverage disabled', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
   t.throws(() => fs.statSync(`${dir}/.tap`))
 })
@@ -53,7 +53,7 @@ t.test('coverage enabled', async t => {
   const dir = t.testdir({
     'r.js': `
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       register()
       process.on('exit', (code, signal) => {
@@ -78,7 +78,7 @@ t.test('coverage enabled', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
   t.match(require(resolve(dir, '.tap/coverage/uuid-0.json')), {
     result: [
@@ -118,7 +118,7 @@ t.test('coverage of diff module enabled', async t => {
         saveLineLengths(m, content)
       }
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       const {findSourceMapSafe} = require(${JSON.stringify(fsmMod)})
       register()
@@ -148,7 +148,7 @@ t.test('coverage of diff module enabled', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
   const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
   // got multiple entries
@@ -169,7 +169,7 @@ t.test('coverage of specific files enabled', async t => {
   const dir = t.testdir({
     'r.js': `
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       register()
       process.on('exit', (code, signal) => {
@@ -198,7 +198,7 @@ t.test('coverage of specific files enabled', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
   const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
   // got one entries
@@ -233,7 +233,7 @@ t.test('coverage of specific files disabled', async t => {
   const dir = t.testdir({
     'r.js': `
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       register()
       process.on('exit', (code, signal) => {
@@ -263,7 +263,7 @@ t.test('coverage of specific files disabled', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
   const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))
   // got one entries
@@ -303,7 +303,7 @@ t.test('coverage of specific files enabled with esm urls', async t => {
   const dir = t.testdir({
     'r.cjs': `
       const {coverageOnProcessEnd, register} = require(${JSON.stringify(
-        mod
+        mod,
       )})
       register()
       const {likelyHasSourceMap} = require(${JSON.stringify(sourcesMod)})
@@ -338,7 +338,7 @@ t.test('coverage of specific files enabled with esm urls', async t => {
       },
       stdio: 'inherit',
       cwd: dir,
-    }
+    },
   )
 
   const cov = require(resolve(dir, '.tap/coverage/uuid-0.json'))

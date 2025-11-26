@@ -39,7 +39,7 @@ const otherHooks = [
 ].map(s => `--loader=${pathToFileURL(resolve(dir, s))}`)
 
 const esmLoader = String(
-  pathToFileURL(resolve(__dirname, '../dist/esm/loader-legacy.mjs'))
+  pathToFileURL(resolve(__dirname, '../dist/esm/loader-legacy.mjs')),
 )
 
 t.test('alone', async t => {
@@ -53,9 +53,9 @@ t.test('alone', async t => {
         },
         {
           _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
-        }
+        },
       ),
-    }
+    },
   )
   t.equal(result.status, 0)
   t.match(result.stdout.toString(), /^file:.*?\/file.mjs\n$/)
@@ -78,9 +78,9 @@ t.test('with others', async t => {
         },
         {
           _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
-        }
+        },
       ),
-    }
+    },
   )
   t.equal(result.status, 0)
   const lines = result.stdout.toString().trim().split('\n')
@@ -92,7 +92,7 @@ t.test('with others', async t => {
       // this one might show up, but often does not arrive in time in node
       // versions with off-thread hook execution.
       ///^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
-    ])
+    ]),
   )
 })
 

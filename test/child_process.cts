@@ -3,19 +3,15 @@ import { promisify } from 'util'
 import Module from 'module'
 
 const formatSnapshot = (o: any): any =>
-  !o || typeof o !== 'object'
-    ? o
-    : Array.isArray(o)
-    ? o.map(el => t.formatSnapshot(el))
-    : o instanceof Map
-    ? new Map(formatSnapshot([...o.entries()]))
-    : o instanceof Set
-    ? new Set(t.formatSnapshot([...o]))
-    : Object.fromEntries(
-        Object.entries(o).map(([k, v]) =>
-          k === 'env' ? [k, filterEnv(v)] : [k, v]
-        )
-      )
+  !o || typeof o !== 'object' ? o
+  : Array.isArray(o) ? o.map(el => t.formatSnapshot(el))
+  : o instanceof Map ? new Map(formatSnapshot([...o.entries()]))
+  : o instanceof Set ? new Set(t.formatSnapshot([...o]))
+  : Object.fromEntries(
+      Object.entries(o).map(([k, v]) =>
+        k === 'env' ? [k, filterEnv(v)] : [k, v],
+      ),
+    )
 t.formatSnapshot = formatSnapshot
 
 import { removePath } from './fixtures/remove-path'
@@ -36,15 +32,15 @@ const filterEnv = (e: any) => {
   e = filterCWD(
     Object.fromEntries(
       Object.entries(e).filter(
-        ([k]) => /PROCESSINFO/.test(k) || /NODE_OPTIONS/.test(k)
-      )
-    )
+        ([k]) => /PROCESSINFO/.test(k) || /NODE_OPTIONS/.test(k),
+      ),
+    ),
   )
   // also remove the --node-preload that nyc adds
   if (e.NODE_OPTIONS) {
     e.NODE_OPTIONS = e.NODE_OPTIONS.replace(
       /"--require" "[^"]*node-preload.js" */g,
-      ''
+      '',
     )
   }
   return e
@@ -78,24 +74,24 @@ for (const loader of ['--import', '--loader']) {
       t.matchSnapshot(cp.spawn('cmd', ['args']), 'spawn, no options')
       t.matchSnapshot(
         cp.spawn('cmd', ['args'], { stdio: 'ignore' }),
-        'spawn, options'
+        'spawn, options',
       )
       t.matchSnapshot(
         cp.spawn('cmd', { stdio: 'ignore' }),
-        'spawn, no args, options'
+        'spawn, no args, options',
       )
       t.matchSnapshot(cp.spawnSync('cmd'), 'spawnSync no args no options')
       t.matchSnapshot(
         cp.spawnSync('cmd', ['args']),
-        'spawnSync no options'
+        'spawnSync no options',
       )
       t.matchSnapshot(
         cp.spawnSync('cmd', ['args'], { stdio: 'ignore' }),
-        'spawnSync options'
+        'spawnSync options',
       )
       t.matchSnapshot(
         cp.spawnSync('cmd', { stdio: 'ignore' }),
-        'spawnSync, no args, options'
+        'spawnSync, no args, options',
       )
       t.end()
     })
@@ -103,31 +99,31 @@ for (const loader of ['--import', '--loader']) {
     t.test('exec', async t => {
       t.matchSnapshot(
         cp.exec('cmd args', () => {}),
-        'exec, no options'
+        'exec, no options',
       )
       t.matchSnapshot(
         cp.exec('cmd args', { stdio: 'ignore' }, () => {}),
-        'exec options'
+        'exec options',
       )
       t.matchSnapshot(
         cp.exec('cmd args', null, () => {}),
-        'exec null options'
+        'exec null options',
       )
       t.matchSnapshot(
         await promisify(cp.exec)('cmd args', () => {}),
-        'p exec, no options'
+        'p exec, no options',
       )
       t.matchSnapshot(
         await promisify(cp.exec)(
           'cmd args',
           { stdio: 'ignore' },
-          () => {}
+          () => {},
         ),
-        'p exec options'
+        'p exec options',
       )
       t.matchSnapshot(
         await promisify(cp.exec)('cmd args', null, () => {}),
-        'p exec null options'
+        'p exec null options',
       )
     })
 
@@ -135,7 +131,7 @@ for (const loader of ['--import', '--loader']) {
       t.matchSnapshot(cp.execSync('cmd args'), 'execSync no options')
       t.matchSnapshot(
         cp.execSync('cmd args', { stdio: 'ignore' }),
-        'execSync options'
+        'execSync options',
       )
       t.end()
     })
@@ -143,49 +139,49 @@ for (const loader of ['--import', '--loader']) {
     t.test('execFile', async t => {
       t.matchSnapshot(
         cp.execFile('cmd', () => {}),
-        'execFile no args no options'
+        'execFile no args no options',
       )
       t.matchSnapshot(
         cp.execFile('cmd', ['args'], () => {}),
-        'execFile no options'
+        'execFile no options',
       )
       t.matchSnapshot(
         cp.execFile('cmd', { stdio: 'ignore' }, () => {}),
-        'execFile options no args'
+        'execFile options no args',
       )
       t.matchSnapshot(
         cp.execFile('cmd', ['args'], { stdio: 'ignore' }, () => {}),
-        'execFile options'
+        'execFile options',
       )
       t.matchSnapshot(
         cp.execFile('cmd', ['args'], null, () => {}),
-        'execFile, null arg, no options'
+        'execFile, null arg, no options',
       )
       t.matchSnapshot(
         cp.execFile('cmd', ['args'], null, { stdio: 'ignore' }, () => {}),
-        'execFile, null arg, options'
+        'execFile, null arg, options',
       )
 
       t.matchSnapshot(
         await promisify(cp.execFile)('cmd', ['args'], () => {}),
-        'p execFile no options'
+        'p execFile no options',
       )
       t.matchSnapshot(
         await promisify(cp.execFile)('cmd', { stdio: 'ignore' }, () => {}),
-        'p execFile options no args'
+        'p execFile options no args',
       )
       t.matchSnapshot(
         await promisify(cp.execFile)(
           'cmd',
           ['args'],
           { stdio: 'ignore' },
-          () => {}
+          () => {},
         ),
-        'p execFile options'
+        'p execFile options',
       )
       t.matchSnapshot(
         await promisify(cp.execFile)('cmd', ['args'], null, () => {}),
-        'p execFile, null arg, no options'
+        'p execFile, null arg, no options',
       )
       t.matchSnapshot(
         await promisify(cp.execFile)(
@@ -193,36 +189,36 @@ for (const loader of ['--import', '--loader']) {
           ['args'],
           null,
           { stdio: 'ignore' },
-          () => {}
+          () => {},
         ),
-        'p execFile, null arg, options'
+        'p execFile, null arg, options',
       )
     })
 
     t.test('execFileSync', t => {
       t.matchSnapshot(
         cp.execFileSync('cmd'),
-        'execFileSync, no options, no args'
+        'execFileSync, no options, no args',
       )
       t.matchSnapshot(
         cp.execFileSync('cmd', ['args']),
-        'execFileSync, no options'
+        'execFileSync, no options',
       )
       t.matchSnapshot(
         cp.execFileSync('cmd', { stdio: 'ignore' }),
-        'execFileSync, options'
+        'execFileSync, options',
       )
       t.matchSnapshot(
         cp.execFileSync('cmd', ['args'], { stdio: 'ignore' }),
-        'execFileSync, args and options'
+        'execFileSync, args and options',
       )
       t.matchSnapshot(
         cp.execFileSync('cmd', ['args'], null),
-        'execFileSync null arg no options'
+        'execFileSync null arg no options',
       )
       t.matchSnapshot(
         cp.execFileSync('cmd', ['args'], null, { stdio: 'ignore' }),
-        'execFileSync null arg options'
+        'execFileSync null arg options',
       )
       t.end()
     })

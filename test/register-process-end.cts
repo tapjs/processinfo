@@ -6,11 +6,11 @@ import * as LS from '../dist/commonjs/lookup-sources'
 // mocks
 const exitHandlers: ((
   code: number | null,
-  signal: NodeJS.Signals | null
+  signal: NodeJS.Signals | null,
 ) => any)[] = []
 const onExit = (
   handler: (code: number | null, signal: NodeJS.Signals | null) => any,
-  opts: any
+  opts: any,
 ) => {
   exitHandlers.push(handler)
   t.same(opts, { alwaysLast: true }, 'should get alwaysLast flag set')
@@ -71,7 +71,7 @@ t.test('run the process end', async t => {
   await import(String(pathToFileURL(bm)))
   const { register } = t.mock(
     '../dist/commonjs/register-process-end.js',
-    mocks
+    mocks,
   )
   LS.likelyHasSourceMap(bmu)
   register()
@@ -80,7 +80,7 @@ t.test('run the process end', async t => {
   t.equal(
     registerCoverage.called,
     true,
-    'called register coverage process end'
+    'called register coverage process end',
   )
   t.same(processInfo, {
     uuid: 'uuid',

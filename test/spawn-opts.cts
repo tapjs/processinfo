@@ -5,8 +5,8 @@ const { NODE_OPTIONS } = process.env
 const getEnvs = () =>
   Object.fromEntries(
     Object.entries(process.env).filter(([k]) =>
-      /^_TAPJS_PROCESSINFO_|^NODE_OPTIONS$/.test(k)
-    )
+      /^_TAPJS_PROCESSINFO_|^NODE_OPTIONS$/.test(k),
+    ),
   )
 const saveEnvs = getEnvs()
 
@@ -26,7 +26,7 @@ t.teardown(() => {
 // not included in @types/tap, part of the reason for porting
 // tap to ts in the first place :\
 const h = (
-  t: Tap.Test
+  t: Tap.Test,
 ): Tap.Test & {
   hasOwnProp(o: any, prop: PropertyKey, m: string): boolean
 } =>
@@ -44,7 +44,7 @@ t.test('no args', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: undefined,
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: undefined,
     },
-    'does not have external id or exclude'
+    'does not have external id or exclude',
   )
   t.end()
 })
@@ -59,7 +59,7 @@ t.test('has external id', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: undefined,
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: 'external ID',
     },
-    'has external id, but no exclude'
+    'has external id, but no exclude',
   )
   t.end()
 })
@@ -74,7 +74,7 @@ t.test('has exclude', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: '/foo/i',
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: 'external ID',
     },
-    'has external id and exclude'
+    'has external id and exclude',
   )
   t.end()
 })
@@ -89,7 +89,7 @@ t.test('existing env', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: undefined,
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: undefined,
     },
-    'does not have external id or exclude'
+    'does not have external id or exclude',
   )
   t.end()
 })
@@ -104,7 +104,7 @@ t.test('existing env, has external id', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: undefined,
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: 'external ID',
     },
-    'has external id, but no exclude'
+    'has external id, but no exclude',
   )
   t.end()
 })
@@ -119,7 +119,7 @@ t.test('existing env, has exclude', t => {
       _TAPJS_PROCESSINFO_EXCLUDE_: '/foo/i',
       _TAPJS_PROCESSINFO_EXTERNAL_ID_: 'external ID',
     },
-    'has external id and exclude'
+    'has external id and exclude',
   )
   t.end()
 })

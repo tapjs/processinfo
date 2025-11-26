@@ -35,6 +35,6 @@ export const register = () => {
       writeFileSync(f, JSON.stringify(processInfo, null, 2) + '\n', 'utf8')
       coverageOnProcessEnd(cwd, processInfo)
     },
-    { alwaysLast: true }
+    { alwaysLast: true },
   )
 }
