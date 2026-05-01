@@ -246,7 +246,7 @@ export function spawnSync(
     | WithExternalID<SpawnSyncOptionsWithStringEncoding>
     | WithExternalID<SpawnSyncOptionsWithBufferEncoding>
     | WithExternalID<SpawnSyncOptions>,
-) {
+): SpawnSyncReturns<string | Buffer> {
   if (isNotArray<SpawnSyncOptions>(args)) {
     options = args
     args = []
@@ -330,6 +330,7 @@ export type ExecArgs =
 export function exec(...args: ExecArgs): ChildProcess {
   const [cmd, options, callback] = args
   if (typeof options === 'function') {
+    //@ts-ignore
     return cpExec(
       cmd,
       spawnOpts<ExecOptions>({}, getExclude(k), []),

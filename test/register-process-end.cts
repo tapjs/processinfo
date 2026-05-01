@@ -68,7 +68,7 @@ const mocks = {
 t.test('run the process end', async t => {
   // have to actually load the bar.min.mjs file to get its source map
   // to be loaded by node.
-  await import(String(pathToFileURL(bm)))
+  await import(bm)
   const { register } = t.mock(
     '../dist/commonjs/register-process-end.js',
     mocks,

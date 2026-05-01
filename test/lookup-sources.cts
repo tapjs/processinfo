@@ -1,5 +1,4 @@
 import t from 'tap'
-import { pathToFileURL } from 'url'
 
 import {
   getSources,
@@ -8,13 +7,9 @@ import {
 } from '../dist/commonjs/lookup-sources.js'
 
 t.test('loading modules and sources', async t => {
-  const missingSM = String(
-    pathToFileURL(require.resolve('./fixtures/missing-sm.min.mjs')),
-  )
-  const hasSM = String(
-    pathToFileURL(require.resolve('./fixtures/y.min.mjs')),
-  )
-  const noSM = String(pathToFileURL(require.resolve('./fixtures/y.mjs')))
+  const missingSM = require.resolve('./fixtures/missing-sm.min.mjs')
+  const hasSM = require.resolve('./fixtures/y.min.mjs')
+  const noSM = require.resolve('./fixtures/y.mjs')
 
   // none of these will find a source map, because they're not loaded yet
   likelyHasSourceMap(missingSM)
