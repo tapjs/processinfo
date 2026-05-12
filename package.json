@@ -52,8 +52,8 @@
     "prepare": "tshy",
     "pretest": "npm run prepare",
     "presnap": "npm run prepare",
-    "test": "c8 tap",
-    "snap": "c8 tap",
+    "test": "tap",
+    "snap": "tap",
     "format": "prettier --write . --log-level warn",
     "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts ./src/*.mts"
   },
@@ -85,11 +85,10 @@
   "license": "BlueOak-1.0.0",
   "devDependencies": {
     "@npmcli/promise-spawn": "^2.0.1",
-    "@types/node": "^20.1.2",
+    "@types/node": "^25.7.0",
     "@types/npmcli__promise-spawn": "^6.0.0",
     "@types/tap": "^15.0.8",
     "@types/uuid": "^9.0.1",
-    "c8": "^7.13.0",
     "diff": "^5.0.0",
     "prettier": "^3.6.2",
     "sync-content": "^1.0.2",

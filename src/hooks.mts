@@ -1,6 +1,4 @@
 // hooks used by loader-legacy.mjs and loader.mjs
-
-import { readFile } from 'node:fs/promises'
 import { parse } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { MessagePort } from 'node:worker_threads'
@@ -13,6 +11,8 @@ import {
 } from './get-process-info.js'
 import { saveLineLengths } from './line-lengths.js'
 import { likelyHasSourceMap } from './lookup-sources.js'
+import { readFileSync } from 'node:fs'
+import { LoadHookSync, ModuleSource } from 'node:module'
 
 let getProcessInfo = _getProcessInfo
 let PORT: undefined | MessagePort = undefined
@@ -52,9 +52,9 @@ export const initialize = ({ port }: { port: MessagePort }) => {
   PORT = port
 }
 
-const record = async (
+export const record = (
   url: string,
-  content?: string,
+  content?: ModuleSource,
   originSource?: string,
 ) => {
   const filename = url.startsWith('file://') ? fileURLToPath(url) : url
@@ -72,8 +72,11 @@ const record = async (
   ) {
     // try to read the file, fall back to the content we have, or ''
     // if any source maps anywhere, flag it as possibly having one
-    originSource ??=
-      (await readFile(filename, 'utf8').catch(() => content)) ?? ''
+    try {
+      originSource ??= readFileSync(filename, 'utf8') ?? ''
+    } catch {
+      originSource = String(content ?? '')
+    }
   }
   maybeSM = smMagicComment.test(originSource as string)
 
@@ -86,9 +89,31 @@ const record = async (
   } else {
     // call lazily so we don't double-register
     getProcessInfo().files.push(filename)
-    saveLineLengths(filename, content)
+    saveLineLengths(filename, String(content))
     if (maybeSM) likelyHasSourceMap(url)
   }
+}
+
+// Used by synchronous module.registerHooks
+export const loadSync: LoadHookSync = (url, context, nextLoad) => {
+  if (url.startsWith('file://')) {
+    const filename = fileURLToPath(url)
+    const { ext } = parse(filename)
+    if (!ext) {
+      record(url)
+      return {
+        ...context,
+        format: 'commonjs',
+        shortCircuit: true,
+      }
+    }
+  }
+
+  // get line lengths from final source
+  // if origin source doesn't match, check for possible source map
+  const ret = nextLoad(url, context)
+  record(url, ret.source)
+  return ret
 }
 
 export const load = async (
@@ -106,7 +131,7 @@ export const load = async (
     // TODO: should we just let this fail? It fails *without* the loader,
     // after all.
     if (!ext) {
-      await record(url)
+      record(url)
       return {
         ...context,
         format: 'commonjs',
@@ -119,7 +144,7 @@ export const load = async (
   // if origin source doesn't match, check for possible source map
   const originSource = context.source
   const ret = await nextLoad(url, context)
-  await record(url, ret.source, originSource)
+  record(url, ret.source, originSource)
   return ret
 }
 
