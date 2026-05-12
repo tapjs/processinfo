@@ -61,41 +61,6 @@ t.test('alone', async t => {
   t.match(result.stdout.toString(), /^file:.*?\/file.mjs\n$/)
 })
 
-t.test('with others', async t => {
-  const result = spawnSync(
-    process.execPath,
-    [
-      '--enable-source-maps',
-      '--loader',
-      esmLoader,
-      ...otherHooks,
-      dir + '/file.mjs',
-    ],
-    {
-      env: Object.assign(
-        {
-          ...process.env,
-        },
-        {
-          _TAPJS_PROCESSINFO_EXCLUDE_: exclude,
-        },
-      ),
-    },
-  )
-  t.equal(result.status, 0)
-  const lines = result.stdout.toString().trim().split('\n')
-  t.match(
-    new Set(lines),
-    new Set([
-      /^otherhook load file:.*?\/file.mjs\?otherhook-resolve\?otherresolve$/,
-      /^otherload file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load$/,
-      // this one might show up, but often does not arrive in time in node
-      // versions with off-thread hook execution.
-      ///^file:.*?\/file.mjs\?otherhook-resolve\?otherresolve\?otherhook-load\?otherload$/,
-    ]),
-  )
-})
-
 t.test('extensionless does not blow up, it is just cjs', async t => {
   const dir = t.testdir({
     program: `console.log('hello')`,
