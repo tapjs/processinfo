@@ -9,7 +9,21 @@ import { saveLineLengths } from './line-lengths.js'
 import { likelyHasSourceMap } from './lookup-sources.js'
 import { loadSync } from './hooks.mjs'
 
-if ((MODULE as Partial<typeof MODULE>).registerHooks) {
+// sync hooks not stable until 24.13.1
+const version = (globalThis.process?.versions?.node ?? '0.0.0')
+  .split('.')
+  .map(n => parseInt(n, 10)) as [number, number, number]
+
+// if we ONLY have registerHooks, use that. otherwise, version detect.
+// registerHooks was present but very buggy in earlier versions
+const useSyncHooks =
+  typeof MODULE.registerHooks === 'function' &&
+  (!MODULE.register ||
+    version[0] > 25 ||
+    (version[0] === 25 && version[1] >= 1) ||
+    (version[0] === 24 && version[1] >= 13))
+
+if (useSyncHooks) {
   MODULE.registerHooks({ load: loadSync })
 } else {
   const { port1, port2 } = new MessageChannel()
