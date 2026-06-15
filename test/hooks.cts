@@ -79,3 +79,37 @@ t.test('extensionless does not blow up, it is just cjs', async t => {
     t.equal(result.stdout.toString().trim(), 'hello')
   }
 })
+
+// strict sync load hook path (node >= 24.13 via registerHooks). A
+// short-circuit without `source` throws ERR_INVALID_RETURN_PROPERTY_VALUE
+// there, so the extensionless branch must delegate to nextLoad instead.
+t.test(
+  'extensionless via --import (sync registerHooks) does not blow up',
+  async t => {
+    const importEntry = String(
+      pathToFileURL(resolve(__dirname, '../dist/esm/import.mjs')),
+    )
+    // mirror real usage: a CJS module require()s an extensionless bin
+    // (as package bin scripts are). That path is strict-validated.
+    const dir = t.testdir({
+      bin: `console.log('hello from extensionless bin')`,
+      'runner.cjs': `require('./bin')`,
+    })
+    const result = spawnSync(process.execPath, [
+      '--no-warnings',
+      '--import',
+      importEntry,
+      resolve(dir, 'runner.cjs'),
+    ])
+    t.equal(result.status, 0, result.stderr.toString())
+    t.notMatch(
+      result.stderr.toString(),
+      /ERR_INVALID_RETURN_PROPERTY_VALUE/,
+      'no strict source validation error',
+    )
+    t.equal(
+      result.stdout.toString().trim(),
+      'hello from extensionless bin',
+    )
+  },
+)
