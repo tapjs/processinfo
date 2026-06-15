@@ -101,11 +101,7 @@ export const loadSync: LoadHookSync = (url, context, nextLoad) => {
     const { ext } = parse(filename)
     if (!ext) {
       record(url)
-      return {
-        ...context,
-        format: 'commonjs',
-        shortCircuit: true,
-      }
+      return nextLoad(url, { ...context, format: 'commonjs' })
     }
   }
 
@@ -132,11 +128,7 @@ export const load = async (
     // after all.
     if (!ext) {
       record(url)
-      return {
-        ...context,
-        format: 'commonjs',
-        shortCircuit: true,
-      }
+      return await nextLoad(url, { ...context, format: 'commonjs' })
     }
   }
 

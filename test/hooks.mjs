@@ -113,10 +113,15 @@ t.test('no extension, treat as commonjs', async t => {
   const ctx = {}
   const u = String(pathToFileURL(resolve('/test/extensionless/file')))
   t.equal(typeof globalPreload(), 'string', 'call gp without port')
-  const res = await load(u, ctx, async () => {
-    throw new Error('should not call nextLoad')
+  // must delegate to nextLoad with a commonjs format hint, so node's
+  // default step supplies a valid `source` (strict sync hook validation
+  // on node >= 24.13 rejects a short-circuit with no source).
+  const res = await load(u, ctx, async (url, c) => {
+    t.equal(url, u)
+    t.equal(c.format, 'commonjs', 'forces commonjs format')
+    return { source: mockContent, format: 'commonjs' }
   })
-  t.strictSame(res, { format: 'commonjs', shortCircuit: true })
+  t.strictSame(res, { source: mockContent, format: 'commonjs' })
   t.strictSame(pi.files, [
     fileURLToPath(import.meta.url),
     resolve('/test/extensionless/file'),
